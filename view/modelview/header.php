@@ -68,7 +68,7 @@
                         <div class="top_header_middle">
                             <a href="#"><i class="fa fa-phone"></i> Call Us: <span>+84 987 654 321</span></a>
                             <a href="#"><i class="fa fa-envelope"></i> Email: <span>support@yourdomain.com</span></a>
-                            <img src="../img/logo.png" alt="">
+                            <img src="../img/logo_saleshop.jpg" alt="">
                         </div>
                     </div>
                     <div class="col-lg-3">
@@ -81,11 +81,27 @@
                                 <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
                             </ul>
                             <ul class="top_right">
-                                <li class="user"><a href="./index.php?act=login"><i class="icon-user icons"></i></a></li>
+                                <?php 
+                                if (empty($_SESSION['user'])) {
+                                    echo'<li class="user"><a href="./index.php?act=login"><i class="icon-user icons"></i></a></li>
+                                    
+                                    <li class="h_price">
+                                    </li>';
+                                }else {
+                                    echo '<a href="../view/login/dangxuat.php">
+                                    <span class="">
+                                    
+                                </span>
+                                <h7 style = "font-size: 20px">Đăng Xuất</h7>
+                                
+                                
+                            </a>';
+                                }
+                
+                               
+                                ?>
                                 <li class="cart"><a href="./index.php?act=giohang"><i class="icon-handbag icons"></i></a></li>
-                                <li class="h_price">
-                                </li>
-                            </ul>
+                            </ul> 
                         </div>
                     </div>
                 </div>
@@ -97,7 +113,7 @@
         <header class="shop_header_area">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <a class="navbar-brand" href="#"><img src="../img/logo.png" alt=""></a>
+                    <a class="navbar-brand" href="#"><img src="../img/logo_saleshop.jpg" alt=""></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     </button>
@@ -106,11 +122,11 @@
                         <ul class="navbar-nav categories">
                               <li class="nav-item">
                                 <select class="selectpicker">
-                                    <option>Danh mục</option>
-                                    <option>iPhone</option>
-                                    <option>Samsung</option>
-                                    <option>Xiaomi</option>
-                                    <option>Realme</a></option>
+                                    <option>Danh mục<a href=""></a></option>
+                                    <option>iPhone<a href=""></a></option>
+                                    <option>Samsung<a href=""></a></option>
+                                    <option>Xiaomi<a href=""></a></option>
+                                    <option>Realme<a href=""></a></option>
                                 </select>
                             </li>
                         </ul>
