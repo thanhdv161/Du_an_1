@@ -63,7 +63,7 @@
                         <!-- Search -->
                         <!-- ============================================================== -->
 
-                        <a href="../view/index.php?act=dangnhap" class="btn btn-danger  d-none d-md-block pull-right ms-3 hidden-xs hidden-sm waves-effect waves-light text-white">Đăng Xuất
+                        <a href="../view/login/dangxuat.php" class="btn btn-danger  d-none d-md-block pull-right ms-3 hidden-xs hidden-sm waves-effect waves-light text-white">Đăng Xuất
                         </a>
                         <!-- ============================================================== -->
                         <!-- User profile and search -->

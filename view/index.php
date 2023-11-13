@@ -1,5 +1,5 @@
 <?php
-include "../model/pdo.php";
+include "../model/connect.php";
 include "../view/modelview/header.php";
 if (isset($_GET['act'])) {
     switch ($_GET['act']) {
@@ -35,7 +35,13 @@ if (isset($_GET['act'])) {
                     include "./login/setpass.php";
                 break;
         case 'dangnhap':
-                
+            if(isset($_GET["successful"])){
+                echo '<script>alert("Đổi mật khẩu thành công")</script>';
+            }
+            else{
+                echo("");
+            }
+            include "./login/dangnhap.php";
                 break;
         case 'tintuc':
             include "./tintuc.php";
