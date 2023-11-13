@@ -3,12 +3,12 @@
 
 <div class="w-[500px] mx-auto container text-center">
         <h3 class="text-4xl font-bold my-5">Phục hồi mật khẩu</h3>
-        <form action="../customer/set_pass.php" method="POST">
+        <form action="./login/set_pass.php" method="POST">
 
             <input type="email" name="email" id="" placeholder="Email" class="inp33">
             <div class="text-left2">
                 <button class="px-5 text-black py-2  slide_right">Gửi</button>
-                <a href="http://localhost/duan1/view/index.php?act=home">Hủy</a>
+                <a href="http://localhost/duan1/view/index.php?act=home" style="color: black;">Hủy</a>
             </div>
         </form>
 

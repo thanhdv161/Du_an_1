@@ -10,9 +10,10 @@
         <div class="login2">
             <div class="text-left">
                 <button class="px-5  text-black py-2  slide_right " type="submit">Đăng nhập</button>
-            </div>
+            </div><br>
             <div class="text-left2">
-                <a href="http://localhost/duan1/view/index.php?act=quenmk" class="mr-2">Quên mật khẩu?</a>hoặc <a href="../view/index.php?act=dangki">Đăng kí</a>
+                <a href="http://localhost/duan1/view/index.php?act=quenmk
+                " class="mr-2" style="color: black;">Quên mật khẩu?</a>hoặc  <a href="../view/index.php?act=dangki" style="color: black;">Đăng kí</a>
             </div>
         </div>
     </form>
@@ -33,6 +34,8 @@
             .text-left2{
               width: 200px;  
               margin-top: 20px;
+              color: black;
+         
             }
             .inp33{
                 width: 400px;
