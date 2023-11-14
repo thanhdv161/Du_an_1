@@ -27,6 +27,7 @@
         
         <link href="../css/style.css" rel="stylesheet">
         <link href="../css/responsive.css" rel="stylesheet">
+        <script src="../js/slide.js"></script>
         <style>
             .top_header_middle>img{
                 width: 210px;
