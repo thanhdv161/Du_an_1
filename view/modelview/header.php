@@ -27,6 +27,52 @@
         
         <link href="../css/style.css" rel="stylesheet">
         <link href="../css/responsive.css" rel="stylesheet">
+        <style>
+            .top_header_middle>img{
+                width: 210px;
+            }
+            .banner{
+                width:100%;
+                min-width:300px;  
+                text-align:center;
+                position:relative;
+            }
+            .banner img{
+                width:100%;
+                height:400px;
+            }
+            .pre, .next{
+                cursor:pointer;
+                position:absolute;
+                top:50%;
+                width:auto;
+                padding:16px;
+                color:white;
+                font-weight:bold;
+                font-size:18px;
+                transition:0.6s ease-in-out;
+                border-radius:0 3px 3px 0;
+                border:none;
+                
+            }
+            .pre:hover, .next:hover{
+                background-color:rgba(0,0,0,0.8);
+            }
+            .next{
+                right:0;
+                border-radius:3px 0 0 3px;
+            }
+            .pre{
+                left:0;
+                border-radius:0 3px 3px 0;
+            }
+            .d-flex>img{
+                width: 80px;
+            }
+            .img-fluid{
+                width: 600px;
+            }
+        </style>
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -68,7 +114,7 @@
                         <div class="top_header_middle">
                             <a href="#"><i class="fa fa-phone"></i> Call Us: <span>+84 987 654 321</span></a>
                             <a href="#"><i class="fa fa-envelope"></i> Email: <span>support@yourdomain.com</span></a>
-                            <img src="../img/logo_saleshop.jpg" alt="">
+                            <img src="../img/image-removebg-preview (1).png" alt="">
                         </div>
                     </div>
                     <div class="col-lg-3">
