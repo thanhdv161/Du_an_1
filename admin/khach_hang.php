@@ -46,7 +46,7 @@
                                         <?php echo $taikhoan['matKhau']?>
                                     </td>
                                     <td>
-                                        <img src="../view/login/img/<?php echo $taikhoan['anh']?>" alt="" width="50" height="50">
+                                        <img src="../img/<?php echo $taikhoan['anh']?>" alt="" width="50" height="50">
                                     </td>
                                     <td>
                                         <?php 
