@@ -26,6 +26,7 @@
                                     <div class="media">
                                         <div class="d-flex">
                                             <img src="../img/product/xiaomi_note12_128gb.png" alt="">
+                                            <a href="../view/chitietsanpham.php"></a>
                                         </div>
                                         <div class="media-body">
                                             <h4>Xiaomi Note12 128gb</h4>
@@ -35,6 +36,7 @@
                                     <div class="media">
                                         <div class="d-flex">
                                             <img src="../img/product/samsung-galaxy-z-fold-5-256gb_1.png" alt="">
+                                            <a href="../view/chitietsanpham.php"></a>
                                         </div>
                                         <div class="media-body">
                                             <h4>Samsung Galaxy Z Fold5 12GB 256GB</h4>
@@ -44,6 +46,7 @@
                                     <div class="media">
                                         <div class="d-flex">
                                             <img src="../img/product/iphone-15-pro-max_3.png" alt="">
+                                            <a href="../view/chitietsanpham.php"></a>
                                         </div>
                                         <div class="media-body">
                                             <h4>iPhone 15 Pro Max 256GB</h4>
@@ -53,6 +56,7 @@
                                     <div class="media">
                                         <div class="d-flex">
                                             <img src="../img/product/realme-11-pro.png" alt="">
+                                            <a href="../view/chitietsanpham.php"></a>
                                         </div>
                                         <div class="media-body">
                                             <h4>realme 11 Pro (8GB - 256GB)</h4>
@@ -72,6 +76,7 @@
                                         <div class="fillter_product_item bags">
                                             <div class="f_p_img">
                                                 <img src="../img/product/samsung-galaxy-z-fold-5-256gb_1.png" alt="">
+                                                <a href="../view/chitietsanpham.php"></a>
                                                 <h5 class="new">New</h5>
                                             </div>
                                             <div class="f_p_text">
@@ -84,6 +89,7 @@
                                         <div class="fillter_product_item bags">
                                             <div class="f_p_img">
                                                 <img src="../img/product/iphone-15-pro-max_3.png" alt="">
+                                                <a href="../view/chitietsanpham.php"></a>
                                                 <h5 class="new">New</h5>
                                             </div>
                                             <div class="f_p_text">
@@ -96,6 +102,7 @@
                                         <div class="fillter_product_item bags">
                                             <div class="f_p_img">
                                                 <img src="../img/product/realme-11-pro.png" alt="">
+                                                <a href="../view/chitietsanpham.php"></a>
                                                 <h5 class="new">New</h5>
                                             </div>
                                             <div class="f_p_text">
@@ -108,6 +115,7 @@
                                         <div class="fillter_product_item bags">
                                             <div class="f_p_img">
                                                 <img src="../img/product/iphone-14-pro_2__4.png" alt="">
+                                                <a href="../view/chitietsanpham.php"></a>
                                                 <h5 class="new">New</h5>
                                             </div>
                                             <div class="f_p_text">
@@ -120,6 +128,7 @@
                                         <div class="fillter_product_item bags">
                                             <div class="f_p_img">
                                                 <img src="../img/product/samsung-galaxy-m34-5g_1_2.png" alt="">
+                                                <a href="../view/chitietsanpham.php"></a>
                                                 <h5 class="new">New</h5>
                                             </div>
                                             <div class="f_p_text">
@@ -132,6 +141,7 @@
                                         <div class="fillter_product_item bags">
                                             <div class="f_p_img">
                                                 <img src="../img/product/xiaomi-13t_1__1_2.png" alt="">
+                                                <a href="../view/chitietsanpham.php"></a>
                                                 <h5 class="new">New</h5>
                                             </div>
                                             <div class="f_p_text">
@@ -144,6 +154,7 @@
                                         <div class="fillter_product_item bags">
                                             <div class="f_p_img">
                                                 <img src="../img/product/realme-11-vang-1.png" alt="">
+                                                <a href="../view/chitietsanpham.php"></a>
                                                 <h5 class="new">New</h5>
                                             </div>
                                             <div class="f_p_text">
@@ -156,6 +167,7 @@
                                         <div class="fillter_product_item bags">
                                             <div class="f_p_img">
                                                 <img src="../img/product/xiaomi_note12_128gb.png" alt="">
+                                                <a href="../view/chitietsanpham.php"></a>
                                                 <h5 class="new">New</h5>
                                             </div>
                                             <div class="f_p_text">
@@ -164,102 +176,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <div class="item woman shoes bags">
-                                        <div class="fillter_product_item">
-                                            <div class="f_p_img">
-                                                <img src="../img/product/fillter-product/f-product-2.jpg" alt="">
-                                                <h5 class="new">New</h5>
-                                            </div>
-                                            <div class="f_p_text">
-                                                <h5>Fossil Watch</h5>
-                                                <h4><del>$250</del> $110</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item woman shoes">
-                                        <div class="fillter_product_item">
-                                            <div class="f_p_img">
-                                                <img src="../img/product/fillter-product/f-product-3.jpg" alt="">
-                                                <h5 class="discount">-10%</h5>
-                                            </div>
-                                            <div class="f_p_text">
-                                                <h5>High Heel</h5>
-                                                <h4>$45.05</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item shoes">
-                                        <div class="fillter_product_item bags">
-                                            <div class="f_p_img">
-                                                <img src="../img/product/fillter-product/f-product-1.jpg" alt="">
-                                                <h5 class="sale">Sale</h5>
-                                            </div>
-                                            <div class="f_p_text">
-                                                <h5>Nike Max Air Vapor Power</h5>
-                                                <h4>$45.05</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item woman shoes bags">
-                                        <div class="fillter_product_item">
-                                            <div class="f_p_img">
-                                                <img src="../img/product/fillter-product/f-product-2.jpg" alt="">
-                                                <h5 class="new">New</h5>
-                                            </div>
-                                            <div class="f_p_text">
-                                                <h5>Fossil Watch</h5>
-                                                <h4><del>$250</del> $110</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item woman shoes">
-                                        <div class="fillter_product_item">
-                                            <div class="f_p_img">
-                                                <img src="../img/product/fillter-product/f-product-3.jpg" alt="">
-                                                <h5 class="discount">-10%</h5>
-                                            </div>
-                                            <div class="f_p_text">
-                                                <h5>High Heel</h5>
-                                                <h4>$45.05</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item shoes">
-                                        <div class="fillter_product_item bags">
-                                            <div class="f_p_img">
-                                                <img src="../img/product/fillter-product/f-product-1.jpg" alt="">
-                                                <h5 class="sale">Sale</h5>
-                                            </div>
-                                            <div class="f_p_text">
-                                                <h5>Nike Max Air Vapor Power</h5>
-                                                <h4>$45.05</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item woman shoes bags">
-                                        <div class="fillter_product_item">
-                                            <div class="f_p_img">
-                                                <img src="../img/product/fillter-product/f-product-2.jpg" alt="">
-                                                <h5 class="new">New</h5>
-                                            </div>
-                                            <div class="f_p_text">
-                                                <h5>Fossil Watch</h5>
-                                                <h4><del>$250</del> $110</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item woman shoes">
-                                        <div class="fillter_product_item">
-                                            <div class="f_p_img">
-                                                <img src="../img/product/fillter-product/f-product-3.jpg" alt="">
-                                                <h5 class="discount">-10%</h5>
-                                            </div>
-                                            <div class="f_p_text">
-                                                <h5>High Heel</h5>
-                                                <h4>$45.05</h4>
-                                            </div>
-                                        </div>
-                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -275,20 +191,12 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="f_add_item white_add">
-                            <div class="f_add_img"><img class="img-fluid" src="../img/blog/chuyentrang-APPLEDT-390x210.png" alt=""></div>
-                            <!-- <div class="f_add_hover">
-                                <h4>Best Summer <br />Collection</h4>
-                                <a class="add_btn" href="#">Shop Now <i class="arrow_right"></i></a>
-                            </div> -->
+                            <div class="f_add_img"><img class="img-fluid" src="../img/blog/chuyentrang-APPLEDT-390x210.png" alt=""></div>>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="f_add_item white_add">
                             <div class="f_add_img"><img class="img-fluid" src="../img/blog/chuyentrang-HP-390x210.png" alt=""></div>
-                            <!-- <div class="f_add_hover">
-                                <h4>Best Summer <br />Collection</h4>
-                                <a class="add_btn" href="#">Shop Now <i class="arrow_right"></i></a>
-                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -306,7 +214,8 @@
                     <div class="item">
                         <div class="l_product_item">
                             <div class="l_p_img">
-                            <a href="./index.php?act=chitietsanpham"><img src="../img/product/ip-15-pro-max-256gb.png" alt=""></a>
+                            <a href="./index.php?act=chitietsanpham">
+                            <img src="../img/product/ip-15-pro-max-256gb.png" alt=""></a>
                             </div>
                             <div class="l_p_text">
                                 <ul>
@@ -322,19 +231,22 @@
                     <div class="item">
                         <div class="l_product_item">
                             <div class="l_p_img">
-                                <img src="../img/product/iphone-14-pro_2__4.png" alt="">
+                                <a href="./your_new_link_here.php?act=chitietsanpham">
+                                    <img src="../img/product/iphone-14-pro_2__4.png" alt="">
+                                </a>
                             </div>
                             <div class="l_p_text">
-                               <ul>
+                                <ul>
                                     <li class="p_icon"><a href="#"><i class="icon_piechart"></i></a></li>
                                     <li><a class="add_cart_btn" href="#">Add To Cart</a></li>
                                     <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
                                 </ul>
                                 <h4>iPhone 14 Pro 128GB</h4>
-                                <h5><del>27.990.000đ</del>  24.590.000đ</h5>
+                                <h5><del>27.990.000đ</del> 24.590.000đ</h5>
                             </div>
                         </div>
                     </div>
+
                     <div class="item">
                         <div class="l_product_item">
                             <div class="l_p_img">
@@ -352,18 +264,21 @@
                         </div>
                     </div>
                     <div class="item">
-                        <div class="l_product_item">
-                            <div class="l_p_img">
-                                <img src="../img/product/iphone-14-pro_2__4.png" alt="">
-                            </div>
-                            <div class="l_p_text">
-                               <ul>
-                                    <li class="p_icon"><a href="#"><i class="icon_piechart"></i></a></li>
-                                    <li><a class="add_cart_btn" href="#">Add To Cart</a></li>
-                                    <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
-                                </ul>
-                                <h4>iPhone 14 Pro 128GB</h4>
-                                <h5><del>27.990.000đ</del>  24.590.000đ</h5>
+                            <div class="l_product_item">
+                                <div class="l_p_img">
+                                    <a href=".//view/index.php?act=chitietsanpham">
+                                        <img src="../img/product/iphone-14-pro_2__4.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="l_p_text">
+                                    <ul>
+                                        <li class="p_icon"><a href="#"><i class="icon_piechart"></i></a></li>
+                                        <li><a class="add_cart_btn" href="#">Add To Cart</a></li>
+                                        <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
+                                    </ul>
+                                    <h4>iPhone 14 Pro 128GB</h4>
+                                    <h5><del>27.990.000đ</del> 24.590.000đ</h5>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -397,6 +312,7 @@
                     <div class="item">
                         <div class="l_product_item">
                             <div class="l_p_img">
+                                <a href="./index.php?act=chitietsanpham"></a>
                                 <img src="../img/product/samsung-galaxy-z-fold-5-256gb_1.png" alt="">
                             </div>
                             <div class="l_p_text">
@@ -429,6 +345,7 @@
                     <div class="item">
                         <div class="l_product_item">
                             <div class="l_p_img">
+                                <a href="./index.php?act=chitietsanpham"></a>
                                 <img src="../img/product/samsung-galaxy-z-fold-5-256gb_1.png" alt="">
                             </div>
                             <div class="l_p_text">
@@ -472,6 +389,7 @@
                     <div class="item">
                         <div class="l_product_item">
                             <div class="l_p_img">
+                                <a href="./index.php?act=chitietsanpham"></a>
                                 <img src="../img/product/xiaomi-13t_1__1_2.png" alt="">
                             </div>
                             <div class="l_p_text">
@@ -504,7 +422,8 @@
                     <div class="item">
                         <div class="l_product_item">
                             <div class="l_p_img">
-                                <img src="../img/product/xiaomi-13t_1__1_2.png" alt="">
+                                <a href="./index.php?act=chitietsanpham"><img src="../img/product/xiaomi-13t_1__1_2.png" alt=""></a>
+                                
                             </div>
                             <div class="l_p_text">
                                <ul>
