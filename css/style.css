@@ -107,6 +107,10 @@ body, p, h1, h2, h3, h4, h5, h6 {
   padding: 80px 0px;
 }
 
+.p_50 {
+  padding: 50px 0px;
+}
+
 iframe {
   border: none;
 }
@@ -1638,7 +1642,6 @@ i:before {
 /* Solid Banner Area css
 ============================================================================================ */
 .solid_banner_area {
-  background: #f3f3f3;
   text-align: center;
 }
 

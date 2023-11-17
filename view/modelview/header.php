@@ -113,8 +113,8 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="top_header_middle">
-                            <a href="#"><i class="fa fa-phone"></i> Call Us: <span>+84 987 654 321</span></a>
-                            <a href="#"><i class="fa fa-envelope"></i> Email: <span>support@yourdomain.com</span></a>
+                            <a href="#"><i class="fa fa-phone"></i> SĐT: <span>1900.636.099</span></a>
+                            <a href="#"><i class="fa fa-envelope"></i> Email: <span>nhom3duan1@gmail.com</span></a>
                             <img src="../img/image-removebg-preview (1).png" alt="">
                         </div>
                     </div>

@@ -1,14 +1,9 @@
-<!--================Categories Banner Area =================-->
-<section class="categories_banner_area">
+<!--================Contact Area =================-->
+
+<section class="contact_area p_50">
             <div class="container">
-                <div class="c_banner_inner">
-                    <h3>Giới thiệu</h3>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Giới thiệu</a></li>
-                    </ul>
-                </div>
+                <div class="contact_title">
+                    <h3>Giới thiệu Salephone</h3>
                 </div>
             </div>
-        </section>
-        <!--================End Categories Banner Area =================-->
+</section>
