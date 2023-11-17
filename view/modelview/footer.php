@@ -5,8 +5,8 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-6">
                             <aside class="f_widget f_about_widget">
-                                <img src="../img/image-removebg-preview (1).png" alt="">
-                                <p>Persuit is a Premium PSD Template. Best choice for your online store. Let purchase it to enjoy now</p>
+                                <img width="200px" src="../img/image-removebg-preview (1).png" alt="">
+                                <p>SALEPHONE trang mua sắm trực tuyến với những mẫu điện thoại mới nhất đa dạng hóa các sản phẩm từ các thương hiệu nổi tiếng đến những nhà sản xuất mới nổi.</p>
                                 <h6>Social:</h6>
                                 <ul>
                                     <li><a href="#"><i class="social_facebook"></i></a></li>
@@ -20,54 +20,54 @@
                         <div class="col-lg-2 col-md-4 col-6">
                             <aside class="f_widget link_widget f_info_widget">
                                 <div class="f_w_title">
-                                    <h3>Information</h3>
+                                    <h3>Thông tin</h3>
                                 </div>
                                 <ul>
-                                    <li><a href="#">About us</a></li>
-                                    <li><a href="#">Delivery information</a></li>
-                                    <li><a href="#">Terms & Conditions</a></li>
-                                    <li><a href="#">Help Center</a></li>
-                                    <li><a href="#">Returns & Refunds</a></li>
+                                    <li><a href="#">Về chúng tôi</a></li>
+                                    <li><a href="#">Thông tin giao hàng</a></li>
+                                    <li><a href="#">Điều khoản và điều kiện</a></li>
+                                    <li><a href="#">Trung tâm trợ giúp</a></li>
+                                    <li><a href="#">Trả lại và hoàn tiền</a></li>
                                 </ul>
                             </aside>
                         </div>
                         <div class="col-lg-2 col-md-4 col-6">
                             <aside class="f_widget link_widget f_service_widget">
                                 <div class="f_w_title">
-                                    <h3>Customer Service</h3>
+                                    <h3>Dịch vụ</h3>
                                 </div>
                                 <ul>
-                                    <li><a href="#">My account</a></li>
-                                    <li><a href="#">Ordr History</a></li>
-                                    <li><a href="#">Wish List</a></li>
-                                    <li><a href="#">Newsletter</a></li>
-                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">Tài khoản</a></li>
+                                    <li><a href="#">Lịch sử đơn hàng</a></li>
+                                    <li><a href="#">Danh sách</a></li>
+                                    <li><a href="#">Bản tin</a></li>
+                                    <li><a href="#">Liên hệ chúng tôi</a></li>
                                 </ul>
                             </aside>
                         </div>
                         <div class="col-lg-2 col-md-4 col-6">
                             <aside class="f_widget link_widget f_extra_widget">
                                 <div class="f_w_title">
-                                    <h3>Extras</h3>
+                                    <h3>Chính sách</h3>
                                 </div>
                                 <ul>
-                                    <li><a href="#">Brands</a></li>
-                                    <li><a href="#">Gift Vouchers</a></li>
-                                    <li><a href="#">Affiliates</a></li>
-                                    <li><a href="#">Specials</a></li>
+                                    <li><a href="#">Chính sách bảo hành</a></li>
+                                    <li><a href="#">Chính sách đổi trả</a></li>
+                                    <li><a href="#">Chính sách bảo mật</a></li>
+                                    <li><a href="#">Chính sách khui hộp</a></li>
                                 </ul>
                             </aside>
                         </div>
                         <div class="col-lg-2 col-md-4 col-6">
                             <aside class="f_widget link_widget f_account_widget">
                                 <div class="f_w_title">
-                                    <h3>My Account</h3>
+                                    <h3>Tài khoản</h3>
                                 </div>
                                 <ul>
-                                    <li><a href="#">My account</a></li>
-                                    <li><a href="#">Ordr History</a></li>
-                                    <li><a href="#">Wish List</a></li>
-                                    <li><a href="#">Newsletter</a></li>
+                                    <li><a href="#">Tài khoản của tôi</a></li>
+                                    <li><a href="#">Lịch sử đơn hàng</a></li>
+                                    <li><a href="#">Thông tin</a></li>
+                                    <li><a href="#">Tuyển dụng</a></li>
                                 </ul>
                             </aside>
                         </div>

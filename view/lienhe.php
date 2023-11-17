@@ -43,8 +43,8 @@
                                 <i class="fa fa-envelope" aria-hidden="true"></i>
                             </div>
                             <div class="media-body">
-                                <a href="mailto:busines@persuit.com"></a>
-                                <a href="mailto:support@persuit.com"></a>
+                                <a href="mailto:busines@persuit.com"></a>support@yourdomain.com
+                                <a href="mailto:support@persuit.com"></a>support2@yourdomain.com
                             </div>
                         </div>
                     </div>
