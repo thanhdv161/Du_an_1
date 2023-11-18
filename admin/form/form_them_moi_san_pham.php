@@ -25,48 +25,48 @@
             <div class="col-lg-8 col-xlg-9 col-md-12">
                 <div class="card">
                     <div class="card-body">
-                        <form class="form-horizontal form-material" method="post" enctype="multipart/form-data" action="" onsubmit="return validate();">
+                        <form class="form-horizontal form-material" method="post" enctype="multipart/form-data" action="">
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Tên sản phẩm</label><br>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="text" class="form-control p-0 border-0" name="productName" id="productName">
+                                    <input type="text" class="form-control p-0 border-0" name="productName" id="productName" required>
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label for="dongia" class="col-md-12 p-0">Đơn giá</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="number" class="form-control p-0 border-0" name="productPrice" id="productPrice">
+                                    <input type="number" class="form-control p-0 border-0" name="productPrice" id="productPrice" required>
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label for="giamgia" class="col-md-12 p-0">Giảm giá</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="number" class="form-control p-0 border-0" name="productDiscount" id="productDiscount">
+                                    <input type="number" class="form-control p-0 border-0" name="productDiscount" id="productDiscount" required>
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label for="giamgia" class="col-md-12 p-0">Màu sắc</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="text" class="form-control p-0 border-0" name="productColor" id="productColor">
+                                    <input type="text" class="form-control p-0 border-0" name="productColor" id="productColor" required>
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Hình Ảnh</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="file" name="productImage[]" class="form-control p-0 border-0" multiple id="picture">
+                                    <input type="file" name="productImage[]" class="form-control p-0 border-0" multiple id="picture" required>
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Mô Tả</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <textarea rows="5" class="form-control pl-4 border-0" name="productDesc" id="productDesc">
+                                    <textarea rows="5" class="form-control pl-4 border-0" name="productDesc" id="productDesc" required>
                                     </textarea>
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label class="col-sm-12">Danh mục</label>
                                 <div class="col-sm-12 border-bottom">
-                                    <select class="form-select shadow-none p-0 border-0 form-control-line" name="brandId">
+                                    <select class="form-select shadow-none p-0 border-0 form-control-line" name="brandId" required>
                                        
                                     </select>
                                 </div>

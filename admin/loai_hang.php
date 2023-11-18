@@ -1,3 +1,11 @@
+<?php
+     $danhmuc = loadalldanhmuc();
+     if (isset($_POST['search']) && $_POST['search']) {
+         $search = $_POST['search'];
+         $query = "select * from danhmuc where  tenLoai like '%$search%' or tenLoai = '$search'";
+         $danhmuc = getAll($query);
+     }
+?>
 <div class="page-wrapper">
     <div class="page-breadcrumb bg-white d-flex justify-content-between align-items-center">
         <p class="fs-6 fw-bold">Danh Mục</p>
@@ -30,7 +38,25 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                
+                            <?php foreach ($danhmuc as $dm): ?>
+                                <tr>
+                                    <td>
+                                        <?php echo $dm['maLoai']?>
+                                    </td>
+                                    <td>
+                                        <?php echo $dm['tenLoai']?>
+                                    </td>
+                                    
+                                    <td >
+                                        <a href="http://localhost/duan1/admin/index.php?act=updatelh&id=<?php echo $dm['maLoai']?>">
+                                            <button type="button" class="btn btn-primary">Sửa</button>
+                                        </a>
+                                        <a  onclick="return confirm_danhmuc('<?php echo $dm['maLoai'];?>')" href="./index.php?act=deletelh&id=<?php echo $dm['maLoai']?>">
+                                            <button type="button" class="btn btn-danger text-white">Xoá</button>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <?php endforeach;?>
                             </tbody>
                         </table>
                     </div>

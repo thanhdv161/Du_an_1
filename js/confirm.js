@@ -4,3 +4,6 @@ function confirm_product(name){
 function confirm_taikhoan(name){
     return confirm("Bạn có chắc chắn muốn xoá tài khoản "+ name + "?");
 }
+function confirm_danhmuc(name){
+    return confirm("Bạn có chắc chắn muốn xoá danh mục "+ name + "?");
+}

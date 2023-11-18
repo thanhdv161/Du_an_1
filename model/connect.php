@@ -41,3 +41,12 @@ function users(){
     $result = getAll($query);
     return $result;
 }
+function addDM($tenLoai){
+    $query ="insert into danhmuc(tenLoai) values('$tenLoai')";
+    connect($query);
+}
+function loadalldanhmuc(){
+    $query = "select * from danhmuc";
+    $result = getAll($query);
+    return $result;
+}

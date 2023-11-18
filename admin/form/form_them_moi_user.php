@@ -41,41 +41,41 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <form class="form-horizontal form-material" method="post" action="../customer/dang_ki.php" enctype="multipart/form-data" onsubmit="return validate_adduser()">
+                        <form class="form-horizontal form-material" method="post" action="../customer/dang_ki.php" enctype="multipart/form-data">
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Tên tài khoản</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="text" class="form-control p-0 border-0" name="tenTK" id="tenTK">
+                                    <input type="text" class="form-control p-0 border-0" name="tenTK" id="tenTK" required>
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Email</label><span><?php echo isset($_GET['error']) ? "Email đã tồn tại" : ""; ?></span>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="text" class="form-control p-0 border-0" name="email" id="email">
+                                    <input type="text" class="form-control p-0 border-0" name="email" id="email" required>
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Mật Khẩu</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="text" class="form-control p-0 border-0" name="matKhau" id="matKhau">
+                                    <input type="text" class="form-control p-0 border-0" name="matKhau" id="matKhau" required>
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Hình Ảnh</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="file" name="anh" class="form-control p-0 border-0">
+                                    <input type="file" name="anh" class="form-control p-0 border-0" required>
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Số điện thoại</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="number" class="form-control p-0 border-0" name="sdt" id="sdt">
+                                    <input type="number" class="form-control p-0 border-0" name="sdt" id="sdt" required>
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Địa chỉ</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="text" class="form-control p-0 border-0" name="diaChi" id="diaChi">
+                                    <input type="text" class="form-control p-0 border-0" name="diaChi" id="diaChi" required>
                                 </div>
                             </div>
                             <div class="form-group mb-4">
