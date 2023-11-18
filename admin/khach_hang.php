@@ -65,7 +65,7 @@
                                         <a href="http://localhost/duan1/admin/index.php?act=updatekh&id=<?php echo $taikhoan['maTK'];?>">
                                             <button type="button" class="btn btn-primary">Sửa KH</button>
                                         </a>
-                                        <a onclick="return confirm_taikhoan('<?php echo $taikhoan['tenTK'];?>')" href="../customer/delete_user.php?id=<?php echo $taikhoan['maTK'];?>">
+                                        <a onclick="return confirm_taikhoan('<?php echo $taikhoan['tenTK'];?>')" href="../view/login/delete_user.php?id=<?php echo $taikhoan['maTK'];?>">
                                             <button type="button" class="btn btn-danger">Xoá KH</button>
                                         </a>
                                     </td>

@@ -76,5 +76,10 @@ function checkUser($result){
         return false;
     }
 }
+function delete($table,$tableId,$id,$case){
+    $query="DELETE FROM $table WHERE $tableId=$id";
+    pdo_execute($query);
+    header("Location: http://localhost/duan1/admin/index.php?act=$case");
+}
 pdo_get_connection();
 ?>
