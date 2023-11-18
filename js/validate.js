@@ -121,7 +121,7 @@ function validate_setpass(){
    
 }
 function validate_adduser(){
-    var useName = document.getElementById("userName");
+    var useName = document.getElementById("tenTK");
     if(useName.value==""){
         alert("Mời bạn nhập tên");
         useName.style.backgroundColor="yellow";
@@ -139,7 +139,7 @@ function validate_adduser(){
     else{
         email.style.backgroundColor="white";
     }
-    var pass = document.getElementById("pass");
+    var pass = document.getElementById("matKhau");
     if(pass.value==""){
         alert("Mời bạn nhập mật khẩu");
         pass.style.backgroundColor="yellow";
@@ -148,15 +148,5 @@ function validate_adduser(){
     else{
         pass.style.backgroundColor="white";
     }
-    var sex = document.getElementsByName("sex");
-    var formValid = false;
-    var i = 0;
-    while (!formValid && i < sex.length) {
-        if (sex[i].checked) formValid = true;
-        i++;        
-    }
-    if (!formValid) alert("Chọn Giới tính!");
-    return formValid;
-    
 
 }

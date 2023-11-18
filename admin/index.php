@@ -22,6 +22,23 @@ if (isset($_GET['act'])) {
             include "./loai_hang.php";
             break;
         case "addlh":
+            $error = array();
+            if (isset($_POST["submit"])) {
+                if ($_POST["tenLoai"] != "") {
+                    $tenLoai = $_POST["tenLoai"];
+                    $query = "select * from danhmuc where tenLoai = '$tenLoai'";
+                    $check = getOne($query);
+                    if (empty($check)) {
+                        addDM($tenLoai);
+                        $yourURL = "http://localhost/duan1/admin/index.php?act=loaihang";
+                        echo ("<script>location.href='$yourURL'</script>");
+                    } else {
+                        $error['danhmuc'] = "Vui lòng chọn tên khác!";
+                    }
+                } else {
+                    $error['danhmuc'] = "Vui lòng nhập tên loại!";
+                }
+            }
             include "./form/form_them_moi_loai_hang.php";
             break;
             // Chức năng khách hàng

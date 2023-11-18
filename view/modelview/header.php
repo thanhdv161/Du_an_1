@@ -15,6 +15,8 @@
         <link href="../vendors/elegant-icon/style.css" rel="stylesheet">
         <!-- Bootstrap -->
         <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
         
         <!-- Rev slider css -->
         <link href="../vendors/revolution/css/settings.css" rel="stylesheet">
@@ -166,17 +168,18 @@
                     </button>
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav categories">
-                              <li class="nav-item">
-                                <select class="selectpicker">
-                                    <option>Danh mục<a href=""></a></option>
-                                    <option>iPhone<a href=""></a></option>
-                                    <option>Samsung<a href=""></a></option>
-                                    <option>Xiaomi<a href=""></a></option>
-                                    <option>Realme<a href=""></a></option>
-                                </select>
-                            </li>
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                            Danh mục
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <li><a href="#" class="dropdown-item">Tất cả sản phẩm</a></li>
+                            <li><a href="#" class="dropdown-item">iPhone</a></li>
+                            <li><a href="#" class="dropdown-item">Samsung</a></li>
+                            <li><a href="#" class="dropdown-item">Xiaomi</a></li>
+                            <li><a href="#" class="dropdown-item">Realme</a></li>
                         </ul>
+                    </div>
                         <ul class="navbar-nav">
                             <li class="nav-item"><a class="nav-link" href="./index.php?act=home">Trang chủ</a></li>
                             <li class="nav-item"><a class="nav-link" href="./index.php?act=gioithieu">Giới thiệu</a></li>
