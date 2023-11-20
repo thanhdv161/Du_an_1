@@ -213,11 +213,13 @@
                     <h2>Iphone</h2>
                 </div>
                 <div class="l_product_slider owl-carousel">
-                    <div class="item">
+                    <?php foreach ($product as $hanghoa) : ?>
                         <div class="l_product_item">
                             <div class="l_p_img">
-                            <a href="./index.php?act=chitietsanpham">
-                            <img src="../img/product/ip-15-pro-max-256gb.png" alt=""></a>
+                            <a href="./index.php?act=chitietsanpham&id=<?php echo $hanghoa['maHH'] ?>">
+                            <img src="../img/<?php $arr = explode(",", $hanghoa['anh']);
+                                                                            echo $arr[0];
+                                                                            ?>" alt=""></a>
                             </div>
                             <div class="l_p_text">
                                 <ul>
@@ -225,64 +227,11 @@
                                     <li><a class="add_cart_btn" href="">Add To Cart</a></li>
                                     <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
                                 </ul>
-                                <h4>iPhone 15 Pro Max 256GB</h4>
-                                <h5><del>37.690.000đ</del>  33.690.000đ</h5>
+                                <h4><?php echo $hanghoa['tenHH'] ?></h4>
+                                <h5><?php echo number_format($hanghoa['gia'])?>đ  <del><?php echo number_format($hanghoa['giaGoc'])?>đ</del></h5>
                             </div>
                         </div>
-                    </div>
-                    <div class="item">
-                        <div class="l_product_item">
-                            <div class="l_p_img">
-                                <a href="./your_new_link_here.php?act=chitietsanpham">
-                                    <img src="../img/product/iphone-14-pro_2__4.png" alt="">
-                                </a>
-                            </div>
-                            <div class="l_p_text">
-                                <ul>
-                                    <li class="p_icon"><a href="#"><i class="icon_piechart"></i></a></li>
-                                    <li><a class="add_cart_btn" href="#">Add To Cart</a></li>
-                                    <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
-                                </ul>
-                                <h4>iPhone 14 Pro 128GB</h4>
-                                <h5><del>27.990.000đ</del> 24.590.000đ</h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="l_product_item">
-                            <div class="l_p_img">
-                            <a href="./index.php?act=chitietsanpham"><img src="../img/product/ip-15-pro-max-256gb.png" alt=""></a>
-                            </div>
-                            <div class="l_p_text">
-                                <ul>
-                                    <li class="p_icon"><a href="#"><i class="icon_piechart"></i></a></li>
-                                    <li><a class="add_cart_btn" href="">Add To Cart</a></li>
-                                    <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
-                                </ul>
-                                <h4>iPhone 15 Pro Max 256GB</h4>
-                                <h5><del>37.690.000đ</del>  33.690.000đ</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                            <div class="l_product_item">
-                                <div class="l_p_img">
-                                    <a href=".//view/index.php?act=chitietsanpham">
-                                        <img src="../img/product/iphone-14-pro_2__4.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="l_p_text">
-                                    <ul>
-                                        <li class="p_icon"><a href="#"><i class="icon_piechart"></i></a></li>
-                                        <li><a class="add_cart_btn" href="#">Add To Cart</a></li>
-                                        <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
-                                    </ul>
-                                    <h4>iPhone 14 Pro 128GB</h4>
-                                    <h5><del>27.990.000đ</del> 24.590.000đ</h5>
-                                </div>
-                            </div>
-                        </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
@@ -295,10 +244,13 @@
                     <h2>Samsung</h2>
                 </div>
                 <div class="l_product_slider owl-carousel">
-                    <div class="item">
+                <?php foreach ($product2 as $hanghoa) : ?>
                         <div class="l_product_item">
                             <div class="l_p_img">
-                            <a href="./index.php?act=chitietsanpham"><img src="../img/product/samsung-galaxy-m34-5g_1_2.png" alt=""></a>
+                            <a href="./index.php?act=chitietsanpham&id=<?php echo $hanghoa['maHH'] ?>">
+                            <img src="../img/<?php $arr = explode(",", $hanghoa['anh']);
+                                                                            echo $arr[0];
+                                                                            ?>" alt=""></a>
                             </div>
                             <div class="l_p_text">
                                 <ul>
@@ -306,60 +258,11 @@
                                     <li><a class="add_cart_btn" href="">Add To Cart</a></li>
                                     <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
                                 </ul>
-                                <h4>Samsung Galaxy M34 5G 8GB 128GB</h4>
-                                <h5><del>9.390.000đ</del>  7.190.000đ</h5>
+                                <h4><?php echo $hanghoa['tenHH'] ?></h4>
+                                <h5><?php echo number_format($hanghoa['gia'])?>đ  <del><?php echo number_format($hanghoa['giaGoc'])?>đ</del></h5>
                             </div>
                         </div>
-                    </div>
-                    <div class="item">
-                        <div class="l_product_item">
-                            <div class="l_p_img">
-                                <a href="./index.php?act=chitietsanpham"></a>
-                                <img src="../img/product/samsung-galaxy-z-fold-5-256gb_1.png" alt="">
-                            </div>
-                            <div class="l_p_text">
-                               <ul>
-                                    <li class="p_icon"><a href="#"><i class="icon_piechart"></i></a></li>
-                                    <li><a class="add_cart_btn" href="#">Add To Cart</a></li>
-                                    <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
-                                </ul>
-                                <h4>Samsung Galaxy Z Fold5 12GB 256GB</h4>
-                                <h5><del>40.990.000₫</del>  30.790.000₫</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="l_product_item">
-                            <div class="l_p_img">
-                            <a href="./index.php?act=chitietsanpham"><img src="../img/product/samsung-galaxy-m34-5g_1_2.png" alt=""></a>
-                            </div>
-                            <div class="l_p_text">
-                                <ul>
-                                    <li class="p_icon"><a href="#"><i class="icon_piechart"></i></a></li>
-                                    <li><a class="add_cart_btn" href="">Add To Cart</a></li>
-                                    <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
-                                </ul>
-                                <h4>Samsung Galaxy M34 5G 8GB 128GB</h4>
-                                <h5><del>9.390.000đ</del>  7.190.000đ</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="l_product_item">
-                            <div class="l_p_img">
-                                <a href="./index.php?act=chitietsanpham"></a>
-                                <img src="../img/product/samsung-galaxy-z-fold-5-256gb_1.png" alt="">
-                            </div>
-                            <div class="l_p_text">
-                               <ul>
-                                    <li class="p_icon"><a href="#"><i class="icon_piechart"></i></a></li>
-                                    <li><a class="add_cart_btn" href="#">Add To Cart</a></li>
-                                    <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
-                                </ul>
-                                <h4>Samsung Galaxy Z Fold5 12GB 256GB</h4>
-                                <h5><del>40.990.000₫</del>  30.790.000₫</h5>
-                            </div>
-                        </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
@@ -372,10 +275,13 @@
                     <h2>Xiaomi</h2>
                 </div>
                 <div class="l_product_slider owl-carousel">
-                    <div class="item">
+                <?php foreach ($product3 as $hanghoa) : ?>
                         <div class="l_product_item">
                             <div class="l_p_img">
-                            <a href="./index.php?act=chitietsanpham"><img src="../img/product/xiaomi_note12_128gb.png" alt=""></a>
+                            <a href="./index.php?act=chitietsanpham&id=<?php echo $hanghoa['maHH'] ?>">
+                            <img src="../img/<?php $arr = explode(",", $hanghoa['anh']);
+                                                                            echo $arr[0];
+                                                                            ?>" alt=""></a>
                             </div>
                             <div class="l_p_text">
                                 <ul>
@@ -383,60 +289,11 @@
                                     <li><a class="add_cart_btn" href="">Add To Cart</a></li>
                                     <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
                                 </ul>
-                                <h4>Xiaomi Redmi Note 12 8GB 128GB</h4>
-                                <h5><del>6.490.000đ</del>  4.990.000đ</h5>
+                                <h4><?php echo $hanghoa['tenHH'] ?></h4>
+                                <h5><?php echo number_format($hanghoa['gia'])?>đ  <del><?php echo number_format($hanghoa['giaGoc'])?>đ</del></h5>
                             </div>
                         </div>
-                    </div>
-                    <div class="item">
-                        <div class="l_product_item">
-                            <div class="l_p_img">
-                                <a href="./index.php?act=chitietsanpham"></a>
-                                <img src="../img/product/xiaomi-13t_1__1_2.png" alt="">
-                            </div>
-                            <div class="l_p_text">
-                               <ul>
-                                    <li class="p_icon"><a href="#"><i class="icon_piechart"></i></a></li>
-                                    <li><a class="add_cart_btn" href="#">Add To Cart</a></li>
-                                    <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
-                                </ul>
-                                <h4>Xiaomi 13T 12GB 256GB</h4>
-                                <h5><del>15.590.000đ</del>  11.990.000đ</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="l_product_item">
-                            <div class="l_p_img">
-                            <a href="./index.php?act=chitietsanpham"><img src="../img/product/xiaomi_note12_128gb.png" alt=""></a>
-                            </div>
-                            <div class="l_p_text">
-                                <ul>
-                                    <li class="p_icon"><a href="#"><i class="icon_piechart"></i></a></li>
-                                    <li><a class="add_cart_btn" href="">Add To Cart</a></li>
-                                    <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
-                                </ul>
-                                <h4>Xiaomi Redmi Note 12 8GB 128GB</h4>
-                                <h5><del>6.490.000đ</del>  4.990.000đ</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="l_product_item">
-                            <div class="l_p_img">
-                                <a href="./index.php?act=chitietsanpham"><img src="../img/product/xiaomi-13t_1__1_2.png" alt=""></a>
-                                
-                            </div>
-                            <div class="l_p_text">
-                               <ul>
-                                    <li class="p_icon"><a href="#"><i class="icon_piechart"></i></a></li>
-                                    <li><a class="add_cart_btn" href="#">Add To Cart</a></li>
-                                    <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
-                                </ul>
-                                <h4>Xiaomi 13T 12GB 256GB</h4>
-                                <h5><del>15.590.000đ</del>  11.990.000đ</h5>
-                            </div>
-                        </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
@@ -449,10 +306,13 @@
                     <h2>Realme</h2>
                 </div>
                 <div class="l_product_slider owl-carousel">
-                    <div class="item">
+                <?php foreach ($product4 as $hanghoa) : ?>
                         <div class="l_product_item">
                             <div class="l_p_img">
-                            <a href="./index.php?act=chitietsanpham"><img src="../img/product/realme-11-vang-1.png" alt=""></a>
+                            <a href="./index.php?act=chitietsanpham&id=<?php echo $hanghoa['maHH'] ?>">
+                            <img src="../img/<?php $arr = explode(",", $hanghoa['anh']);
+                                                                            echo $arr[0];
+                                                                            ?>" alt=""></a>
                             </div>
                             <div class="l_p_text">
                                 <ul>
@@ -460,58 +320,11 @@
                                     <li><a class="add_cart_btn" href="">Add To Cart</a></li>
                                     <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
                                 </ul>
-                                <h4>realme 11 8GB 128GB</h4>
-                                <h5><del>7.890.000đ</del>  6.290.000đ</h5>
+                                <h4><?php echo $hanghoa['tenHH'] ?></h4>
+                                <h5><?php echo number_format($hanghoa['gia'])?>đ  <del><?php echo number_format($hanghoa['giaGoc'])?>đ</del></h5>
                             </div>
                         </div>
-                    </div>
-                    <div class="item">
-                        <div class="l_product_item">
-                            <div class="l_p_img">
-                                <img src="../img/product/realme-11-pro.png" alt="">
-                            </div>
-                            <div class="l_p_text">
-                               <ul>
-                                    <li class="p_icon"><a href="#"><i class="icon_piechart"></i></a></li>
-                                    <li><a class="add_cart_btn" href="#">Add To Cart</a></li>
-                                    <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
-                                </ul>
-                                <h4>realme 11 Pro (8GB - 256GB)</h4>
-                                <h5><del>16.290.000đ</del>  11.490.000đ</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="l_product_item">
-                            <div class="l_p_img">
-                            <a href="./index.php?act=chitietsanpham"><img src="../img/product/realme-11-vang-1.png" alt=""></a>
-                            </div>
-                            <div class="l_p_text">
-                                <ul>
-                                    <li class="p_icon"><a href="#"><i class="icon_piechart"></i></a></li>
-                                    <li><a class="add_cart_btn" href="">Add To Cart</a></li>
-                                    <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
-                                </ul>
-                                <h4>realme 11 8GB 128GB</h4>
-                                <h5><del>7.890.000đ</del>  6.290.000đ</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="l_product_item">
-                            <div class="l_p_img">
-                                <img src="../img/product/realme-11-pro.png" alt="">
-                            </div>
-                            <div class="l_p_text">
-                               <ul>
-                                    <li class="p_icon"><a href="#"><i class="icon_piechart"></i></a></li>
-                                    <li><a class="add_cart_btn" href="#">Add To Cart</a></li>
-                                    <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
-                                </ul>
-                                <h4>realme 11 Pro (8GB - 256GB)</h4>
-                                <h5><del>16.290.000đ</del>  11.490.000đ</h5>
-                            </div>
-                        </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
