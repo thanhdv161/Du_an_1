@@ -1,6 +1,6 @@
 <?php
     $id = $_GET['id'];
-    $query = "select * from brand where brandId = $id";
+    $query = "select * from danhmuc where maLoai = $id";
     $category = getOne($query);
 ?>
 
@@ -42,17 +42,18 @@
                 <div class="card">
                     <div class="card-body">
                         <form class="form-horizontal form-material" method="post" action="./index.php?act=updatelh" enctype="multipart/form-data">
-                            <input type="text" name="brandId" value="<?php echo $category['brandId'] ?>" hidden>
+                            <input type="text" name="maLoai" value="<?php echo $category['maLoai'] ?>" hidden>
                             <?php  ?>
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Tên Loại Hàng</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="text" value="<?php echo $category['brandName'] ?>" class="form-control p-0 border-0" name="brandName">
+                                    <input type="text" value="<?php echo $category['tenLoai'] ?>" class="form-control p-0 border-0" name="tenLoai">
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <div class="col-sm-12">
-                                    <button class="btn btn-success" name="submit" type="submit">Update Loại Hàng</button>
+                                    <button class="btn btn-success" name="submit" type="submit" >Update Loại Hàng</button>
+                                     
                                 </div>
                             </div>
                         </form>
@@ -67,7 +68,7 @@
     
     <!-- footer -->
     <!-- ============================================================== -->
-    <footer class="footer text-center"> 2021 © Ample Admin brought to you by <a href="https://www.wrappixel.com/">wrappixel.com</a>
+    <footer class="footer text-center"> 2023 © Ample Admin brought to you 
     </footer>
     <!-- ============================================================== -->
     <!-- End footer -->

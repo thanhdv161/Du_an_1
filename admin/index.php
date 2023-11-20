@@ -1,4 +1,5 @@
 <?php
+
 include "../model/connect.php";
 include "../admin/modeladmin/header.php";
 if (isset($_GET['act'])) {
@@ -48,6 +49,25 @@ if (isset($_GET['act'])) {
             // chức năng Loại Hàng
         case "loaihang":
             include "./loai_hang.php";
+            break;
+        case "deletelh":
+            if (isset($_GET['id'])) {
+                $id = $_GET["id"];
+                deleteLH($id);
+            }
+            include "./loai_hang.php";
+        break;
+        case "updatelh":
+                
+                if (isset($_POST["submit"])) {
+                    $id = $_POST['maLoai'];
+                    $tenLoai = $_POST["tenLoai"];
+                    updateDanhMuc($id, $tenLoai);
+                    $yourURL = "http://localhost/duan1/admin/index.php?act=loaihang";
+                    echo ("<script>location.href='$yourURL'</script>");
+                    
+                }
+                include "./form/form_sua_loai_hang.php";
             break;
         case "addlh":
             $error = array();
