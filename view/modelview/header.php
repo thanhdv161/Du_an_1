@@ -28,55 +28,10 @@
         <link href="../vendors/bootstrap-selector/css/bootstrap-select.min.css" rel="stylesheet">
         
         <link href="../css/style.css" rel="stylesheet">
+        <link href="../css/style2.css" rel="stylesheet">
         <link href="../css/responsive.css" rel="stylesheet">
         <script src="../js/slide.js"></script>
-        <style>
-            .top_header_middle>img{
-                width: 210px;
-            }
-            .banner{
-                width:100%;
-                min-width:300px;  
-                text-align:center;
-                position:relative;
-            }
-            .banner img{
-                width:100%;
-                height:400px;
-            }
-            .pre, .next{
-                cursor:pointer;
-                position:absolute;
-                top:50%;
-                width:auto;
-                padding:16px;
-                color:white;
-                font-weight:bold;
-                font-size:18px;
-                transition:0.6s ease-in-out;
-                border-radius:0 3px 3px 0;
-                border:none;
-                
-            }
-            .pre:hover, .next:hover{
-                background-color:rgba(0,0,0,0.8);
-            }
-            .next{
-                right:0;
-                border-radius:3px 0 0 3px;
-            }
-            .pre{
-                left:0;
-                border-radius:0 3px 3px 0;
-            }
-            .d-flex>img{
-                width: 80px;
-            }
-            .img-fluid{
-                width: 600px;
-            }
-        </style>
-
+        
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
