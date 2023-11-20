@@ -25,8 +25,8 @@
                                     <th class="border-top-0">#</th>
                                     <th class="border-top-0">Tên Sản Phẩm</th>
                                     <th class="border-top-0">Hình ảnh</th>
-                                    <th class="border-top-0">Giá Gốc</th>
                                     <th class="border-top-0">Giá Bán</th>
+                                    <th class="border-top-0">Giá Gốc</th>
                                     <th class="border-top-0">Màu Sắc</th>
                                     <th class="border-top-0">Danh mục</th>
                                     <th class="border-top-0">Trạng thái</th>
@@ -34,7 +34,53 @@
                                 </tr>
                             </thead>
                             <tbody>
-                               
+                            <?php foreach ($sanpham as $hanghoa) : ?>
+                                    <tr>
+                                        <td>
+                                            <?php echo $hanghoa['maHH'] ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $hanghoa['tenHH'] ?>
+                                        </td>
+                                        <td>
+                                            <img src="../img/<?php
+                                                                $arr = explode(",", $hanghoa['anh']);
+                                                                echo $arr[0];
+                                                                ?>" alt="" width="50" height="50">
+                                        </td>
+                                        <td>
+                                        <?php echo number_format($hanghoa['gia'])?>đ</td>
+                                        <td>
+                                            <?php echo number_format($hanghoa['giaGoc'])?>đ</td>
+                                        <td>
+                                            <?php echo $hanghoa['mauSac'] ?>
+                                        </td>
+                                        <td>
+                                            <?php
+                                            if ($hanghoa['maLoai'] == 1) {
+                                                echo "iPhone";
+                                            } else if ($hanghoa['maLoai'] == 2) {
+                                                echo "Samsung";
+                                            } else if ($hanghoa['maLoai'] == 3) {
+                                                echo "Xiaomi";
+                                            } else {
+                                                echo "Realme";
+                                            }
+                                            ?>
+                                        </td>
+                                        <td>
+                                        <?php echo $hanghoa['trangthai']==0?"Còn Hàng":"Hết Hàng"?>
+                                        </td>
+                                        <td>
+                                            <a href="http://localhost/duan1/admin/index.php?act=updatesp&id=<?php echo $hanghoa['maHH'] ?>">
+                                                <button type="button" class="btn btn-primary">Sửa sp</button>
+                                            </a>
+                                            <a onclick="return confirm_product('<?php echo $product['productName']; ?>')" href="../customer/delete_sanpham.php?id=<?php echo $hanghoa['maHH'] ?>">
+                                                <button type="button" class="btn btn-danger text-white">Xoá sp</button>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
                             </tbody>
                         </table>
                     </div>

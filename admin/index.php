@@ -9,9 +9,37 @@ if (isset($_GET['act'])) {
             break;
             // chức năng sản phẩm
         case "sanpham":
+            $sanpham = hanghoa();
+            if (isset($_POST['search']) && $_POST['search']) {
+                $search = $_POST['search'];
+                $query = "select * from hanghoa where  tenHH like '%$search%' or tenHH = '$search'";
+                $sanpham = getAll($query);
+            }
             include "./san_pham.php";
             break;
         case "addsp":
+            if (isset($_POST["submit"])) {
+                $tenHH = $_POST['tenHH'];
+                $gia = $_POST['gia'];
+                $giaGoc = $_POST['giaGoc'];
+                $mauSac = $_POST['mauSac'];
+                $moTa = $_POST['moTa'];
+                $maLoai = $_POST['maLoai'];
+                $anh = $_FILES['anh']['name'];
+                $stringImage = '';
+                $arranh = count($anh);
+                foreach ($anh as $key => $value) {
+                    $stringImage .= $value;
+                    $stringImage .= "";
+                    if ($key !== $arranh - 1) {
+                        $stringImage .= ",";
+                    }
+                    move_uploaded_file($_FILES['anh']['tmp_name'][$key], "../img/" . $value);
+                }
+                themhanghoa($tenHH, $gia, $giaGoc, $mauSac, $stringImage, $maLoai, $moTa);
+                $yourURL = "http://localhost/duan1/admin/index.php?act=sanpham";
+                echo ("<script>location.href='$yourURL'</script>");
+            }
             include "./form/form_them_moi_san_pham.php";
             break;
         case "updatesp":

@@ -50,3 +50,13 @@ function loadalldanhmuc(){
     $result = getAll($query);
     return $result;
 }
+function hanghoa(){
+    $query ="select * from hanghoa";
+    $result = getAll($query);
+    return $result;
+}
+function themhanghoa($tenHH, $gia, $giaGoc, $mauSac, $anh, $maLoai, $moTa){
+    $query="INSERT INTO hanghoa( tenHH, gia, giaGoc, mauSac, anh, maLoai, moTa) 
+    VALUES('$tenHH', $gia, $giaGoc,'$mauSac','$anh','$maLoai','$moTa')";
+    connect($query);
+}
