@@ -21,6 +21,23 @@
     <!-- Container fluid  -->
     <!-- ============================================================== -->
     <div class="container-fluid">
+    <div class="row">
+            <!-- Column -->
+            <div class="col-lg-4 col-xlg-3 col-md-12 " id="boxImg">
+                <p>Xem trước hình ảnh</p>
+                <div class="white-box">
+                    <img width="100%" alt="user" src="" class="prev">
+                </div>
+                <div class="white-box">
+                    <img width="100%" alt="user" src="" class="prev">
+                </div>
+                <div class="white-box">
+                    <img width="100%" alt="user" src="" class="prev">
+                </div>
+                <div class="white-box">
+                    <img width="100%" alt="user" src="" class="prev">
+                </div>
+            </div>
             <!-- Column -->
             <div class="col-lg-8 col-xlg-9 col-md-12">
                 <div class="card">
@@ -29,45 +46,50 @@
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Tên sản phẩm</label><br>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="text" class="form-control p-0 border-0" name="productName" id="productName">
+                                    <input type="text" class="form-control p-0 border-0" name="tenHH" id="tenHH">
                                 </div>
                             </div>
                             <div class="form-group mb-4">
-                                <label for="dongia" class="col-md-12 p-0">Đơn giá</label>
+                                <label for="dongia" class="col-md-12 p-0">Giá bán</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="number" class="form-control p-0 border-0" name="productPrice" id="productPrice">
+                                    <input type="number" class="form-control p-0 border-0" name="gia" id="gia">
                                 </div>
                             </div>
                             <div class="form-group mb-4">
-                                <label for="giamgia" class="col-md-12 p-0">Giảm giá</label>
+                                <label for="giamgia" class="col-md-12 p-0">Giá gốc</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="number" class="form-control p-0 border-0" name="productDiscount" id="productDiscount">
+                                    <input type="number" class="form-control p-0 border-0" name="giaGoc" id="giaGoc">
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label for="giamgia" class="col-md-12 p-0">Màu sắc</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="text" class="form-control p-0 border-0" name="productColor" id="productColor">
+                                    <input type="text" class="form-control p-0 border-0" name="mauSac" id="mauSac">
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Hình Ảnh</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="file" name="productImage[]" class="form-control p-0 border-0" multiple id="picture">
+                                    <input type="file" name="anh[]" class="form-control p-0 border-0" multiple id="picture">
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Mô Tả</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <textarea rows="5" class="form-control pl-4 border-0" name="productDesc" id="productDesc">
+                                    <textarea rows="5" class="form-control pl-4 border-0" name="moTa" id="moTa">
                                     </textarea>
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label class="col-sm-12">Danh mục</label>
                                 <div class="col-sm-12 border-bottom">
-                                    <select class="form-select shadow-none p-0 border-0 form-control-line" name="brandId">
-                                       
+                                    <select class="form-select shadow-none p-0 border-0 form-control-line" name="maLoai">
+                                    <?php
+                                        $category = getAll("select * from danhmuc");
+                                        foreach ($category as $cate) :
+                                        ?>
+                                            <option value="<?php echo $cate['maLoai'] ?>"> <?php echo $cate['tenLoai'] ?></option>
+                                        <?php endforeach ?>
                                     </select>
                                 </div>
                             </div>
@@ -85,14 +107,6 @@
         <!-- Row -->
 
     </div>
-
-    <!-- footer -->
-    <!-- ============================================================== -->
-    <footer class="footer text-center"> 2022 © Admin brought to you by <a href="https://facebook.com/ducduc.1002">Group 8</a>
-    </footer>
-    <!-- ============================================================== -->
-    <!-- End footer -->
-    <!-- ============================================================== -->
 </div>
 <script>
     var picture = document.querySelector("#picture");
