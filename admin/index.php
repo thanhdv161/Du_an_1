@@ -79,9 +79,29 @@ if (isset($_GET['act'])) {
             }
             include "./khach_hang.php";
             break;
-        case "updatekh":
-            include "./form/form_sua_user.php";
-            break;
+            case "updatekh":
+                if (isset($_POST['update'])) {
+                    $id = $_POST['ma_kh'];
+                    $userName = $_POST['ten_kh'];
+                    $password = $_POST['mat_khau'];
+                    $email = $_POST['email'];
+                    $sdt = $_POST['sdt'];
+                    $location = $_POST['location'];
+                    $vai_tro = $_POST['vai_tro'];
+                    $oldImage = $_POST['oldImage'];
+                    $Image = $_FILES['anh']['name'];
+                    if (strlen($Image) > 0) {
+                        move_uploaded_file($_FILES['anh']['tmp_name'], '../img/' . $Image);
+                    } else {
+                        $Image = $oldImage;
+                    }
+                    $sql = "UPDATE taikhoan SET tenTK='$userName',matKhau='$password',email='$email',diaChi='$location',maVaiTro='$vai_tro',anh='$Image',sdt='$sdt' where maTK = $id";
+                    connect($sql);
+                    $yourURL = "http://localhost/duan1/admin/index.php?act=khachhang";
+                    echo ("<script>location.href='$yourURL'</script>");
+                }
+                include "./form/form_sua_user.php";
+                break;
         case "addkh":
             include "./form/form_them_moi_user.php";
             break;

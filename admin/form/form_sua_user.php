@@ -1,6 +1,6 @@
 <?php
 $id = $_GET['id'];
-$query = "select * from user where userId =$id";
+$query = "select * from taikhoan where maTK =$id";
 $user_update = getOne($query);
 ?>
 
@@ -42,7 +42,7 @@ $user_update = getOne($query);
             <!-- Column -->
             <div class="col-lg-4 col-xlg-3 col-md-12">
                 <div class="white-box">
-                    <img width="100%" alt="user" src="../img/<?php echo $user_update['userImage'] ?>">
+                    <img width="100%" alt="user" src="../img/<?php echo $user_update['anh'] ?>">
                 </div>
             </div>
             <!-- Column -->
@@ -50,38 +50,27 @@ $user_update = getOne($query);
                 <div class="card">
                     <div class="card-body">
                         <form class="form-horizontal form-material" method="post" action="" enctype="multipart/form-data">
-                            <input type="text" name="ma_kh" value="<?php echo $user_update['userId'] ?>" hidden>
+                            <input type="text" name="ma_kh" value="<?php echo $user_update['maTK'] ?>" hidden>
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Tên User</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="text" value="<?php echo $user_update['userName'] ?>" class="form-control p-0 border-0" name="ten_kh">
+                                    <input type="text" value="<?php echo $user_update['tenTK'] ?>" class="form-control p-0 border-0" name="ten_kh">
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Email</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="text" value="<?php echo $user_update['userEmail'] ?>" class="form-control p-0 border-0" name="email">
+                                    <input type="text" value="<?php echo $user_update['email'] ?>" class="form-control p-0 border-0" name="email">
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Mật Khẩu</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="text" value="<?php echo $user_update['userPassword'] ?>" class="form-control p-0 border-0" name="mat_khau">
+                                    <input type="text" value="<?php echo $user_update['matKhau'] ?>" class="form-control p-0 border-0" name="mat_khau">
                                 </div>
                             </div>
-                            <div class="form-group mb-4">
-                                <label class="col-md-12 p-0">Ngày Tháng Năm Sinh</label>
-                                <div class="col-md-12 border-bottom p-0">
-                                    <input type="date" value="<?php echo $user_update['userBirthday'] ?>" class="form-control p-0 border-0" name="date">
-                                </div>
-                            </div>
-                            <div class="form-group mb-4">
-                                <label class="col-md-12 p-0">Giới Tính</label>
-                                <div class="col-md-12 border-bottom p-0">
-                                    <input type="radio" class="" name="sex" value="1" <?php echo $user_update['userGender'] == 1 ? 'checked' : ''; ?>><span>Nam</span>
-                                    <input type="radio" class="" name="sex" value="0" <?php echo $user_update['userGender'] == 0 ? 'checked' : ''; ?>><span>Nữ</span>
-                                </div>
-                            </div>
+                           
+                           
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">SDT</label>
                                 <div class="col-md-12 border-bottom p-0">
@@ -91,21 +80,21 @@ $user_update = getOne($query);
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">ĐỊA CHỈ</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="text" value="<?php echo $user_update['location'] ?>" class="form-control p-0 border-0" name="location">
+                                    <input type="text" value="<?php echo $user_update['diaChi'] ?>" class="form-control p-0 border-0" name="location">
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Hình Ảnh</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="file" name="userImage" class="form-control p-0 border-0">
-                                    <input type="text" name="oldImage" value="<?php echo $user_update['userImage'] ?>" hidden>
+                                    <input type="file" name="anh" class="form-control p-0 border-0">
+                                    <input type="text" name="oldImage" value="<?php echo $user_update['anh'] ?>" hidden>
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label for="vai_tro" class="col-md-12 p-0">Chọn vai trò của bạn:</label>
                                 <select name="vai_tro" id="vai_tro" class="form-select shadow-none p-0 border-0 form-control-line">
-                                    <option value="2" <?php echo $user_update['roleId'] == 1 ? 'selected' : ''; ?>>Khách hàng</option>
-                                    <option value="4" <?php echo $user_update['roleId'] == 0 ? 'selected' : ''; ?>>Quản trị viên</option>
+                                    <option value="2" <?php echo $user_update['maVaiTro'] == 1 ? 'selected' : ''; ?>>Khách hàng</option>
+                                    <option value="4" <?php echo $user_update['maVaiTro'] == 0 ? 'selected' : ''; ?>>Quản trị viên</option>
                                 </select>
                             </div>
                             <div class="form-group mb-4">
@@ -125,7 +114,7 @@ $user_update = getOne($query);
 
     <!-- footer -->
     <!-- ============================================================== -->
-    <footer class="footer text-center"> 2021 © Ample Admin brought to you by <a href="https://www.wrappixel.com/">wrappixel.com</a>
+    <footer class="footer text-center"> 2023 © Ample Admin brought to you 
     </footer>
     <!-- ============================================================== -->
     <!-- End footer -->
