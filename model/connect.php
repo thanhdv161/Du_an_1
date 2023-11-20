@@ -41,6 +41,16 @@ function users(){
     $result = getAll($query);
     return $result;
 }
+function updateDanhMuc($id,$tenLoai){
+    $query = "update danhmuc set tenLoai = '$tenLoai' where maLoai = $id";
+    connect($query);
+}
+function deleteLH($id){
+    $query0 = "update hanghoa set maLoai = 10 where maLoai = $id";
+    connect($query0);
+    $query = "delete from danhmuc where maLoai = $id";
+    connect($query);
+}
 function addDM($tenLoai){
     $query ="insert into danhmuc(tenLoai) values('$tenLoai')";
     connect($query);

@@ -51,7 +51,7 @@
                                         <a href="http://localhost/duan1/admin/index.php?act=updatelh&id=<?php echo $dm['maLoai']?>">
                                             <button type="button" class="btn btn-primary">Sửa</button>
                                         </a>
-                                        <a  onclick="return confirm_danhmuc('<?php echo $dm['maLoai'];?>')" href="./index.php?act=deletelh&id=<?php echo $dm['maLoai']?>">
+                                        <a  onclick="return confirm_danhmuc('<?php echo $dm['tenLoai'];?>, sản phẩm của bạn sẽ chuyển về loại Chưa xác định')" href="./index.php?act=deletelh&id=<?php echo $dm['maLoai']?>">
                                             <button type="button" class="btn btn-danger text-white">Xoá</button>
                                         </a>
                                     </td>
