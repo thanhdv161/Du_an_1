@@ -4,6 +4,14 @@ include "../view/modelview/header.php";
 if (isset($_GET['act'])) {
     switch ($_GET['act']) {
         case 'home':
+            $query = "SELECT * FROM hanghoa WHERE maLoai=1";
+            $product = getAll($query);
+            $query2 = "SELECT * FROM hanghoa WHERE maLoai=2";
+            $product2 = getAll($query2);
+            $query3 = "SELECT * FROM hanghoa WHERE maLoai=3";
+            $product3 = getAll($query3);
+            $query4 = "SELECT * FROM hanghoa WHERE maLoai=4";
+            $product4 = getAll($query4);
             include "./home.php";
             break;
         case 'chitietsanpham':
