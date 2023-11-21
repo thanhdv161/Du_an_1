@@ -1,4 +1,5 @@
-    <!--================Slider Area =================-->
+
+  <!--================Slider Area =================-->
     <section class="main_slider_area">
             <div class="container">
                 <div class="banner">

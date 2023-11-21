@@ -412,3 +412,14 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+-- Add a new column 'brand' to the hanghoa table
+ALTER TABLE hanghoa
+ADD COLUMN brand VARCHAR(255) NOT NULL;
+
+-- Update existing records with the appropriate brand values
+UPDATE hanghoa SET brand = 'iPhone' WHERE maHH IN (1, 2, 3); -- Replace 1, 2, 3 with the maHH values for iPhones
+UPDATE hanghoa SET brand = 'Samsung' WHERE maHH IN (4, 5, 6); -- Replace 4, 5, 6 with the maHH values for Samsung
+UPDATE hanghoa SET brand = 'Xiaomi' WHERE maHH IN (7, 8, 9); -- Replace 7, 8, 9 with the maHH values for Xiaomi
+
+-- Verify the changes
+SELECT * FROM hanghoa;

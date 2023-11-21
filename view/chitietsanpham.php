@@ -1,6 +1,5 @@
-
-        <!--================connect=================-->
-        <?php
+<!--================connect=================-->
+<?php
 $servername = "localhost";
 $username = "root"; // replace with your actual database username
 $password = ""; // replace with your actual database password
@@ -14,88 +13,60 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-echo "Connected successfully";
+$maHH = isset($_GET['id']) ? $_GET['id'] : null;;
 
-// Now you can perform database operations using $conn
+// Fetch product details from the database based on maHH
+$query = "SELECT * FROM hanghoa WHERE maHH = '$maHH'";
+$result = mysqli_query($conn, $query);
 
-// Don't forget to close the connection when done
-$conn->close();
+// Check if the query was successful
+if ($result) {
+    $product = mysqli_fetch_assoc($result);
+
+    // ... Rest of your code ...
+
+    // Close the connection only after you have finished executing queries
+    $conn->close();
+}
 ?>
+
         <!--================Product Details Area =================-->
         <section class="product_details_area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="product_details_slider">
-                            <div id="product_slider" class="rev_slider" data-version="5.3.1.6">
-                                <ul>	<!-- SLIDE  -->
-                                        <!-- MAIN IMAGE -->
-                                        <img src="../img/product/product-details/p-details-big-1.jpg"  alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="5" class="rev-slidebg" data-no-retina>
-                                        <!-- LAYERS -->
-
-                                    </li>
-                                    <!-- SLIDE  -->
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-8">
-    <div class="product_details_text">
-        <h3>Nike Flex Run Tracksuit</h3>
-        <ul class="p_rating">
-            <li><a href="#"><i class="fa fa-star"></i></a></li>
-            <li><a href="#"><i class="fa fa-star"></i></a></li>
-            <li><a href="#"><i class="fa fa-star"></i></a></li>
-            <li><a href="#"><i class="fa fa-star"></i></a></li>
-            <li><a href="#"><i class="fa fa-star"></i></a></li>
-        </ul>
-        <div class="add_review">
-            <a href="#">5 Reviews</a>
-            <a href="#">Add your review</a>
-        </div>
-        <h6>Available In <span>Stock</span></h6>
-        <h4>$45.05</h4>
-        <p>Curabitur semper varius lectus sed consequat. Nam accumsan dapibus sem, sed lobortis nisi porta vitae. Ut quam tortor, facilisis nec laoreet consequat, malesuada a massa. Proin pretium tristique leo et imperdiet.</p>
-                            <div class="p_color">
-                                <h4 class="p_d_title">color <span>*</span></h4>
-                                <ul class="color_list">
-                                    <li><a href="#"></a></li>
-                                    <li><a href="#"></a></li>
-                                    <li><a href="#"></a></li>
-                                    <li><a href="#"></a></li>
-                                    <li><a href="#"></a></li>
-                                    <li><a href="#"></a></li>
-                                </ul>
-                            </div>
-                            <div class="p_color">
-                                <h4 class="p_d_title">size <span>*</span></h4>
-                                <select class="selectpicker">
-                                    <option>Select your size</option>
-                                    <option>Select your size M</option>
-                                    <option>Select your size XL</option>
-                                </select>
-                            </div>
-
-                            <!-- Add to Cart and Buy Now buttons -->
-                            <div class="product_buttons">
-                                <a href="#" class="btn btn-primary add_to_cart_btn">Add to Cart</a>
-                                <a href="#" class="btn btn-success buy_now_btn">Buy Now</a>
-                            </div>
-
-                            <div class="shareing_icon">
-                                <h5>share :</h5>
-                                <ul>
-                                    <li><a href="#"><i class="social_facebook"></i></a></li>
-                                    <li><a href="#"><i class="social_twitter"></i></a></li>
-                                    <li><a href="#"><i class="social_pinterest"></i></a></li>
-                                    <li><a href="#"><i class="social_instagram"></i></a></li>
-                                    <li><a href="#"><i class="social_youtube"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="product_details_slider">
+                    <div id="product_slider" class="rev_slider" data-version="5.3.1.6">
+                        <ul>
+                            <!-- MAIN IMAGE -->
+                            <img src="../img/<?php echo $product['anh']; ?>" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="5" class="rev-slidebg" data-no-retina>
+                            <!-- LAYERS -->
+                        </ul>
                     </div>
                 </div>
             </div>
+            <div class="col-lg-8">
+                <div class="product_details_text">
+                    <h3><?php echo $product['tenHH']; ?></h3>
+                    <!-- Add your product details here using PHP variables -->
+                    <p><?php echo $product['moTa']; ?></p>
+                    <h4>$<?php echo $product['gia']; ?></h4>
+                    <!-- Add more product details as needed -->
+
+                    <!-- Add to Cart and Buy Now buttons -->
+                    <div class="product_buttons">
+                        <a href="#" class="btn btn-primary add_to_cart_btn">Add to Cart</a>
+                        <a href="#" class="btn btn-success buy_now_btn">Buy Now</a>
+                    </div>
+
+                    <!-- Add your social sharing icons here -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
         </section>
         <!--================End Product Details Area =================-->
         
