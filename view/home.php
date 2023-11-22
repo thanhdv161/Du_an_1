@@ -20,10 +20,10 @@
                         <div class="col-lg-3">
                              <!--================top sản phẩm =================-->
                             <div class="f_product_left">
-                                <div class="s_m_title">
-                                    <h2>Top sản phẩm</h2>
-                                </div>
                                 <div class="f_product_inner">
+                                    <div class="s_m_title">
+                                        <h2>Top sản phẩm</h2>
+                                    </div>
                                     <div class="media">
                                         <div class="d-flex">
                                             <img src="../img/product/xiaomi_note12_128gb.png" alt="">

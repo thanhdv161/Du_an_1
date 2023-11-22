@@ -1,3 +1,31 @@
+/*=========css_header=========*/
+.header_top_area{
+    height: 120px;
+    line-height: 90px;
+}
+.top_header_left{
+    height: 120px;
+    padding: 5px 0px;
+}
+#navbarSupportedContent{
+    height: 75px;
+}
+#dropdownMenu2{
+    background-color: rgb(251, 251, 251);
+    height: 73px;
+    line-height: 60px;
+}
+/*=========end_css_header=========*/
+/*=========css_footer=========*/
+.top_header_middle{
+
+}
+.footer_copyright{
+    border-top: none;
+    text-align: center;
+    height: 80px;
+}
+/*=========end_css_footer=========*/
 /*=========css_home=========*/
 .top_header_middle>img{
     width: 210px;

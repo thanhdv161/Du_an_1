@@ -31,6 +31,37 @@
         <link href="../css/style2.css" rel="stylesheet">
         <link href="../css/responsive.css" rel="stylesheet">
         <script src="../js/slide.js"></script>
+        <style>
+            /*=========css_header=========*/
+            .header_top_area{
+                height: 120px;
+                line-height: 90px;
+            }
+            .top_header_left{
+                height: 120px;
+                padding: 5px 0px;
+            }
+            #navbarSupportedContent{
+                height: 75px;
+            }
+            #dropdownMenu2{
+                background-color: rgb(251, 251, 251);
+                height: 73px;
+                line-height: 60px;
+            }
+            /*=========end_css_header=========*/
+            /*=========css_footer=========*/
+            .top_header_middle{
+                width: 540px;
+            }
+            .footer_copyright{
+                border-top: none;
+                text-align: center;
+                height: 50px;
+                padding: 0px 300px;
+            }
+            /*=========end_css_footer=========*/
+        </style>
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -47,19 +78,6 @@
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="top_header_left">
-                            <div class="selector">
-                                <select class="language_drop" name="countries" id="countries" style="width:300px;">
-                                  <option value='yt' data-image="../img/icon/flag-1.png" data-imagecss="flag yt" data-title="English">English</option>
-                                  <option value='yu' data-image="../img/icon/flag-1.png" data-imagecss="flag yu" data-title="Bangladesh">Bangla</option>
-                                  <option value='yt' data-image="../img/icon/flag-1.png" data-imagecss="flag yt" data-title="English">English</option>
-                                  <option value='yu' data-image="../img/icon/flag-1.png" data-imagecss="flag yu" data-title="Bangladesh">Bangla</option>
-                                </select>
-                            </div>
-                            <select class="selectpicker usd_select">
-                                <option>USD</option>
-                                <option>$</option>
-                                <option>$</option>
-                            </select>
                             <div class="input-group">
                                 <input type="text" class="form-control" placeholder="Search" aria-label="Search">
                                 <span class="input-group-btn">
@@ -70,20 +88,11 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="top_header_middle">
-                            <a href="#"><i class="fa fa-phone"></i> SĐT: <span>1900.636.099</span></a>
-                            <a href="#"><i class="fa fa-envelope"></i> Email: <span>nhom3duan1@gmail.com</span></a>
                             <img src="../img/image-removebg-preview (1).png" alt="">
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="top_right_header">
-                            <ul class="header_social">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
-                            </ul>
                             <ul class="top_right">
                                 <?php 
                                 if (empty($_SESSION['user'])) {
@@ -123,18 +132,18 @@
                     </button>
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <div class="dropdown">
-                        <button class="btn btn-light dropdown-toggle" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                            Danh mục
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                            <li><a href="#" class="dropdown-item">Tất cả sản phẩm</a></li>
-                            <li><a href="#" class="dropdown-item">iPhone</a></li>
-                            <li><a href="#" class="dropdown-item">Samsung</a></li>
-                            <li><a href="#" class="dropdown-item">Xiaomi</a></li>
-                            <li><a href="#" class="dropdown-item">Realme</a></li>
-                        </ul>
-                    </div>
+                        <div class="dropdown">
+                            <button class="btn btn-light dropdown-toggle" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                Danh mục
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <li><a href="#" class="dropdown-item">Tất cả sản phẩm</a></li>
+                                <li><a href="#" class="dropdown-item">iPhone</a></li>
+                                <li><a href="#" class="dropdown-item">Samsung</a></li>
+                                <li><a href="#" class="dropdown-item">Xiaomi</a></li>
+                                <li><a href="#" class="dropdown-item">Realme</a></li>
+                            </ul>
+                        </div>
                         <ul class="navbar-nav">
                             <li class="nav-item"><a class="nav-link" href="./index.php?act=home">Trang chủ</a></li>
                             <li class="nav-item"><a class="nav-link" href="./index.php?act=gioithieu">Giới thiệu</a></li>

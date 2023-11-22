@@ -74,10 +74,15 @@
                     </div>
                 </div>
                 <div class="footer_copyright">
-                    <h5>© <script>document.write(new Date().getFullYear());</script> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    <div class="col-lg-6">
+                        <div class="top_header_middle">
+                            <a href="#"><i class="fa fa-phone"></i> SĐT: <span>1900.636.099</span></a>
+                            <a href="#"><i class="fa fa-envelope"></i> Email: <span>nhom3duan1@gmail.com</span></a>
+                        </div>
+                    </div>
+                    <!-- <h5>© <script>document.write(new Date().getFullYear());</script> 
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-</h5>
+</h5> -->
                 </div>
             </div>
         </footer>
