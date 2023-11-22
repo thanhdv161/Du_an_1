@@ -102,10 +102,12 @@
                                     </li>';
                                 }else {
                                     echo '<a href="../view/login/dangxuat.php">
-                                    <span class="">
-                                    
+                                    <span class="logout">
+                                    <svg  fill="none"  stroke-width="1.5" stroke="currentColor" class="w-5 h-5 inline">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
+                                    </svg>
                                 </span>
-                                <h7 style = "font-size: 20px">Đăng Xuất</h7>
+                                <h7 style = "font-size: 20px" >Đăng Xuất</h7>
                                 
                                 
                             </a>';
@@ -115,6 +117,19 @@
                                 ?>
                                 <li class="cart"><a href="./index.php?act=giohang"><i class="icon-handbag icons"></i></a></li>
                             </ul> 
+                            <style>
+                                .w-5.h-5.inline{
+                                    width: 20px;
+                                    margin-top: 20px;
+                                    height: 21.4px;
+                                }
+                                h7{
+                                    color: black;
+                                }
+                                .logout{
+                                    color: black;
+                                }
+                            </style>
                         </div>
                     </div>
                 </div>
