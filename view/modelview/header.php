@@ -61,6 +61,18 @@
                 padding: 0px 300px;
             }
             /*=========end_css_footer=========*/
+            /*=========css_sanpham=========*/
+            .sanphamdanhmuc{
+                width: 280px;
+                
+            }
+            .sanpham-flex{
+                margin-top: 10px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-column-gap: 10px;
+            }
+            /*=========end_css_sanpham=========*/
         </style>
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -152,7 +164,7 @@
                                 Danh mục
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                <li><a href="#" class="dropdown-item">Tất cả sản phẩm</a></li>
+                                <li><a href="index.php?act=sanphamdanhmuc" class="dropdown-item">Tất cả sản phẩm</a></li>
                                 <li><a href="#" class="dropdown-item">iPhone</a></li>
                                 <li><a href="#" class="dropdown-item">Samsung</a></li>
                                 <li><a href="#" class="dropdown-item">Xiaomi</a></li>

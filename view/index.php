@@ -17,6 +17,11 @@ if (isset($_GET['act'])) {
         case 'chitietsanpham':
             include "./chitietsanpham.php";
             break;
+        case 'sanphamdanhmuc':
+            $query = "SELECT * FROM hanghoa";
+            $product = getAll($query);
+            include "./sanpham.php";
+            break;
         case 'login':
             if(isset($_GET["successful"])){
                 echo '<script>alert("Đổi mật khẩu thành công")</script>';

@@ -120,3 +120,13 @@
 }
 
 /*=========end_css_tintuc=========*/
+/*=========css_sanpham=========*/
+.sanphamdanhmuc{
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    grid-column-gap: 5px;
+}
+/*=========end_css_sanpham=========*/
