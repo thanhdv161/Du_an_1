@@ -43,9 +43,40 @@ if (isset($_GET['act'])) {
             }
             include "./form/form_them_moi_san_pham.php";
             break;
-        case "updatesp":
-            include "./form/form_sua_san_pham.php";
-            break;
+            case "updatesp":
+                $productId = $_GET['id'];
+                $query = "select * from hanghoa where maHH = $productId";
+                $product = getOne($query);
+                $queryCate = "select * from danhmuc";
+                $category = getAll($queryCate);
+                if (isset($_POST["submit"])) {
+                    $productName = $_POST['tenHH'];
+                    $productPrice = $_POST['gia'];
+                    $productGiaGoc = $_POST['giaGoc'];
+                    $productColor = $_POST['mauSac'];
+                    $maLoai = $_POST['maLoai'];
+                    $productImage = $_FILES['anh']['name'];
+                    $stringImage = '';
+                    $oldImage = $_POST['oldImage'];
+                    $numberArrayImage = count($productImage);
+                    if (strlen($productImage[0]) > 0) {
+                        foreach ($productImage as $key => $value) {
+                            $stringImage .= $value;
+                            $stringImage .= "";
+                            if ($key !== $numberArrayImage - 1) {
+                                $stringImage .= ",";
+                            }
+                            move_uploaded_file($_FILES['anh']['tmp_name'][$key], "../img/" . $value);
+                        }
+                    } else {
+                        $stringImage = $oldImage;
+                    }
+                    updateProduct($productId, $productName, $productPrice, $productGiaGoc, $productColor, $stringImage, $maLoai);
+                    $yourURL = "http://localhost/duan1/admin/index.php?act=sanpham";
+                    echo ("<script>location.href='$yourURL'</script>");
+                }
+                include "./form/form_sua_san_pham.php";
+                break;
             // chức năng Loại Hàng
         case "loaihang":
             include "./loai_hang.php";

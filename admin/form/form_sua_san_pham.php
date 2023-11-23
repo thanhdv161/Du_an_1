@@ -1,3 +1,8 @@
+<?php 
+$id = $_GET['id'];
+$query = "select * from hanghoa where maHH = $id";
+$category = getOne($query);
+?>
 <div class="page-wrapper">
     <!-- ============================================================== -->
     <!-- Bread crumb and right sidebar toggle -->
@@ -34,7 +39,7 @@
             <div class="col-lg-4 col-xlg-3 col-md-12">
                 <div class="white-box row">
                     <?php
-                        $arr = explode(",", $product['productImage']);
+                        $arr = explode(",", $category['anh']);
                         foreach ($arr as $key => $value){
                         echo'<img width="100%" alt="user" src="../img/'.$value.'" class="border col-6">';
                         }
@@ -46,61 +51,56 @@
                 <div class="card">
                     <div class="card-body">
                         <form class="form-horizontal form-material" method="post" enctype="multipart/form-data" action="" onsubmit="return validate();">
-                            <input type="hidden" name="productId" value="<?php echo $product['productId']; ?>">
+                            <input type="hidden" name="maHH" value="<?php echo $category['maHH']; ?>">
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Tên Sản Phẩm</label><br>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="text" class="form-control p-0 border-0" name="productName" value="<?php echo $product['productName']?>" id="productName">
+                                    <input type="text" class="form-control p-0 border-0" name="tenHH" value="<?php echo $category['tenHH']?>" id="productName">
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label for="dongia" class="col-md-12 p-0">Đơn Giá</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="number" class="form-control p-0 border-0" name="productPrice" value="<?php echo $product['productPrice']?>" id="productPrice">
+                                    <input type="number" class="form-control p-0 border-0" name="gia" value="<?php echo $category['gia']?>" id="productPrice">
                                 </div>
                             </div>
                             <div class="form-group mb-4">
-                                <label for="giamgia" class="col-md-12 p-0">Giảm giá</label>
+                                <label for="giamgia" class="col-md-12 p-0">Giá Gốc</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="number" class="form-control p-0 border-0" name="productDiscount" id="productDiscount" value="0">
+                                    <input type="number" class="form-control p-0 border-0" name="giaGoc" id="productDiscount" value="<?php echo $category['giaGoc']?>">
                                 </div>
                             </div>
-                            <div class="form-group mb-4">
-                                <label for="giamgia" class="col-md-12 p-0">Kích cỡ</label>
-                                <div class="col-md-12 border-bottom p-0">
-                                    <input type="number" class="form-control p-0 border-0" name="productSize" id="productSize" value="<?php echo $product['productSize']  ?>">
-                                </div>
-                            </div>
+                            
                             <div class="form-group mb-4">
                                 <label for="giamgia" class="col-md-12 p-0">Màu sắc</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="text" class="form-control p-0 border-0" name="productColor" id="productColor" value="<?php echo $product['productColor']  ?>">
+                                    <input type="text" class="form-control p-0 border-0" name="mauSac" id="productColor" value="<?php echo $category['mauSac']  ?>">
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Hình Ảnh</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="file" name="productImage[]" class="form-control p-0 border-0" multiple>
-                                    <input type="hidden" name="oldImage" value="<?php echo $product['productImage']; ?>">
+                                    <input type="file" name="anh[]" class="form-control p-0 border-0" multiple>
+                                    <input type="hidden" name="oldImage" value="<?php echo $category['anh']; ?>">
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Mô Tả</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <textarea rows="5" class="form-control pl-4 border-0" name="productDesc" id="productDesc">
-                                        <?php echo $product['productDesc']?>
+                                    <textarea rows="5" class="form-control pl-4 border-0" name="moTa" id="productDesc">
+                                        <?php echo $category['moTa']?>
                                     </textarea>
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label class="col-sm-12">Danh mục</label>
                                 <div class="col-sm-12 border-bottom">
-                                    <select class="form-select shadow-none p-0 border-0 form-control-line" name="brandId">
+                                    <select class="form-select shadow-none p-0 border-0 form-control-line" name="maLoai">
                                         <?php
-                                        $category = getAll("select * from brand");
+                                        $category = getAll("select * from danhmuc");
                                         foreach ($category as $cate) :
                                         ?>
-                                            <option <?php echo $cate['brandId'] == $product['brandId'] ? "checked" : "" ?> value="<?php echo $cate['brandId'] ?>"> <?php echo $cate['brandName'] ?></option>
+                                            <option <?php echo $cate['maLoai'] == $cate['maLoai'] ? "checked" : "" ?> value="<?php echo $cate['maLoai'] ?>"> <?php echo $cate['tenLoai'] ?></option>
                                         <?php endforeach ?>
                                     </select>
                                 </div>

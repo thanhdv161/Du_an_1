@@ -41,6 +41,12 @@ function users(){
     $result = getAll($query);
     return $result;
 }
+function updateProduct($productId, $productName, $productPrice, $productGiaGoc, $productColor , $stringImage, $maLoai){
+    $query="UPDATE hanghoa SET 
+    tenHH='$productName',gia='$productPrice',giaGoc='$productGiaGoc',mauSac='$productColor',
+    anh='$stringImage',maLoai='$maLoai' WHERE maHH=$productId";
+    connect($query);
+}
 function updateDanhMuc($id,$tenLoai){
     $query = "update danhmuc set tenLoai = '$tenLoai' where maLoai = $id";
     connect($query);
@@ -69,4 +75,10 @@ function themhanghoa($tenHH, $gia, $giaGoc, $mauSac, $anh, $maLoai, $moTa){
     $query="INSERT INTO hanghoa( tenHH, gia, giaGoc, mauSac, anh, maLoai, moTa) 
     VALUES('$tenHH', $gia, $giaGoc,'$mauSac','$anh','$maLoai','$moTa')";
     connect($query);
+}
+
+function delete($table,$tableId,$id,$case){
+    $query="DELETE FROM $table WHERE $tableId=$id";
+    connect($query);
+    header("Location: http://localhost/duan1/admin/index.php?act=$case");
 }
