@@ -15,11 +15,11 @@
     height: 73px;
     line-height: 60px;
 }
+.box_search>form{
+    background: white;
+}
 /*=========end_css_header=========*/
 /*=========css_footer=========*/
-.top_header_middle{
-
-}
 .footer_copyright{
     border-top: none;
     text-align: center;
