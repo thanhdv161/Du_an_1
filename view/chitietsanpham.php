@@ -1,141 +1,175 @@
 
-        <!--================connect=================-->
-        <?php
-$servername = "localhost";
-$username = "root"; // replace with your actual database username
-$password = ""; // replace with your actual database password
-$dbname = "duan1";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-echo "Connected successfully";
-
-// Now you can perform database operations using $conn
-
-// Don't forget to close the connection when done
-$conn->close();
-?>
-        <!--================Product Details Area =================-->
+ <!--================Product Details Area =================-->
         <section class="product_details_area">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-4">
+                <div class="chiahang">
+                    <div class="hang1" style="margin-right: 140px;">
                         <div class="product_details_slider">
-                            <div id="product_slider" class="rev_slider" data-version="5.3.1.6">
-                                <ul>	<!-- SLIDE  -->
-                                        <!-- MAIN IMAGE -->
-                                        <img src="../img/product/product-details/p-details-big-1.jpg"  alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="5" class="rev-slidebg" data-no-retina>
-                                        <!-- LAYERS -->
-
-                                    </li>
-                                    <!-- SLIDE  -->
-                                </ul>
+                            <div>
+                                <img style="width: 400px;" id="mainImage" src="../img/<?php
+                                                    $arr = explode(",", $hanghoa['anh']);
+                                                    echo $arr[0];
+                                                    ?>" class="sm:w-full border" alt="" id="imgProduct">
+                            </div>
+                            <div style="text-align: center; margin-top: 20px;">
+                                <img class="anhbe" src="../img/<?php
+                                                    $arr = explode(",", $hanghoa['anh']);
+                                                    echo $arr[0]; 
+                                                    ?>" onclick="changeImage('../img/<?php echo $arr[0]; ?>')" alt="">
+                                <img class="anhbe" src="../img/<?php echo $arr[1]; ?>" onclick="changeImage('../img/<?php echo $arr[1]; ?>')" alt="">
+                                <img class="anhbe" src="../img/<?php echo $arr[2]; ?>" onclick="changeImage('../img/<?php echo $arr[2]; ?>')" alt="">
+                                <img style="width: 50px;" src="../img/<?php echo $arr[3]; ?>" onclick="changeImage('../img/<?php echo $arr[3]; ?>')" alt="">
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-8">
-    <div class="product_details_text">
-        <h3>Nike Flex Run Tracksuit</h3>
-        <ul class="p_rating">
-            <li><a href="#"><i class="fa fa-star"></i></a></li>
-            <li><a href="#"><i class="fa fa-star"></i></a></li>
-            <li><a href="#"><i class="fa fa-star"></i></a></li>
-            <li><a href="#"><i class="fa fa-star"></i></a></li>
-            <li><a href="#"><i class="fa fa-star"></i></a></li>
-        </ul>
-        <div class="add_review">
-            <a href="#">5 Reviews</a>
-            <a href="#">Add your review</a>
-        </div>
-        <h6>Available In <span>Stock</span></h6>
-        <h4>$45.05</h4>
-        <p>Curabitur semper varius lectus sed consequat. Nam accumsan dapibus sem, sed lobortis nisi porta vitae. Ut quam tortor, facilisis nec laoreet consequat, malesuada a massa. Proin pretium tristique leo et imperdiet.</p>
-                            <div class="p_color">
-                                <h4 class="p_d_title">color <span>*</span></h4>
-                                <ul class="color_list">
-                                    <li><a href="#"></a></li>
-                                    <li><a href="#"></a></li>
-                                    <li><a href="#"></a></li>
-                                    <li><a href="#"></a></li>
-                                    <li><a href="#"></a></li>
-                                    <li><a href="#"></a></li>
-                                </ul>
-                            </div>
-                            <div class="p_color">
-                                <h4 class="p_d_title">size <span>*</span></h4>
-                                <select class="selectpicker">
-                                    <option>Select your size</option>
-                                    <option>Select your size M</option>
-                                    <option>Select your size XL</option>
-                                </select>
-                            </div>
 
-                            <!-- Add to Cart and Buy Now buttons -->
-                            <div class="product_buttons">
-                                <a href="#" class="btn btn-primary add_to_cart_btn">Add to Cart</a>
-                                <a href="#" class="btn btn-success buy_now_btn">Buy Now</a>
+                    <div class="hang2">
+                    <div class="kieuchu">
+                    <div class="product_details_text">
+                            <h3><?php echo $hanghoa['tenHH'] ?></h3>
+                            <ul class="p_rating">
+                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                            </ul>
+                    </div>
+                            <div class="cotgia">
+                                <label for="">Giá:&nbsp;</label>
+                            <span style="color: red;"><?php echo number_format($hanghoa['gia'])?>đ</span>
+                            <p><del><?php echo number_format($hanghoa['giaGoc'])?>đ</del></p>
                             </div>
-
-                            <div class="shareing_icon">
-                                <h5>share :</h5>
-                                <ul>
-                                    <li><a href="#"><i class="social_facebook"></i></a></li>
-                                    <li><a href="#"><i class="social_twitter"></i></a></li>
-                                    <li><a href="#"><i class="social_pinterest"></i></a></li>
-                                    <li><a href="#"><i class="social_instagram"></i></a></li>
-                                    <li><a href="#"><i class="social_youtube"></i></a></li>
-                                </ul>
-                            </div>
+                        <label class="text-black">Màu sắc:&ensp;</label>
+                                <?php
+                                $arrcolor = explode(",", $hanghoa['mauSac']);
+                                ?>
+                                <input type="radio" id="" name="productColor" value="<?php echo  $arrcolor[0] ?>" checked>
+                                <label class="font-bold text-green-500 pr-4 pl-1 text-sm" for="<?php echo $arrcolor[0] ?>"><?php echo  $arrcolor[0] ?></label>
+                                <input type="radio" id="" name="productColor" value="<?php echo  $arrcolor[1] ?>">
+                                <label class="font-bold text-green-500 pr-4 pl-1 text-sm" for="<?php echo $arrcolor[1] ?>"><?php echo  $arrcolor[1] ?></label>
                         </div>
+                        <label class="text-black">Ưu đãi đặc biệt:</label>
+                        <div class="baohanh" style="margin-left: 10px;">
+                        <img width="15px" src="../img/icon-v.png" alt=""><label for="">&ensp;Đặc quyền 2 năm bảo hành</label><br>
+                        <img width="15px" src="../img/icon-v.png" alt=""><label for="">&ensp;Tặng sim Mobiphone 0đ trị giá 170.000Đ</label><br>
+                        <img width="15px" src="../img/icon-v.png" alt=""><label for="">&ensp;Tặng Phiếu mua hàng 50,000đ</label>
+                        </div><br>
+                        <div class="btn-ct">
+                            <button type="button" onclick="tru();">-</button>
+                            <span">
+                                <input class="soluong" type="text" value="1" id="count">
+                            </span>
+                            <button type="button" onclick="cong()">+</button>
+                        </div><br>
+                        <button type="submit" class="addgh"  name="submit">THÊM VÀO GIỎ HÀNG</button><br><br>
+                         <!-- mo ta sp -->
+                    <div class="p-2">
+                        <h3 class="font-mota">Mô tả</h3>
+                        <h3 class="font-mota">Đặc điểm nổi bật:</h3>
+                        <p class="text-mota" style="width: 500px;">
+                            <?php echo $hanghoa['moTa'] ?>
+                        </p>
+                    </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </section><br><br><br>
         <!--================End Product Details Area =================-->
-        
-        <!--================Product Description Area =================-->
-        <section class="product_description_area">
+
+    <div class="min-h-min">
+        <section class="bg-white container binhluanspct">
+            <div style="margin-right: 80px;">
+                <div>
+                    <h2>Bình luận về sản phẩm</h2>
+                </div>
+                <!-- form comment -->
+                <form method="post" action="../customer/binhluan.php?id=<?php echo $id; ?>">
+                    <div>
+                        <label for="comment" class="sr-only">Bình luận của bạn</label>
+                        <textarea style="border-radius: 10px;" cols="70" rows="5" id="comment" <?php echo !isset($_SESSION['user']) ? "disabled" : ""; ?> name="comment" placeholder=" Nhập bình luận ở đây..." required></textarea>
+                    </div>
+                    <button class="guibl" type="submit" <?php echo !isset($_SESSION['user']) ? "disabled" : ""; ?>>
+                        Gửi
+                    </button>
+                </form>
+            </div>
+                <!-- list comment -->
+                <div>
+                    <h2>
+                    Danh sách bình luận
+                    </h2>
+                    <?php foreach ($comment as $binhluan) : ?>
+                        <article class="ttbinhluan" >
+                            <footer>
+                                <div class="thongtinbl">
+                                    <p style="margin-right: 10px;"><img width="20px" src="../img/<?php echo $binhluan['anh']?>">&emsp;<?php echo $binhluan['tenTK']?></p>
+                                    <p><time><?php echo $binhluan['ngayBL']?></time></p>
+                                </div>
+                            </footer>
+                            <p>
+                                <?php echo $binhluan['noiDung']?>
+                            </p>
+                        </article>
+                    <?php endforeach; ?>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <!-- kết thúc comment -->
+      <!-- san pham lien quan -->
+      <section class="our_latest_product">
             <div class="container">
-                <nav class="tab_menu">
-                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Product Description</a>
-                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Reviews (1)</a>
-                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Tags</a>
-                        <a class="nav-item nav-link" id="nav-info-tab" data-toggle="tab" href="#nav-info" role="tab" aria-controls="nav-info" aria-selected="false">additional information</a>
-                        <a class="nav-item nav-link" id="nav-gur-tab" data-toggle="tab" href="#nav-gur" role="tab" aria-controls="nav-gur" aria-selected="false">gurantees</a>
-                    </div>
-                </nav>
-                <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.  Emo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.</p>
-                    </div>
-                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                        <h4>Rocky Ahmed</h4>
-                        <ul>
-                            <li><a href="#"><i class="fa fa-star"></i></a></li>
-                            <li><a href="#"><i class="fa fa-star"></i></a></li>
-                            <li><a href="#"><i class="fa fa-star"></i></a></li>
-                            <li><a href="#"><i class="fa fa-star"></i></a></li>
-                            <li><a href="#"><i class="fa fa-star"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.  Emo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.</p>
-                    </div>
-                    <div class="tab-pane fade" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab">
-                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.  Emo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.</p>
-                    </div>
-                    <div class="tab-pane fade" id="nav-gur" role="tabpanel" aria-labelledby="nav-gur-tab">
-                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.  Emo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.</p>
+                <div class="s_m_title" style="text-align: center;">
+                    <h2>Sản phẩm liên quan</h2>
+                </div>
+                <div class="l_product_slider owl-carousel">
+                    <?php foreach ($splienquan as $hanghoa) : ?>
+                        <div class="l_product_item">
+                            <div class="l_p_img">
+                            <a href="./index.php?act=chitietsanpham&id=<?php echo $hanghoa['maHH'] ?>">
+                            <img src="../img/<?php $arr = explode(",", $hanghoa['anh']);
+                                                                            echo $arr[0];
+                                                                            ?>" alt=""></a>
+                            </div>
+                            <div class="l_p_text">
+                                <ul>
+                                    <li class="p_icon"><a href="#"><i class="icon_piechart"></i></a></li>
+                                    <li><a class="add_cart_btn" href="">Add To Cart</a></li>
+                                    <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
+                                </ul>
+                                <h4><?php echo $hanghoa['tenHH'] ?></h4>
+                                <h5><?php echo number_format($hanghoa['gia'])?>đ  <del><?php echo number_format($hanghoa['giaGoc'])?>đ</del></h5>
+                            </div>
+                        </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <!--================End Related Product Area =================-->
+    <!-- kết thúc sp lien quan -->
+    </div>                   
+    <script>
+        function changeImage(imagePath) {
+            var mainImage = document.getElementById('mainImage');
+            mainImage.src = imagePath;
+        }
+        var i = 1;
+
+        function cong() {
+        i++;
+        if (i > 10) {
+            i = 10;
+        };
+        document.querySelector('#count').value = i;
+    }
+
+    function tru() {
+        i--;
+        if (i < 1) {
+            i = 1;
+        };
+        document.querySelector('#count').value = i;
+    }
+    </script>

@@ -47,7 +47,7 @@
                         <div class="col-lg-9">
                             <div class="fillter_slider_inner">
                                 <ul class="portfolio_filter">
-                                    <li class="active" data-filter="*"><a href="#">Sản phẩm mới</a></li>
+                                    <li class="active" data-filter="*"><a style="color: black;" href="#">Sản phẩm mới</a></li>
                                 </ul>
                                 <div class="fillter_slider owl-carousel">
                                 <?php foreach ($spmoi as $hanghoa) : ?>

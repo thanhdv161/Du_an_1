@@ -1051,12 +1051,14 @@ i:before {
 .black_top_header {
   background: #333333;
 }
-
+.chiahang{
+  display: flex;
+  
+}
 .black_top_header .selector {
   position: relative;
   top: -4px;
 }
-
 .black_top_header .selector .ddcommon .ddTitle .ddTitleText span {
   color: #fff;
 }
@@ -2696,7 +2698,10 @@ i:before {
   border-color: #333333;
   color: #fff;
 }
-
+.anhbe{
+  width: 50px;
+  margin-right: 25px;
+}
 /* End Add Button css
 ============================================================================================ */
 /*---------------------------------------------------- */
@@ -2825,7 +2830,105 @@ i:before {
   font-size: 16px;
   color: #666666;
 }
-
+.ttbinhluan{
+  border: 1px solid #b1154a;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 0 300px 0 15px;
+}
+.guibl{
+  background-color: #3d3b3b;
+  color: white;
+  border: 1px solid white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.guibl:hover{
+  background-color: #666666;
+  color: white;
+  border: 1px solid white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.kieuchu span{
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #d91522;
+  -webkit-transition: all 400ms linear 0s;
+  -o-transition: all 400ms linear 0s;
+  transition: all 400ms linear 0s;
+  margin-right: 10px;
+}
+.binhluanspct{
+  display: flex;
+}
+.thongtinbl{
+  display: flex;
+}
+.binhluanspct h2{
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #000;
+  -webkit-transition: all 400ms linear 0s;
+  -o-transition: all 400ms linear 0s;
+  transition: all 400ms linear 0s;
+}
+.kieuchu p{
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #666666;
+}
+.text-black{
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #000;
+  -webkit-transition: all 400ms linear 0s;
+  -o-transition: all 400ms linear 0s;
+  transition: all 400ms linear 0s;
+}
+.baohanh label{
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  -webkit-transition: all 400ms linear 0s;
+  -o-transition: all 400ms linear 0s;
+  transition: all 400ms linear 0s;
+}
+.font-mota{
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #000;
+  -webkit-transition: all 400ms linear 0s;
+  -o-transition: all 400ms linear 0s;
+  transition: all 400ms linear 0s;
+}
+.text-mota{
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  -webkit-transition: all 400ms linear 0s;
+  -o-transition: all 400ms linear 0s;
+  transition: all 400ms linear 0s;
+}
+.cotgia{
+  display: flex;
+}
+.cotgia label{
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #000;
+  -webkit-transition: all 400ms linear 0s;
+  -o-transition: all 400ms linear 0s;
+  transition: all 400ms linear 0s;
+}
 .l_product_item:hover .l_p_text ul {
   margin-top: 0px;
 }
@@ -3379,13 +3482,40 @@ i:before {
 .two_column_product .pagination_area {
   margin-top: 30px;
 }
+.btn-ct button{
+  background-color: #ced7e2;
+  border: 1px solid #cccccc;
+}
+.soluong{
+  width: 80px;
+  background-color: white;
+  border: 1px solid #cccccc;
+  text-align: center;
+}
+.addgh{
+  background-color: red;
+  color: white;
+  border: 1px solid white;
+  font-size: 16px;
+  padding: 10px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.addgh:hover{
+  background-color: chocolate;
+  color: white;
+  border: 1px solid white;
+  padding: 10px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
 
 /* End Categories Grid Product Details Area css
 ============================================================================================ */
 /* Product Details Slider Area css
 ============================================================================================ */
 .product_details_area {
-  padding-top: 100px;
+  padding-top: 50px;
 }
 
 .product_details_slider .tp-thumbs {

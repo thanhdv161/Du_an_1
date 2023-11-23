@@ -82,3 +82,8 @@ function delete($table,$tableId,$id,$case){
     connect($query);
     header("Location: http://localhost/duan1/admin/index.php?act=$case");
 }
+function comments(){
+    $query = "select * from (binhluan inner join taikhoan on binhluan.maTK = taikhoan.maTK) inner join sanpham on binhluan.maHH = sanpham.maHH";
+    $result = getAll($query);
+    return $result;
+}

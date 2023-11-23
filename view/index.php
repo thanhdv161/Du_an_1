@@ -19,6 +19,14 @@ if (isset($_GET['act'])) {
             include "./home.php";
             break;
         case 'chitietsanpham':
+            $id = $_GET['id'];
+            $query = "SELECT * FROM hanghoa WHERE maHH=$id";
+            $hanghoa = getOne($query);
+            $maloai = $hanghoa['maLoai'];
+            $query1 = "SELECT * FROM hanghoa WHERE maLoai=$maloai";
+            $splienquan = getAll($query1);
+            $queryComment = "SELECT * FROM binhluan join taikhoan on binhluan.maTK = taikhoan.maTK WHERE maHH ='$id'";
+            $comment = getAll($queryComment);
             include "./chitietsanpham.php";
             break;
         case 'sanphamdanhmuc':
