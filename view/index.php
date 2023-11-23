@@ -72,7 +72,24 @@ if (isset($_GET['act'])) {
         case 'giohang':
             include "./giohang/giohangtrong.php";
             break;
-
+        case 'timkiemsanpham':
+            if(isset($_POST['keyword']) &&  $_POST['keyword'] != 0 ){
+                $kw = $_POST['keyword'];
+            }else{
+                $kw = "";
+            }
+            if(isset($_GET['maLoai']) && ($_GET['maLoai']>0)){
+                $maLoai=$_GET['maLoai'];
+            }else{
+                $maLoai=0;
+            }
+            $dssp=loadall_sanphamtk($kw,$maLoai);
+            $tendm= load_ten_dmtk($maLoai);
+            $query6 ="select * from hanghoa order by luotxem desc limit 8";
+            $topsp = getAll($query6);
+            include "./sanpham.php";
+            break;
+        
         default:
             include "./home.php";
             break;

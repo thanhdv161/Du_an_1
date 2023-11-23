@@ -82,3 +82,25 @@ function delete($table,$tableId,$id,$case){
     connect($query);
     header("Location: http://localhost/duan1/admin/index.php?act=$case");
 }
+function loadall_sanphamtk($kw="",$maLoai=0){
+    $query="SELECT * from hanghoa where trangthai = 0";
+    if($kw!=""){
+        $query.=" and tenHH like '%".$kw."%'";
+    }
+    if($maLoai>0){
+        $query.=" and maLoai ='".$maLoai."'";
+    }
+    $query.=" order by maHH desc";
+    $listsanpham=connect($query);
+    return  $listsanpham;
+}
+function load_ten_dmtk($maLoai){
+    if($maLoai>0){
+        $query="select * from hanghoa where maHH=".$maLoai;
+        $dm=getOne($query);
+        extract($dm);
+        return $name;
+    }else{
+        return "";
+    }
+}

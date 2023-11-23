@@ -49,6 +49,31 @@
                 height: 73px;
                 line-height: 60px;
             }
+            .box_search{
+                margin-top: 35px;
+            }
+            .box_search>form{
+                display: flex;
+                background-color: white;
+            }
+            .box_search>form>input{
+                width: 200px;
+                height: 40px;
+            }
+            .input-group-btn{
+                margin-left: 165px;
+                margin-top: 3px;
+            }
+            .box_search>form>input, .input-group-btn{
+                position: absolute;
+            }
+            .box_search>form>span>button{
+                border: none;
+                background:transparent;
+            }
+            .box_search>form>span>button>i{
+                color: grey;
+            }
             /*=========end_css_header=========*/
             /*=========css_footer=========*/
             .top_header_middle{
@@ -90,11 +115,13 @@
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="top_header_left">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search" aria-label="Search">
-                                <span class="input-group-btn">
-                                <button class="btn btn-secondary" type="button"><i class="icon-magnifier"></i></button>
-                                </span>
+                            <div class="box_search">
+                                <form action="index.php?act=timkiemsanpham" method="POST">
+                                    <input type="text" id="" placeholder="Tìm kiếm" name="keyword">
+                                    <span class="input-group-btn">
+                                    <button class="btn btn-secondary" type="button"><i class="icon-magnifier"></i></button>
+                                    </span>
+                                </form>
                             </div>
                         </div>
                     </div>
