@@ -24,49 +24,25 @@
                                     <div class="s_m_title">
                                         <h2>Top sản phẩm</h2>
                                     </div>
+                                    <?php foreach ($topsp as $hanghoa) : ?>
                                     <div class="media">
                                         <div class="d-flex">
-                                            <img src="../img/product/xiaomi_note12_128gb.png" alt="">
-                                            <a href="../view/chitietsanpham.php"></a>
+                                        <a href="./index.php?act=chitietsanpham&id=<?php echo $hanghoa['maHH'] ?>">
+                                                    <img style="width: 80px;" src="../img/<?php $arr = explode(",", $hanghoa['anh']);
+                                                                                                    echo $arr[0];
+                                                                                                    ?>" alt=""></a>
                                         </div>
                                         <div class="media-body">
-                                            <h4>Xiaomi Note12 128gb</h4>
-                                            <h5>4.990.000đ</h5>
+                                            <h4><?php echo $hanghoa['tenHH'] ?></h4>
+                                            <h5><?php echo number_format($hanghoa['gia'])?>đ</h5>
                                         </div>
                                     </div>
-                                    <div class="media">
-                                        <div class="d-flex">
-                                            <img src="../img/product/samsung-galaxy-z-fold-5-256gb_1.png" alt="">
-                                            <a href="../view/chitietsanpham.php"></a>
-                                        </div>
-                                        <div class="media-body">
-                                            <h4>Samsung Galaxy Z Fold5 12GB 256GB</h4>
-                                            <h5>30.790.000₫</h5>
-                                        </div>
-                                    </div>
-                                    <div class="media">
-                                        <div class="d-flex">
-                                            <img src="../img/product/iphone-15-pro-max_3.png" alt="">
-                                            <a href="../view/chitietsanpham.php"></a>
-                                        </div>
-                                        <div class="media-body">
-                                            <h4>iPhone 15 Pro Max 256GB</h4>
-                                            <h5>33.690.000đ</h5>
-                                        </div>
-                                    </div>
-                                    <div class="media">
-                                        <div class="d-flex">
-                                            <img src="../img/product/realme-11-pro.png" alt="">
-                                            <a href="../view/chitietsanpham.php"></a>
-                                        </div>
-                                        <div class="media-body">
-                                            <h4>realme 11 Pro (8GB - 256GB)</h4>
-                                            <h5>11.490.000đ</h5>
-                                        </div>
-                                    </div>
+                                    <?php endforeach; ?>
                                 </div>
                             </div>
                              <!--================kết thúc top sản phẩm =================-->
+
+                             <!--================sản phẩm mới=================-->
                         </div>
                         <div class="col-lg-9">
                             <div class="fillter_slider_inner">
@@ -74,118 +50,30 @@
                                     <li class="active" data-filter="*"><a href="#">Sản phẩm mới</a></li>
                                 </ul>
                                 <div class="fillter_slider owl-carousel">
+                                <?php foreach ($spmoi as $hanghoa) : ?>
                                     <div class="item shoes">
                                         <div class="fillter_product_item bags">
                                             <div class="f_p_img">
-                                                <img src="../img/product/samsung-galaxy-z-fold-5-256gb_1.png" alt="">
-                                                <a href="../view/chitietsanpham.php"></a>
+                                            <a href="./index.php?act=chitietsanpham&id=<?php echo $hanghoa['maHH'] ?>">
+                                                    <img src="../img/<?php $arr = explode(",", $hanghoa['anh']);
+                                                                                                    echo $arr[0];
+                                                                                                    ?>" alt=""></a>
+
                                                 <h5 class="new">New</h5>
                                             </div>
                                             <div class="f_p_text">
-                                                <h5>Samsung Galaxy Z Fold5 12GB 256GB</h5>
-                                                <h4>30.790.000₫</h4>
+                                            <h5><?php echo $hanghoa['tenHH'] ?></h5>
+                                                        <h4><?php echo number_format($hanghoa['gia'])?>đ  <del><?php echo number_format($hanghoa['giaGoc'])?>đ</del></h4>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="item shoes">
-                                        <div class="fillter_product_item bags">
-                                            <div class="f_p_img">
-                                                <img src="../img/product/iphone-15-pro-max_3.png" alt="">
-                                                <a href="../view/chitietsanpham.php"></a>
-                                                <h5 class="new">New</h5>
-                                            </div>
-                                            <div class="f_p_text">
-                                                <h5>iPhone 15 Pro Max 256GB</h5>
-                                                <h4>33.690.000đ</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item shoes">
-                                        <div class="fillter_product_item bags">
-                                            <div class="f_p_img">
-                                                <img src="../img/product/realme-11-pro.png" alt="">
-                                                <a href="../view/chitietsanpham.php"></a>
-                                                <h5 class="new">New</h5>
-                                            </div>
-                                            <div class="f_p_text">
-                                                <h5>realme 11 Pro (8GB - 256GB)</h5>
-                                                <h4>11.490.000đ</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item shoes">
-                                        <div class="fillter_product_item bags">
-                                            <div class="f_p_img">
-                                                <img src="../img/product/iphone-14-pro_2__4.png" alt="">
-                                                <a href="../view/chitietsanpham.php"></a>
-                                                <h5 class="new">New</h5>
-                                            </div>
-                                            <div class="f_p_text">
-                                                <h5>iPhone 14 Pro 128GB</h5>
-                                                <h4>24.590.000đ</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item shoes">
-                                        <div class="fillter_product_item bags">
-                                            <div class="f_p_img">
-                                                <img src="../img/product/samsung-galaxy-m34-5g_1_2.png" alt="">
-                                                <a href="../view/chitietsanpham.php"></a>
-                                                <h5 class="new">New</h5>
-                                            </div>
-                                            <div class="f_p_text">
-                                                <h5>Samsung Galaxy M34 5G 8GB 128GB</h5>
-                                                <h4>7.190.000đ</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item shoes">
-                                        <div class="fillter_product_item bags">
-                                            <div class="f_p_img">
-                                                <img src="../img/product/xiaomi-13t_1__1_2.png" alt="">
-                                                <a href="../view/chitietsanpham.php"></a>
-                                                <h5 class="new">New</h5>
-                                            </div>
-                                            <div class="f_p_text">
-                                                <h5>Xiaomi 13T 12GB 256GB</h5>
-                                                <h4>11.990.000đ</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item shoes">
-                                        <div class="fillter_product_item bags">
-                                            <div class="f_p_img">
-                                                <img src="../img/product/realme-11-vang-1.png" alt="">
-                                                <a href="../view/chitietsanpham.php"></a>
-                                                <h5 class="new">New</h5>
-                                            </div>
-                                            <div class="f_p_text">
-                                                <h5>realme 11 8GB 128GB</h5>
-                                                <h4>6.290.000đ</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item shoes">
-                                        <div class="fillter_product_item bags">
-                                            <div class="f_p_img">
-                                                <img src="../img/product/xiaomi_note12_128gb.png" alt="">
-                                                <a href="../view/chitietsanpham.php"></a>
-                                                <h5 class="new">New</h5>
-                                            </div>
-                                            <div class="f_p_text">
-                                                <h5>Xiaomi Redmi Note 12 8GB 128GB</h5>
-                                                <h4>4.990.000đ</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                    <?php endforeach; ?>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!--================End Featured Product Area =================-->
+        <!--================kt sản phẩm mới=================-->
         
         <!--================Feature Big Add Area =================-->
         <section class="feature_big_add_area">

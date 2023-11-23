@@ -12,6 +12,10 @@ if (isset($_GET['act'])) {
             $product3 = getAll($query3);
             $query4 = "SELECT * FROM hanghoa WHERE maLoai=4";
             $product4 = getAll($query4);
+            $query5 ="select * from hanghoa order by maHH desc limit 9";
+            $spmoi = getAll($query5);
+            $query6 ="select * from hanghoa order by luotxem desc limit 4";
+            $topsp = getAll($query6);
             include "./home.php";
             break;
         case 'chitietsanpham':
@@ -70,14 +74,6 @@ if (isset($_GET['act'])) {
             break;
 
         default:
-            $query = "SELECT * FROM hanghoa WHERE maLoai=1";
-            $product = getAll($query);
-            $query2 = "SELECT * FROM hanghoa WHERE maLoai=2";
-            $product2 = getAll($query2);
-            $query3 = "SELECT * FROM hanghoa WHERE maLoai=3";
-            $product3 = getAll($query3);
-            $query4 = "SELECT * FROM hanghoa WHERE maLoai=4";
-            $product4 = getAll($query4);
             include "./home.php";
             break;
     }
@@ -90,6 +86,10 @@ if (isset($_GET['act'])) {
     $product3 = getAll($query3);
     $query4 = "SELECT * FROM hanghoa WHERE maLoai=4";
     $product4 = getAll($query4);
+    $query5 ="select * from hanghoa order by maHH desc limit 9";
+    $spmoi = getAll($query5);
+    $query6 ="select * from hanghoa order by luotxem desc limit 4";
+    $topsp = getAll($query6);
     include "./home.php";
 }
 
