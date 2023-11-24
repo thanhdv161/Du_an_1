@@ -33,7 +33,7 @@
                                 <h2>Tất cả sản phẩm</h2>
                             </div>
                             <div class="sanpham-flex">
-                                <?php foreach ($dssp as $hanghoa) : ?>
+                                <?php foreach ($product as $hanghoa) : ?>
                                     <div class="sanphamdanhmuc">
                                         <div class="l_product_item">
                                             <div class="l_p_img">

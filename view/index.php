@@ -32,6 +32,8 @@ if (isset($_GET['act'])) {
         case 'sanphamdanhmuc':
             $query = "SELECT * FROM hanghoa";
             $product = getAll($query);
+            $query6 ="select * from hanghoa order by luotxem desc limit 8";
+            $topsp = getAll($query6);
             include "./sanpham.php";
             break;
         case 'login':
@@ -91,7 +93,7 @@ if (isset($_GET['act'])) {
             }else{
                 $maLoai=0;
             }
-            $dssp=loadall_sanphamtk($kw,$maLoai);
+            $product=loadall_sanphamtk($kw,$maLoai);
             $tendm= load_ten_dmtk($maLoai);
             $query6 ="select * from hanghoa order by luotxem desc limit 8";
             $topsp = getAll($query6);
