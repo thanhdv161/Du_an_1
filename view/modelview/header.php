@@ -71,8 +71,14 @@
                 border: none;
                 background:transparent;
             }
+            .box_search>form>span>button:hover{
+                background:transparent;
+            }
             .box_search>form>span>button>i{
                 color: grey;
+            }
+            .box_search>form>span>button>i:hover{
+                color: red;
             }
             /*=========end_css_header=========*/
             /*=========css_footer=========*/
@@ -119,7 +125,7 @@
                                 <form action="index.php?act=timkiemsanpham" method="POST">
                                     <input type="text" id="" placeholder="Tìm kiếm" name="keyword">
                                     <span class="input-group-btn">
-                                    <button class="btn btn-secondary" type="button"><i class="icon-magnifier"></i></button>
+                                    <button class="btn btn-secondary" type="submit" name="btn_timkiem"><i class="icon-magnifier"></i></button>
                                     </span>
                                 </form>
                             </div>

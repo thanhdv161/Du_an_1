@@ -88,6 +88,11 @@ if (isset($_GET['act'])) {
             }else{
                 $kw = "";
             }
+            if(isset($_POST['btn_timkiem'])){
+                $kw = $_POST['keyword'];
+            }else{
+                $kw = "";
+            }
             if(isset($_GET['maLoai']) && ($_GET['maLoai']>0)){
                 $maLoai=$_GET['maLoai'];
             }else{
