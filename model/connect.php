@@ -104,8 +104,8 @@ function load_ten_dmtk($maLoai){
         return "";
     }
 }
-function comments(){
-    $query = "select * from (binhluan inner join taikhoan on binhluan.maTK = taikhoan.maTK) inner join sanpham on binhluan.maHH = sanpham.maHH";
+function binhluan(){
+    $query = "select * from (binhluan inner join taikhoan on binhluan.maTK = taikhoan.maTK) inner join hanghoa on binhluan.maHH = hanghoa.maHH";
     $result = getAll($query);
     return $result;
 }

@@ -186,10 +186,10 @@
                                     <span class="hide-menu">Quản lí bình luật sản phẩm</span>
                                 </a>
 
-                                <a class="sidebar-link waves-effect waves-dark sidebar-link box-menu" href="http://localhost/duan1/admin/index.php?act=binhluan_blog">
+                                <!-- <a class="sidebar-link waves-effect waves-dark sidebar-link box-menu" href="http://localhost/duan1/admin/index.php?act=binhluan_blog">
 
                                     <span class="hide-menu">Quản lí bình luật bài viết</span>
-                                </a>
+                                </a> -->
                             </div>
                         </li>
 

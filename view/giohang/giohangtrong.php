@@ -1,7 +1,7 @@
 
 <div class="container mx-auto text-center">
-    <h1 class="text-3xl">Giỏ hàng của bạn</h1>
-    <p class="">
+    <h1 style="margin-top: 30px;" class="text-3xl">Giỏ hàng của bạn</h1>
+    <p style="font-size: 15px;">
         <?php
         if ($success) {
             echo $success;
@@ -31,21 +31,21 @@
                             </td>
                             <td class="text-left py-5 pl-3.5 w-[630px] container border-b-2">
                                 <div class="flex justify-between">
-                                    <strong><?php echo $row['tenHH'] ?></strong>
+                                    <label class="text-black"><?php echo $row['tenHH'] ?></label>
                                     <a href="../customer/delete_gio_hang.php?id=<?php echo $row['maHH'] ?>">
-                                        <span> <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 inline">
+                                        <span> <svg style="color: black;"  fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 inline">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                             </svg>
                                         </span>
                                     </a>
                                 </div>
-                                <div><span><?php echo number_format($row['gia']) ?>đ</span></div>
+                               <span><?php echo number_format($row['gia']) ?>đ</span>
                                 <div><span><?php echo $row['mauSac'] ?></span></div>
                                 <div class="flex justify-between">
                                     <div class="my-3 flex">
                                         <span class="fix" id="counting" class="border text-center w-[70px] font-bold flex justify-center items-center">
-                                            <input type="number" name="productSlUpdate[]" class="w-full h-full text-center py-2 outline-none" value="<?php echo $row['so_luong'] ?>" min="1">
-                                            <strong class="thanhtien"><?php echo number_format($thanh_tien) ?></strong>
+                                            <input type="number" name="productSlUpdate[]" style="width: 60px;text-align: center;padding-left: 10px;" value="<?php echo $row['so_luong'] ?>" min="1">
+                                            <span style="float: right;margin-right: 80px;" class="thanhtien"><?php echo number_format($thanh_tien) ?>đ</span>
                                         </span>
                                     </div>
                                     <div>
@@ -60,16 +60,16 @@
                 </tbody>
             </table>
             <div class="flex flex-col">
-                <p style="font-size: 20px;">Tổng tiền:<strong class="text-3xl"><?php echo number_format($tongtien) ?>₫</strong></p>
-                <div class="text-left2">
+                <p style="font-size: 20px;">Tổng tiền:&ensp;<span style="font-size: 20px;" class="text-black"><?php echo number_format($tongtien) ?>đ</span></p><br>
+                <div style="text-align: center;margin-bottom: 30px;">
                     
-                        <button class="px-5 text-black py-2  slide_right" type="submit"> <a href="http://localhost/duan1/view/index.php?act=sanphamdanhmuc" style="color: black" >
+                        <button class="px-5 text-black py-2 giohangtt" type="submit"> <a href="http://localhost/duan1/view/index.php?act=sanphamdanhmuc">
                             Tiếp tục mua hàng </a></button>
                     
-                    <button class="px-5 text-black py-2  slide_right" type="submit" name="update">Cập nhật</button>
-                    <a href="" class="w-full" <?php echo count($result) == 0 ? "hidden" : "" ?>>
-                    <button class="text-left2  text-black button_slide  "><p class="text6">Thanh toán</p></button>
-                </a>
+                    <button  class="px-5 text-black py-2 giohangtt" type="submit" name="update">Cập nhật</button> <br>
+                    <a href="#" class="w-full" <?php echo count($result) == 0 ? "hidden" : "" ?>>
+                    <button style="padding: 0 172px;" class="text-black py-2 thanhtoan " type="submit"> <a href="#">
+                            Thanh toán</a></button>
                 </div>
                 
             </div>
@@ -88,6 +88,24 @@
     
 </script>
 <style>
+        .giohangtt a{
+            color: black;
+        }
+        .giohangtt{
+            color: black;
+        }
+        .thanhtoan a{
+            color: black;
+        }
+        .giohangtt:hover{
+            text-decoration: underline;
+        }
+        .giohangtt a:hover{
+            text-decoration: underline;
+        }
+        .thanhtoan a:hover{
+            text-decoration: underline;
+        }
    .text-left2.text-black.button_slide {
     width: 250px;
    margin-bottom: 10px;

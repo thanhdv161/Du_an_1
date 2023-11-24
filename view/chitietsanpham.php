@@ -63,7 +63,7 @@
                             <button type="button" onclick="cong()">+</button>
                         </div><br>
                     
-                        <a href="../customer/add_cart.php?id=<?php echo $hanghoa['maHH'] ?>"><button type="submit" class="addgh"  name="submit">THÊM VÀO GIỎ HÀNG</button><br><br></a>
+                        <a href="#"><button type="submit" class="addgh"  name="submit">THÊM VÀO GIỎ HÀNG</button><br><br></a>
                         
                          <!-- mo ta sp -->
                     <div class="p-2">
@@ -137,9 +137,7 @@
                             </div>
                             <div class="l_p_text">
                                 <ul>
-                                    <li class="p_icon"><a href="#"><i class="icon_piechart"></i></a></li>
-                                    <li><a class="add_cart_btn" href="">Add To Cart</a></li>
-                                    <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
+                                    <li><a class="add_cart_btn" href="../customer/add_cart.php?id=<?php echo $hanghoa['maHH'] ?>">Thêm Vào Giỏ Hàng</a></li>
                                 </ul>
                                 <h4><?php echo $hanghoa['tenHH'] ?></h4>
                                 <h5><?php echo number_format($hanghoa['gia'])?>đ  <del><?php echo number_format($hanghoa['giaGoc'])?>đ</del></h5>

@@ -7,7 +7,7 @@
         <div class="d-flex form-group">
             <form action="" class="mx-2 border" method="post">
                 <input type="date" class="p-1" placeholder="tìm kiếm" name="search">
-                <button class="btn btn-primary" type="submit">TÌm kiếm</button>
+                <button class="btn btn-primary" type="submit">Tìm kiếm</button>
             </form>
             
         </div>
@@ -34,7 +34,31 @@
                                 </tr>
                             </thead>
                             <tbody>
-                              
+                            <?php foreach ($binhluan as $comment): ?>
+                                <tr>
+                                    <td>
+                                        <?php echo $comment['maBL']?>
+                                    </td>
+                                    <td>
+                                        <?php echo $comment['tenTK']?>
+                                    </td>
+                                    <td>
+                                        <?php echo $comment['noiDung']?>
+                                    </td>
+                                    <td>
+                                        <?php echo $comment['tenHH']?>
+                                    </td>
+                                    <td>
+                                        <?php echo $comment['ngayBL']?>
+                                    </td>
+                                    <td>
+                                        <a href="../customer/delete_comment.php?id=<?php echo $comment['maBL']?>">
+                                            <button type="button" class="btn btn-danger">Xoá Bl</button>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <?php endforeach;?>
+                            </tbody>
                             </tbody>
                         </table>
                     </div>
