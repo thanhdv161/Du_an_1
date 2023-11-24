@@ -165,7 +165,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="top_right_header">
+                        <div class="top_right_header" style="height: 200px;">
                             <ul class="top_right">
                                 <?php 
                                 if (empty($_SESSION['user'])) {
@@ -188,7 +188,27 @@
                                
                                
                                 ?>
-                                <li class="cart"><a href="./index.php?act=giohang"><i class="icon-handbag icons"></i></a></li>
+                                <li class=""><a href="./index.php?act=giohang"><i class="icon-handbag icons"></i><span class="text-sm font-bold" id="<?php
+                                                if(isset($_GET['act'])){
+                                                    if ($_GET['act'] == 'trangchu') {
+                                                        echo 'giohangnho';
+                                                    } else {
+                                                        echo 'giohangnho1';
+                                                }
+                                                }
+                                                ?>">
+                                            <?php
+                                            if (isset($_SESSION['gio_hang'])) {
+                                                echo count($_SESSION['gio_hang']);
+                                            } else {
+                                                echo "0";
+                                            }
+                                            ?>
+                                        </span>
+                                
+                            </a>
+                                
+                            </li>
                             </ul> 
                             <style>
                                 .w-5.h-5.inline{

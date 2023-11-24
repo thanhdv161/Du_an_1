@@ -62,7 +62,9 @@
                             </span>
                             <button type="button" onclick="cong()">+</button>
                         </div><br>
-                        <button type="submit" class="addgh"  name="submit">THÊM VÀO GIỎ HÀNG</button><br><br>
+                    
+                        <a href="../customer/add_cart.php?id=<?php echo $hanghoa['maHH'] ?>"><button type="submit" class="addgh"  name="submit">THÊM VÀO GIỎ HÀNG</button><br><br></a>
+                        
                          <!-- mo ta sp -->
                     <div class="p-2">
                         <h3 class="font-mota">Mô tả</h3>
