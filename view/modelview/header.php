@@ -22,6 +22,7 @@
         <link href="../vendors/revolution/css/settings.css" rel="stylesheet">
         <link href="../vendors/revolution/css/layers.css" rel="stylesheet">
         <link href="../vendors/revolution/css/navigation.css" rel="stylesheet">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
         
         <!-- Extra plugin css -->
         <link href="../vendors/owl-carousel/owl.carousel.min.css" rel="stylesheet">
@@ -79,6 +80,33 @@
             }
             .box_search>form>span>button>i:hover{
                 color: red;
+            }
+            .loc-sanpham{
+                margin-bottom: 15px;
+                padding-bottom: 15px;
+                border-bottom: 1px solid grey;
+            }
+            .loc-sanpham>p{
+                margin-bottom: 15px;
+                text-align: center;
+                font-size: 18px;
+                
+            }
+            .loc-sanpham>form{
+                display: flex;
+                padding-left: 50px;
+            }
+            .loc-sanpham>form>select{
+               width: 125px;
+            }
+            .gia{
+                width: 350px;
+                margin: 0px 100px;
+            }
+            .loc-sanpham>form>button{
+                width: 80px;
+                background-color: rgb(251, 251, 251);
+                border: 1px solid grey;
             }
             /*=========end_css_header=========*/
             /*=========css_footer=========*/

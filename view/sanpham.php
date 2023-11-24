@@ -36,6 +36,31 @@ echo '</script>';
                     <!--================kết thúc top sản phẩm =================-->
                 </div>
                 <div class="col-lg-9">
+                            <div class="loc-sanpham">
+                                <p>Bộ lọc sản phẩm</p>
+                                <form action="index.php?act=timkiemsanpham" method="POST">
+                                    <select name="danhmuc" id="">
+                                        <option value="0">Tất cả danh mục</option>
+                                        <?php
+                                            foreach($kq as $row){
+                                        ?>
+                                        <option value="<?php echo $row['maLoai']?>"><?php echo $row['tenLoai']?></option>
+                                        <?php
+                                            }
+                                        ?>
+                                    </select>
+                                    <div class="gia">
+                                        <p>
+                                            <label for="amount">Khoảng giá:</label>
+                                            <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold; width: 250px;">
+                                        </p>
+                                        <div id="slider-range"></div>
+                                    </div>
+                                    <input type="hidden" class="price_from" name="from" value="">
+                                    <input type="hidden" class="price_to" name="to" value="">
+                                    <button type="submit" name="btn_search">Lọc</button>
+                                </form>
+                            </div>
                     <div class="s_m_title">
                         <h2>Tất cả sản phẩm</h2>
                     </div>
