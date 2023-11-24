@@ -97,8 +97,19 @@ function loadall_sanphamtk($kw=""){
     $listsanpham=connect($query);
     return  $listsanpham;
 }
-function comments(){
-    $query = "select * from (binhluan inner join taikhoan on binhluan.maTK = taikhoan.maTK) inner join sanpham on binhluan.maHH = sanpham.maHH";
+
+function load_ten_dmtk($maLoai){
+    if($maLoai>0){
+        $query="select * from hanghoa where maHH=".$maLoai;
+        $dm=getOne($query);
+        extract($dm);
+        return $name;
+    }else{
+        return "";
+    }
+}
+function binhluan(){
+    $query = "select * from (binhluan inner join taikhoan on binhluan.maTK = taikhoan.maTK) inner join hanghoa on binhluan.maHH = hanghoa.maHH";
     $result = getAll($query);
     return $result;
 }

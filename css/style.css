@@ -2552,22 +2552,20 @@ i:before {
 .add_btn:hover i {
   left: 5px;
 }
-
+.text-3xl{
+  font-size: 25px;
+}
 .add_cart_btn {
   background: #262121;
-  color: #fff;
+  color: #D8D9DA;
   line-height: 38px;
   border: 1px solid #262121;
   display: inline-block;
   font-size: 14px;
-  text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: .70px;
   padding: 0px 15px;
-  -webkit-transition: all 400ms linear 0s;
-  -o-transition: all 400ms linear 0s;
-  transition: all 400ms linear 0s;
-  font-family: "Poppins", sans-serif;
+
 }
 
 .add_cart_btn:hover {

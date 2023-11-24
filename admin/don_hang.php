@@ -8,7 +8,7 @@
     </div>
     <div class="container-fluid">
         <!-- Start Page Content -->
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-sm-12">
                 <div class="white-box">
                     <div class="row">
@@ -43,7 +43,7 @@
                         <tbody>
                             
                         </tbody>
-                    </table>
+                    </table> -->
                 </div>
             </div>
         </div>

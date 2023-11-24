@@ -6,6 +6,7 @@ if (isset($_GET['act'])) {
     switch ($_GET['act']) {
 
         case "trangchu":
+            $topTenProducts = hanghoa();
             include "./trang_chu.php";
             break;
             // chức năng sản phẩm
@@ -158,6 +159,13 @@ if (isset($_GET['act'])) {
             break;
             // chức năng bình luận
         case "binhluan":
+            $binhluan = binhluan();
+            if (isset($_POST['search']) && $_POST['search']) {
+                $search = $_POST['search'];
+                var_dump($search);
+                $query = "select * from (binhluan inner join taikhoan on binhluan.maTK =taikhoan.maTK) inner join hanghoa on binhluan.maHH = hanghoa.maHH where  ngayBL = '$search'";
+                $binhluan = getAll($query);
+            }
             include "./binh_luan.php";
             break;
         case "binhluan_blog":
