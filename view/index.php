@@ -30,10 +30,18 @@ if (isset($_GET['act'])) {
             include "./chitietsanpham.php";
             break;
         case 'sanphamdanhmuc':
+            $sql = "SELECT * FROM danhmuc";
+            $kq = connect($sql);
             $query = "SELECT * FROM hanghoa";
             $product = getAll($query);
             $query6 ="select * from hanghoa order by luotxem desc limit 8";
             $topsp = getAll($query6);
+            $querygiamin = "SELECT MIN(gia) FROM hanghoa";
+            $giamin = getFetch($querygiamin);
+            $giamin_string = implode(', ', $giamin);
+            $querygiamax = "SELECT MAX(gia) FROM hanghoa";
+            $giamax = getFetch($querygiamax);
+            $giamax_string = implode(', ', $giamax);
             include "./sanpham.php";
             break;
         case 'login':
@@ -85,21 +93,37 @@ if (isset($_GET['act'])) {
         case 'timkiemsanpham':
             if(isset($_POST['keyword']) &&  $_POST['keyword'] != 0 ){
                 $kw = $_POST['keyword'];
+                $product=loadall_sanphamtk($kw);
             }else{
                 $kw = "";
             }
             if(isset($_POST['btn_timkiem'])){
                 $kw = $_POST['keyword'];
+                $product=loadall_sanphamtk($kw);
             }else{
                 $kw = "";
             }
-            if(isset($_GET['maLoai']) && ($_GET['maLoai']>0)){
-                $maLoai=$_GET['maLoai'];
-            }else{
-                $maLoai=0;
+            if(isset($_POST['btn_search'])){
+                $danhmuc = $_POST['danhmuc'];
+                $query = "SELECT * FROM hanghoa where trangthai = 0 ";
+                if($_POST['danhmuc']){
+                    $query .= "and maLoai = $danhmuc";
+                }
+                if(isset($_POST['from']) && $_POST['to']){
+                    $price_min = $_POST['from'];
+                    $price_max = $_POST['to'];
+                    $query .= " and gia between $price_min and $price_max";
+                }
+                $product = getAll($query);
             }
-            $product=loadall_sanphamtk($kw,$maLoai);
-            $tendm= load_ten_dmtk($maLoai);
+            $querygiamin = "SELECT MIN(gia) FROM hanghoa";
+            $giamin = getFetch($querygiamin);
+            $giamin_string = implode(', ', $giamin);
+            $querygiamax = "SELECT MAX(gia) FROM hanghoa";
+            $giamax = getFetch($querygiamax);
+            $giamax_string = implode(', ', $giamax);
+            $sql = "SELECT * FROM danhmuc";
+            $kq = connect($sql);
             $query6 ="select * from hanghoa order by luotxem desc limit 8";
             $topsp = getAll($query6);
             include "./sanpham.php";
