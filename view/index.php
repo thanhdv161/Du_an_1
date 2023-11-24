@@ -80,8 +80,18 @@ if (isset($_GET['act'])) {
             include "./gioithieu.php";
             break;
         case 'giohang':
+                $success = false;
+                if (empty($_SESSION['gio_hang'])) {
+                    $result = [];
+                } else {
+                    $result = $_SESSION['gio_hang'];
+                }
+                if (isset($_GET['success'])) {
+                    $success  = "Bạn đã đặt hàng thành công";
+                }
             include "./giohang/giohangtrong.php";
-            break;
+                break;
+          
         case 'timkiemsanpham':
             if(isset($_POST['keyword']) &&  $_POST['keyword'] != 0 ){
                 $kw = $_POST['keyword'];
