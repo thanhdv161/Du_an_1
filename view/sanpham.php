@@ -37,9 +37,9 @@ echo '</script>';
                 </div>
                 <div class="col-lg-9">
                             <div class="loc-sanpham">
-                                <p>Bộ lọc sản phẩm</p>
+                                <p style="font-size: 18px; font-weight: 500;">Bộ lọc sản phẩm</p>
                                 <form action="index.php?act=timkiemsanpham" method="POST">
-                                    <select name="danhmuc" id="">
+                                    <select style="font-size: 12px; font-weight: 500;" name="danhmuc" id="">
                                         <option value="0">Tất cả danh mục</option>
                                         <?php
                                             foreach($kq as $row){
@@ -58,7 +58,7 @@ echo '</script>';
                                     </div>
                                     <input type="hidden" class="price_from" name="from" value="">
                                     <input type="hidden" class="price_to" name="to" value="">
-                                    <button type="submit" name="btn_search">Lọc</button>
+                                    <button type="submit" name="btn_loc">Lọc</button>
                                 </form>
                             </div>
                     <div class="s_m_title">

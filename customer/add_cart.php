@@ -32,7 +32,7 @@ if (isset($_POST['submit'])) {
     $productColor = $_POST['mauSac'];
     $productPrice = $_POST['gia'];
     $productImage = $_POST['anh'];
-    $sl = $_POST['productSl'];
+    $sl = $_POST['soluong'];
     if (!isset($_SESSION['gio_hang'][$productId])) {
         $_SESSION['gio_hang'][$productId] = array(
             'tenHH' => $productName,

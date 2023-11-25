@@ -40,13 +40,19 @@
                             <span style="color: red;"><?php echo number_format($hanghoa['gia'])?>đ</span>
                             <p><del><?php echo number_format($hanghoa['giaGoc'])?>đ</del></p>
                             </div>
+                              <!-- form de dat hang -->
+                              <form action="../customer/add_cart.php" method="post">
+                              <input type="text" name="gia" value="<?php echo $hanghoa['gia'] ?>" hidden>
+                                <input type="text" name="tenHH" value="<?php echo $hanghoa['tenHH'] ?>" hidden>
+                                <input type="text" name="maHH" value="<?php echo $hanghoa['maHH'] ?>" hidden>
+                                <input type="text" name="anh" value="<?php echo $arr[0] ?>" hidden>
                         <label class="text-black">Màu sắc:&ensp;</label>
                                 <?php
                                 $arrcolor = explode(",", $hanghoa['mauSac']);
                                 ?>
-                                <input type="radio" id="" name="productColor" value="<?php echo  $arrcolor[0] ?>" checked>
+                                <input type="radio" id="" name="mauSac" value="<?php echo  $arrcolor[0] ?>" checked>
                                 <label class="font-bold text-green-500 pr-4 pl-1 text-sm" for="<?php echo $arrcolor[0] ?>"><?php echo  $arrcolor[0] ?></label>
-                                <input type="radio" id="" name="productColor" value="<?php echo  $arrcolor[1] ?>">
+                                <input type="radio" id="" name="mauSac" value="<?php echo  $arrcolor[1] ?>">
                                 <label class="font-bold text-green-500 pr-4 pl-1 text-sm" for="<?php echo $arrcolor[1] ?>"><?php echo  $arrcolor[1] ?></label>
                         </div>
                         <label class="text-black">Ưu đãi đặc biệt:</label>
@@ -58,13 +64,13 @@
                         <div class="btn-ct">
                             <button type="button" onclick="tru();">-</button>
                             <span">
-                                <input class="soluong" type="text" value="1" id="count">
+                                <input class="soluong" type="text" value="1" name="soluong" id="so_luong">
                             </span>
                             <button type="button" onclick="cong()">+</button>
                         </div><br>
                     
-                        <a href="#"><button type="submit" class="addgh"  name="submit">THÊM VÀO GIỎ HÀNG</button><br><br></a>
-                        
+                        <button type="submit" class="addgh"  name="submit">THÊM VÀO GIỎ HÀNG</button><br><br>
+                        </form>
                          <!-- mo ta sp -->
                     <div class="p-2">
                         <h3 class="font-mota">Mô tả</h3>
@@ -162,7 +168,7 @@
         if (i > 10) {
             i = 10;
         };
-        document.querySelector('#count').value = i;
+        document.querySelector('#so_luong').value = i;
     }
 
     function tru() {
@@ -170,6 +176,6 @@
         if (i < 1) {
             i = 1;
         };
-        document.querySelector('#count').value = i;
+        document.querySelector('#so_luong').value = i;
     }
     </script>
