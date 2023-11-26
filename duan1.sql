@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 15, 2023 at 12:47 PM
+-- Generation Time: Nov 26, 2023 at 07:17 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -111,19 +111,21 @@ CREATE TABLE `hanghoa` (
   `tenHH` varchar(255) NOT NULL,
   `gia` double NOT NULL,
   `giamGia` double NOT NULL,
+  `giagoc` double NOT NULL DEFAULT 0,
   `anh` varchar(255) NOT NULL,
   `maLoai` int(10) NOT NULL,
   `soLuotXem` int(10) NOT NULL,
-  `moTa` varchar(255) NOT NULL
+  `moTa` varchar(255) NOT NULL,
+  `luotxem` int(11) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `hanghoa`
 --
 
-INSERT INTO `hanghoa` (`maHH`, `tenHH`, `gia`, `giamGia`, `anh`, `maLoai`, `soLuotXem`, `moTa`) VALUES
-(3, 'iPhone 14 Pro Max', 24590000, 3400000, 'iphone_14_pro_max.jpg', 1, 0, 'Description for iPhone 14 Pro Max'),
-(4, 'iPhone 15 Pro Max', 33690000, 4000000, 'iphone_15_pro_max.jpg', 1, 0, 'Description for iPhone 15 Pro Max');
+INSERT INTO `hanghoa` (`maHH`, `tenHH`, `gia`, `giamGia`, `giagoc`, `anh`, `maLoai`, `soLuotXem`, `moTa`, `luotxem`) VALUES
+(3, 'iPhone 14 Pro Max', 24590000, 3400000, 27990000, 'ip1.1.jpeg', 1, 1, 'Description for iPhone 14 Pro Max', 0),
+(4, 'iPhone 15 Pro Max', 33690000, 4000000, 37690000, 'ip2.1.jpeg\r\n', 1, 0, 'Description for iPhone 15 Pro Max', 0);
 
 -- --------------------------------------------------------
 
@@ -297,7 +299,7 @@ ALTER TABLE `vaitro`
 -- AUTO_INCREMENT for table `binhluan`
 --
 ALTER TABLE `binhluan`
-  MODIFY `maBL` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `maBL` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `binhluantintuc`
@@ -412,4 +414,3 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-ALTER TABLE hanghoa ADD COLUMN luotxem INT DEFAULT 0;
