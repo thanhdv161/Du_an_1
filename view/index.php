@@ -1,3 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden; /* Hide horizontal overflow */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            overflow-x: hidden; /* Hide horizontal overflow */
+            /* Add spacing to the right */
+            padding-right: 20px; /* You can adjust this value based on your design */
+        }
+
+        /* Add specific styles for iPhone 10 to iPhone 15 */
+        @media (max-width: 428px) {
+            body {
+                font-size: 14px;
+            }
+            /* Adjust styles for iPhone 10 */
+            /* Your specific styles for iPhone 10 go here */
+        }
+
+        @media (min-width: 429px) and (max-width: 471px) {
+            body {
+                font-size: 14px;
+            }
+            /* Adjust styles for iPhone 11 */
+            /* Your specific styles for iPhone 11 go here */
+        }
+
+        @media (min-width: 472px) and (max-width: 524px) {
+            body {
+                font-size: 14px;
+            }
+            /* Adjust styles for iPhone 12 */
+            /* Your specific styles for iPhone 12 go here */
+        }
+
+        @media (min-width: 525px) and (max-width: 572px) {
+            body {
+                font-size: 15px;
+            }
+            /* Adjust styles for iPhone 13 */
+            /* Your specific styles for iPhone 13 go here */
+        }
+
+        @media (min-width: 573px) and (max-width: 619px) {
+            body {
+                font-size: 15px;
+            }
+            /* Adjust styles for iPhone 14 */
+            /* Your specific styles for iPhone 14 go here */
+        }
+
+        @media (min-width: 620px) and (max-width: 767px) {
+            body {
+                font-size: 15px;
+            }
+            /* Adjust styles for iPad Mini and Samsung Galaxy */
+            /* Your specific styles for iPad Mini and Samsung Galaxy go here */
+        }
+
+        @media (min-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+            /* Your existing styles for larger screens go here */
+        }
+
+        /* Your existing styles go here */
+    </style>
+</head>
+
+<body>
 <?php
 include "../model/connect.php";
 include "../view/modelview/header.php";
@@ -160,3 +247,7 @@ if (isset($_GET['act'])) {
 }
 
 include '../view/modelview/footer.php';
+?>
+</body>
+
+</html>
