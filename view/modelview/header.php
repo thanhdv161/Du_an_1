@@ -108,6 +108,12 @@
                 background-color: rgb(251, 251, 251);
                 border: 1px solid grey;
             }
+            .top_header_middle>a>img{
+                width: 210px;
+            }
+            .top_header_middle>a{
+                text-decoration: none;
+            }
             /*=========end_css_header=========*/
             /*=========css_footer=========*/
             .top_header_middle{
@@ -132,6 +138,85 @@
                 grid-column-gap: 10px;
             }
             /*=========end_css_sanpham=========*/
+            /*=========css_slideshow=========*/
+            .main_slider_area{
+                width: 1170px;
+                margin: auto;
+            }
+            .container{
+                width: 1170px;
+            }
+            #body_slideshow{
+                width: 1170px;
+                margin:0px;
+                background-color:#fff;
+            }
+            #jssor_1{
+                position:relative;
+                margin:0 auto;
+                top:0px;
+                left:0px;
+                width:100%;
+                height:380px;
+                overflow:hidden;
+                visibility:hidden;
+            }
+            .jssorl-009-spin{
+                position:absolute;
+                top:0px;
+                left:0px;
+                width:100%;
+                height:100%;
+                text-align:center;
+                background-color:rgba(0,0,0,0.7);
+            }
+            .jssorl-009-spin>img{
+                animation-name: jssorl-009-spin;
+                animation-duration: 1.6s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                margin-top:-19px;
+                position:relative;
+                top:50%;
+                width:38px;
+                height:38px;
+            }
+            .slideshow{
+                cursor:default;
+                position:relative;
+                top:0px;
+                left:0px;
+                width: 1170px;
+                height:380px;
+                overflow:hidden;
+            }
+            .image{
+                width: 1170px;
+            }
+            .image>img{
+                width: 1170px;
+            }
+            @keyframes jssorl-009-spin {
+                from { transform: rotate(0deg); }
+                to { transform: rotate(360deg); }
+            }
+
+            .jssora061 {
+                display:block;
+                position:absolute;
+                cursor:pointer;
+            }
+            .jssora061 .a {
+                fill:none;
+                stroke:#fff;
+                stroke-width:360;
+                stroke-linecap:round;
+            }
+            .jssora061:hover {opacity:.8;}
+            .jssora061.jssora061dn {opacity:.5;}
+            .jssora061.jssora061ds {opacity:.3;pointer-events:none;}
+            
+            /*=========end_css_slideshow=========*/
         </style>
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -161,7 +246,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="top_header_middle">
-                            <img src="../img/image-removebg-preview (1).png" alt="">
+                            <a href="index.php?act=home"><img src="../img/image-removebg-preview (1).png" alt=""></a>
                         </div>
                     </div>
                     <div class="col-lg-3">
