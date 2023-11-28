@@ -183,7 +183,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
                 /*#region responsive code begin*/
 
-                var MAX_WIDTH = 980;
+                var MAX_WIDTH = 1170;
 
                 function ScaleSlider() {
                     var containerElement = jssor_1_slider.$Elmt.parentNode;

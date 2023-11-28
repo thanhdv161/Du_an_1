@@ -77,9 +77,11 @@
             }
             .box_search>form>span>button>i{
                 color: grey;
+                border: none;
             }
             .box_search>form>span>button>i:hover{
                 color: red;
+                border: none;
             }
             .loc-sanpham{
                 margin-bottom: 15px;
@@ -131,6 +133,7 @@
                 width: 280px;
                 
             }
+
             .sanpham-flex{
                 margin-top: 10px;
                 display: grid;
@@ -238,7 +241,7 @@
                                 <form action="index.php?act=timkiemsanpham" method="POST">
                                     <input type="text" id="" placeholder="Tìm kiếm" name="keyword">
                                     <span class="input-group-btn">
-                                    <button class="btn btn-secondary" type="submit" name="btn_timkiem"><i class="icon-magnifier"></i></button>
+                                    <button class="btn" type="submit" name="btn_timkiem"><i class="icon-magnifier"></i></button>
                                     </span>
                                 </form>
                             </div>

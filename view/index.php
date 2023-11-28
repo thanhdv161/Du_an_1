@@ -113,7 +113,7 @@ if (isset($_GET['act'])) {
             }else{
                 $kw = "";
             }
-            if(isset($_POST['btn_search'])){
+            if(isset($_POST['btn_loc'])){
                 $danhmuc = $_POST['danhmuc'];
                 $query = "SELECT * FROM hanghoa where trangthai = 0 ";
                 if($_POST['danhmuc']){

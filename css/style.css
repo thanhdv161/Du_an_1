@@ -418,15 +418,6 @@ i:before {
   border-color: #000;
 }
 
-.top_header_left .input-group .input-group-btn {
-  position: absolute;
-  right: 20px;
-  top: 51%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  z-index: 3;
-}
 
 .top_header_left .input-group .input-group-btn .btn-secondary {
   background: transparent;
@@ -509,7 +500,6 @@ i:before {
 }
 
 .top_header_middle a:before {
-  content: "|";
   position: absolute;
   right: -12px;
   top: 50%;
@@ -2503,20 +2493,7 @@ i:before {
   letter-spacing: .35px;
 }
 
-.advanced_search_area .input-group .input-group-btn .btn-secondary {
-  background: #d91522;
-  border-radius: 0px;
-  outline: none !important;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-  border: none;
-  font-size: 15px;
-  color: #fff;
-  padding: 0px;
-  width: 66px;
-  margin: 0px;
-  cursor: pointer;
-}
+
 
 /* End World Servie Area css
 ============================================================================================ */
@@ -5969,12 +5946,6 @@ i:before {
 
 .l_news_widget .input-group input:focus {
   border-color: #000;
-}
-
-.l_news_widget .input-group .input-group-btn {
-  display: block;
-  text-align: center;
-  margin-top: 30px;
 }
 
 .l_hot_widget {

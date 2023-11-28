@@ -8,7 +8,7 @@ if (isset($_GET['success'])) {
 ?>
 <!--================Slider Area =================-->
 <section class="main_slider_area">
-    <div class="container">
+    <div class="container body1">
         <div id="body_slideshow">
             <div id="jssor_1">
                 <!-- Loading Screen -->
