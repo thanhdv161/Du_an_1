@@ -53,9 +53,10 @@
             .box_search{
                 margin-top: 35px;
             }
+            
             .box_search>form{
                 display: flex;
-                background-color: white;
+                background-color: transparent;
             }
             .box_search>form>input{
                 width: 200px;
@@ -65,14 +66,15 @@
                 margin-left: 165px;
                 margin-top: 3px;
             }
+            .btn{
+                background-color: transparent;
+                border: none;
+            }
             .box_search>form>input, .input-group-btn{
                 position: absolute;
             }
             .box_search>form>span>button{
                 border: none;
-                background:transparent;
-            }
-            .box_search>form>span>button:hover{
                 background:transparent;
             }
             .box_search>form>span>button>i{
@@ -144,23 +146,27 @@
             /*=========css_slideshow=========*/
             .main_slider_area{
                 width: 1170px;
+                height: 400px;
                 margin: auto;
             }
             .container{
                 width: 1170px;
+                
             }
             #body_slideshow{
                 width: 1170px;
+                height: 400px;
                 margin:0px;
                 background-color:#fff;
             }
             #jssor_1{
                 position:relative;
-                margin:0 auto;
+                margin: auto;
+                margin-left: 0px;
                 top:0px;
                 left:0px;
-                width:100%;
-                height:380px;
+                width:1170px;
+                height:400px;
                 overflow:hidden;
                 visibility:hidden;
             }
@@ -168,8 +174,8 @@
                 position:absolute;
                 top:0px;
                 left:0px;
-                width:100%;
-                height:100%;
+                width:1170px;
+                height:400px;
                 text-align:center;
                 background-color:rgba(0,0,0,0.7);
             }
@@ -190,7 +196,7 @@
                 top:0px;
                 left:0px;
                 width: 1170px;
-                height:380px;
+                height: 400px;
                 overflow:hidden;
             }
             .image{
@@ -334,10 +340,10 @@
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
                                 <li><a href="index.php?act=sanphamdanhmuc" class="dropdown-item">Tất cả sản phẩm</a></li>
-                                <li><a href="#" class="dropdown-item">iPhone</a></li>
-                                <li><a href="#" class="dropdown-item">Samsung</a></li>
-                                <li><a href="#" class="dropdown-item">Xiaomi</a></li>
-                                <li><a href="#" class="dropdown-item">Realme</a></li>
+                                <li><a href="index.php?act=sanphamdanhmuc&maLoai=1" class="dropdown-item">Iphone</a></li>
+                                <li><a href="index.php?act=sanphamdanhmuc&maLoai=2" class="dropdown-item">SamSung</a></li>
+                                <li><a href="index.php?act=sanphamdanhmuc&maLoai=3" class="dropdown-item">Xiaomi</a></li>
+                                <li><a href="index.php?act=sanphamdanhmuc&maLoai=4" class="dropdown-item">Realme</a></li>
                             </ul>
                         </div>
                         <ul class="navbar-nav">

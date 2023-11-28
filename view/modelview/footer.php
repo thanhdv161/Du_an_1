@@ -120,14 +120,14 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         <script src="../js/theme.js"></script>
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
         <script>
-            $('.price_from').val(<?php echo $giamin_string ?>);
-	        $('.price_to').val(<?php echo $giamax_string/2 ?>);
+            $('.price_from').val(<?php echo $giamin_arr ?>);
+	        $('.price_to').val(<?php echo $giamax_arr/2 ?>);
             $( function() {
                 $( "#slider-range" ).slider({
                 range: true,
-                min: <?php echo $giamin_string ?>,
-                max: <?php echo $giamax_string ?>,
-                values: [ <?php echo $giamin_string ?>, <?php echo $giamax_string/2 ?> ],
+                min: <?php echo $giamin_arr ?>,
+                max: <?php echo $giamax_arr ?>,
+                values: [ <?php echo $giamin_arr ?>, <?php echo $giamax_arr/2 ?> ],
                 slide: function( event, ui ) {
                     $( "#amount" ).val( "vnđ " + addPlus(ui.values[ 0 ]).toString() + " - vnđ " + addPlus(ui.values[ 1 ]) );
                     $('.price_from').val(ui.values[ 0 ]);
@@ -183,7 +183,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
                 /*#region responsive code begin*/
 
-                var MAX_WIDTH = 1170;
+                var MAX_WIDTH = 1140;
 
                 function ScaleSlider() {
                     var containerElement = jssor_1_slider.$Elmt.parentNode;
