@@ -509,7 +509,6 @@ i:before {
 }
 
 .top_header_middle a:before {
-  content: "|";
   position: absolute;
   right: -12px;
   top: 50%;
