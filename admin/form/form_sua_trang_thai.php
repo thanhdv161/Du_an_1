@@ -37,14 +37,14 @@
                 <div class="card">
                     <div class="card-body">
                         <form class="form-horizontal form-material" method="post" action="./index.php?act=donhang">
-                            <input type="hidden" value="<?php echo $_GET['orderId'] ?>" name="orderId">
+                            <input type="hidden" value="<?php echo $_GET['maDH'] ?>" name="maDH">
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Trạng Thái</label>
                                 <select class="form-select shadow-none p-0 border-0 form-control-line" name="id">
                                     <?php
                                     foreach ($category as $cate) :
                                     ?>
-                                        <option <?php echo $cate['id'] == $id ? "selected" : "" ?> value="<?php echo $cate['id'] ?>"> <?php echo $cate['statusName'] ?></option>
+                                        <option <?php echo $cate['id'] == $id ? "selected" : "" ?> value="<?php echo $cate['id'] ?>"> <?php echo $cate['tenTrangThai'] ?></option>
                                     <?php endforeach ?>
                                 </select>
                             </div>
@@ -65,7 +65,6 @@
 
     <!-- footer -->
     <!-- ============================================================== -->
-    <footer class="footer text-center"> 2021 © Ample Admin brought to you by <a href="https://www.wrappixel.com/">wrappixel.com</a>
     </footer>
     <!-- ============================================================== -->
     <!-- End footer -->

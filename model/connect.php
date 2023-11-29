@@ -113,3 +113,24 @@ function binhluan(){
     $result = getAll($query);
     return $result;
 }
+function getOrderId($query){
+    $connection = new PDO("mysql:host=localhost;dbname=duan1;charset=utf8", "root", "");
+    $status = $connection->prepare($query);
+    $status->execute();
+    $orderId =  $connection -> lastInsertId();
+    return $orderId;
+}
+function orders(){
+    $query = "select * from donhang";
+    $result = getAll($query);
+    return $result;
+}
+function checkStatus($number){
+    if($number==1){
+        echo "Chưa Thanh Toán";
+    }elseif($number ==2){
+        echo "Đã Thanh Toán";
+    }else{
+        echo "Chưa xác đinh";
+    }
+}

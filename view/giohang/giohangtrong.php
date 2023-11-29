@@ -67,8 +67,8 @@
                             Tiếp tục mua hàng </a></button>
                     
                     <button  class="px-5 text-black py-2 giohangtt" type="submit" name="update">Cập nhật</button> <br>
-                    <a href="#" class="w-full" <?php echo count($result) == 0 ? "hidden" : "" ?>>
-                    <button style="padding: 0 172px;" class="text-black py-2 thanhtoan " type="submit"> <a href="#">
+                    <a href="" class="w-full" <?php echo count($result) == 0 ? "hidden" : "" ?>>
+                    <button style="padding: 0 172px;" class="text-black py-2 thanhtoan " type="submit"> <a href="http://localhost/duan1/view/index.php?act=thanhtoan">
                             Thanh toán</a></button>
                 </div>
                 

@@ -172,13 +172,45 @@ if (isset($_GET['act'])) {
             include "./binhluan_blog.php";
             break;
             // Chức năng giỏ hàng
-        case "donhang":
-            include "./don_hang.php";
-            break;
+            case "donhang":
+                if(isset($_GET['updateStatus'])){
+                    $statusId = $_GET['maLoai'];
+                    $orderId = $_GET['updateStatus'];
+                    $statusIdCount = $statusId[0];
+                    $query = "UPDATE `donhang` SET maTrangThai = $statusIdCount WHERE maDH = $orderId";
+                    connect($query);
+                }
+                $orders = orders();
+                if (isset($_GET['trangThai'])) {
+                    if($_GET['trangThai']){
+                        $statusOrder = $_GET["trangThai"];
+                        $query = "select * from `donhang` where maTrangThai = $statusOrder";
+                        $orders = getAll($query);
+                    }
+                }
+                $query1 = "SELECT * FROM trangthaidonhang";
+                $categorys = getAll($query1);
+                include "./don_hang.php";
+                break;
         case "capnhattrangthai":
+            $id = $_GET['id'];
+            $query1 = "SELECT * FROM `trangthaidonhang`";
+            $category = getAll($query1);
+            var_dump($id);
+            // echo "<pre>";
+            // var_dump($category);
             include "./form/form_sua_trang_thai.php";
+        
             break;
         case "chitietdonhang":
+            $num = 0;
+            $id = $_GET['id'];
+            $query = "select donhang.tenKH,donhang.maTrangThai,donhang.diaChi,donhang.sdt,donhang.ngayDatHang, donhang.ghiChu, donhang.tongTien as money, chitietdonhang.*,hanghoa.tenHH as productName from donhang
+            inner join chitietdonhang on donhang.maDH = chitietdonhang.maDH
+            inner join hanghoa on hanghoa.maHH = chitietdonhang.maHH
+            where donhang.maDH = $id
+            ";
+            $results = getAll($query);
             include "./chitietdonhang.php";
             break;
         default:

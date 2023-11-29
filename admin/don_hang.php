@@ -7,8 +7,8 @@
         <!-- /.col-lg-12 -->
     </div>
     <div class="container-fluid">
-        <!-- Start Page Content -->
-        <!-- <div class="row">
+        Start Page Content
+         <div class="row">
             <div class="col-sm-12">
                 <div class="white-box">
                     <div class="row">
@@ -41,9 +41,53 @@
                             </tr>
                         </thead>
                         <tbody>
-                            
+                        <?php foreach ($orders as $order) : ?>
+                                <form action="" method="get">
+                                    <input type="text" name="act" value="donhang" hidden>
+                                    <tr>
+                                        <td>
+                                            <?php echo $order['maDH'] ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $order['tenKH'] ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $order['ngayDatHang'] ?>
+                                        </td>
+                                        <td>
+                                            <?php echo number_format($order['tongTien']) ?> đ
+                                        </td>
+                                        <td><?php echo $order['ghiChu'] ?></td>
+                                        <td>
+                                            <?php echo $order['diaChi'] ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $order['sdt'] ?>
+                                        </td>
+                                        <td>
+                                            <select name="maLoai" class="border-0">
+                                                <?php
+                                                foreach ($categorys as $cate) :
+                                                ?>
+                                                    <option <?php echo $cate['id'] == $order['maTrangThai'] ? "selected" : "" ?> value="<?php echo $cate['id'] ?>"> <?php echo $cate['tenTrangThai'] ?></option>
+                                                <?php endforeach ?>
+                                            </select>
+                                        </td>
+
+                                        <td>
+                                            <a href="http://localhost/duan1/admin/index.php?act=chitietdonhang&id=<?php echo $order['maDH'] ?>">
+                                                <button type="button" class="btn btn-primary text-white">Chi tiết</button>
+                                            </a>
+                                            <button type="submit" class="btn btn-primary text-white" name="updateStatus" value="<?php echo $order['maDH'] ?>">Cập nhật Trạng Thái </button>
+                                            <a onclick="return confirm('Bạn muốn xóa đơn hàng <?php echo $order['maDH'] ?> chứ?')" href="../customer/delete_don_hang.php?id=<?php echo $order['maDH'] ?>">
+                                                <button type="button" class="btn btn-danger text-white">Xoá</button>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </form>
+                            <?php endforeach; ?>
                         </tbody>
-                    </table> -->
+                    </table> 
                 </div>
             </div>
         </div>
