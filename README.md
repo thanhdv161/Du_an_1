@@ -73,15 +73,19 @@
   </a>
 </p>
 &nbsp;
-### 🧠 Lời mở đầu
+### 🧠 Design Philosophy
 &nbsp;
-### 👐 Cống hiến
+
+
 &nbsp;
-### 🌟 demo sản phẩm
+### 👐 Contributing
 &nbsp;
-### 📜 tổng quan về dự án
+### 🌟 Showcase
 &nbsp;
-### ❤️ Lời cảm ơn
+### 📜 
+&nbsp;
+### ❤️ 
 &nbsp;
 <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
+
 
