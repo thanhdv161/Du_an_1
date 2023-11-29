@@ -38,7 +38,7 @@
                             <div class="cotgia">
                                 <label for="">Giá:&nbsp;</label>
                             <span style="color: red;"><?php echo number_format($hanghoa['gia'])?>đ</span>
-                            <p><del><?php echo number_format($hanghoa['giaGoc'])?>đ</del></p>
+                            <p><del><?php echo number_format($hanghoa['giagoc'])?>đ</del></p>
                             </div>
                               <!-- form de dat hang -->
                               <form action="../customer/add_cart.php" method="post">
