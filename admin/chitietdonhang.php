@@ -65,7 +65,7 @@
                                             <?php echo $result['ghiChu'] ?>
                                         </td>
                                         <td>
-                                            <?php checkStatus($result['maTrangThai']) ?>
+                                            <?php echo $result['tenTrangThai'] ?>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

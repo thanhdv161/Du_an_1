@@ -1644,20 +1644,6 @@ i:before {
   text-align: center;
 }
 
-.solid_banner_inner {
-  padding: 68px 0px;
-}
-
-.solid_banner_inner h3 {
-  font-size: 24px;
-  text-transform: uppercase;
-  color: #000;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  letter-spacing: .60px;
-  padding-bottom: 10px;
-}
-
 .solid_banner_inner ul li {
   display: inline-block;
   margin-right: 12px;
@@ -2492,9 +2478,36 @@ i:before {
   color: #666666;
   letter-spacing: .35px;
 }
+.btn-gui{
+  background-color: black;
+  color: #D8D9DA;
+  padding: 10px 20px;
+  border-radius: 3px;
+  margin-bottom: 40px;
+}
 
-
-
+.btn-gui:hover{
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 3px;
+}
+.text-hdn{
+  font-size: 18px;
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin: 50px 0 30px 0;
+  text-transform: uppercase;
+}
+.text-hgh{
+  font-size: 20px;
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin: 50px 0 10px 0;
+  text-transform: uppercase;
+}
 /* End World Servie Area css
 ============================================================================================ */
 /*---------------------------------------------------- */

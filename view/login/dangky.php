@@ -2,19 +2,19 @@
 
 
 <div class="w-[500px] mx-auto container text-center">
-        <h3 class="text-4xl font-bold my-5">Tạo Tài Khoản</h3>
+        <h3 class="text-hdn">Đăng ký tài khoản</h3>
         <form action="../view/login/create_user.php" method="POST" enctype="multipart/form-data">
 
-            <input type="email" name="email" id="" placeholder="Email" class="inp33"><br>
-            <input type="texk" name="tenTK" id="" placeholder="Tên Tài Khoản" class="inp33"><br>
-            <input type="password" name="matKhau" id="" placeholder="Mật Khẩu" class="inp33"><br>
-            <input type="file" name="anh" id="" class="inp33"><br>
+            <input type="email" name="email" id="" placeholder="Email" class="inp33" required><br>
+            <input type="text" name="tenTK" id="" placeholder="Tên Tài Khoản" class="inp33" required><br>
+            <input type="password" name="matKhau" id="" placeholder="Mật Khẩu" class="inp33" required><br>
+            <input type="file" name="anh" id="" class="inp33" required><br>
             <input type="text" value="2" name="maVaiTro" hidden>
-            <input type="text" name="sdt" id="" placeholder="Số Điện Thoại" class="inp33"><br>
-            <input type="text" name="diaChi" id="" placeholder="Địa Chỉ" class="inp33">
+            <input type="text" name="sdt" id="" placeholder="Số Điện Thoại" class="inp33" required><br>
+            <input type="text" name="diaChi" id="" placeholder="Địa Chỉ" class="inp33" required>
             <div class="text-left2">
-                <button class="px-5 text-black py-2  slide_right" type="submit" name="submit1" >Đăng Kí</button>
-                <a href="http://localhost/duan1/view/index.php?act=home" style="color: black;">Hủy</a>
+                <button class="btn-gui" type="submit" name="submit1" >Đăng Kí</button>
+                <a href="http://localhost/duan1/view/index.php?act=dangnhap" style="color: black;">Hủy</a>
             </div>
         </form>
 
@@ -27,7 +27,7 @@
     .text-left2{
               width: 200px;  
               margin-top: 20px;
-              margin-left: 370px;
+              margin-left: 330px;
              
             }
       .inp33{

@@ -2,13 +2,13 @@
 
 
 <div class="w-[500px] mx-auto container text-center">
-        <h3 class="text-4xl font-bold my-5">Phục hồi mật khẩu</h3>
+        <h3 class="text-hdn">Phục hồi mật khẩu</h3>
         <form action="./login/set_pass.php" method="POST">
 
-            <input type="email" name="email" id="" placeholder="Email" class="inp33">
+            <input type="email" name="email" id="" placeholder="Email" class="inp33" required>
             <div class="text-left2">
-                <button class="px-5 text-black py-2  slide_right">Gửi</button>
-                <a href="http://localhost/duan1/view/index.php?act=home" style="color: black;">Hủy</a>
+                <button class="btn-gui">Gửi</button>
+                <a href="http://localhost/duan1/view/index.php?act=dangnhap" style="color: black;">Hủy</a>
             </div>
         </form>
 
@@ -18,10 +18,11 @@
 
 
 <style>
+
     .text-left2{
               width: 200px;  
               margin-top: 20px;
-              margin-left: 360px;
+              margin-left: 315px;
             }
       .inp33{
                 width: 400px;

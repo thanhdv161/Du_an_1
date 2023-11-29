@@ -7,7 +7,6 @@
         <!-- /.col-lg-12 -->
     </div>
     <div class="container-fluid">
-        Start Page Content
          <div class="row">
             <div class="col-sm-12">
                 <div class="white-box">
@@ -19,8 +18,10 @@
                             <input type="text" name="act" value="donhang" hidden>
                             <select class="form-select shadow-none p-0 border-0 " name="trangThai">
                                 <option value="0">Chọn Trạng Thái Đơn Hàng</option>
-                                <option value="2">Đã Thanh Toán</option>
-                                <option value="1">Chưa Thanh Toán</option>
+                                <option value="1">Chưa xác nhận</option>
+                                <option value="2">Đã xác nhận</option>
+                                <option value="3">Đang giao hàng</option>
+                                <option value="4">Đã giao hàng</option>
                             </select>
                             <button type="submit" class="btn btn-primary text-white">Lọc</button>
                         </form>
