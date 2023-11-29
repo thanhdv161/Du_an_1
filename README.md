@@ -75,9 +75,6 @@
 &nbsp;
 ### 🧠 Design Philosophy
 &nbsp;
-
-
-&nbsp;
 ### 👐 Contributing
 &nbsp;
 ### 🌟 Showcase
