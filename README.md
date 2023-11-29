@@ -74,6 +74,7 @@
 </p>
 &nbsp;
 ### 🧠 Design Philosophy
+
 &nbsp;
 ### 👐 Contributing
 &nbsp;
