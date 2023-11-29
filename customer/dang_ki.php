@@ -20,12 +20,12 @@ if (isset($_POST['submit'])) {
     var_dump($_POST);
   
     if (!empty($user)) {
-        header("location:http://localhost/duan1/admin/index.php?act=addkh&error");
+        header("location:http://localhost/du_an_1/admin/index.php?act=addkh&error");
       
     } else {
         $query = "INSERT INTO taikhoan( tenTK, email, matKhau, maVaiTro, anh ,sdt,diaChi) VALUES ('$tenTK','$email','$matKhau','$maVaiTro','$anh','$sdt','$diaChi')";
         connect($query);
-        header("location:http://localhost/duan1/admin/index.php?act=khachhang");
+        header("location:http://localhost/du_an_1/admin/index.php?act=khachhang");
     }
 }
 

@@ -4,7 +4,7 @@
         echo '<script language="javascript">';
         echo 'alert("Chưa có sản phẩm nào trong giỏ hàng ! ")';
         echo '</script>';
-        $yourURL = "http://localhost/duan1/view/index.php?act=sanphamdanhmuc";
+        $yourURL = "http://localhost/du_an_1/view/index.php?act=sanphamdanhmuc";
                 echo ("<script>location.href='$yourURL'</script>");
         die;
     }

@@ -15,7 +15,7 @@
                         <p class="box-title col-4">
                             Bảng Thống Kê Đơn Hàng
                         </p>
-                        <form action="http://localhost/duan1/admin/index.php?act=donhang" method="get" class="col-4">
+                        <form action="http://localhost/du_an_1/admin/index.php?act=donhang" method="get" class="col-4">
                             <input type="text" name="act" value="donhang" hidden>
                             <select class="form-select shadow-none p-0 border-0 " name="trangThai">
                                 <option value="0">Chọn Trạng Thái Đơn Hàng</option>
@@ -75,7 +75,7 @@
                                         </td>
 
                                         <td>
-                                            <a href="http://localhost/duan1/admin/index.php?act=chitietdonhang&id=<?php echo $order['maDH'] ?>">
+                                            <a href="http://localhost/du_an_1/admin/index.php?act=chitietdonhang&id=<?php echo $order['maDH'] ?>">
                                                 <button type="button" class="btn btn-primary text-white">Chi tiết</button>
                                             </a>
                                             <button type="submit" class="btn btn-primary text-white" name="updateStatus" value="<?php echo $order['maDH'] ?>">Cập nhật Trạng Thái </button>

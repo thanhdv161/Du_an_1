@@ -39,7 +39,7 @@ if (isset($_GET['act'])) {
                     move_uploaded_file($_FILES['anh']['tmp_name'][$key], "../img/" . $value);
                 }
                 themhanghoa($tenHH, $gia, $giaGoc, $mauSac, $stringImage, $maLoai, $moTa);
-                $yourURL = "http://localhost/duan1/admin/index.php?act=sanpham";
+                $yourURL = "http://localhost/du_an_1/admin/index.php?act=sanpham";
                 echo ("<script>location.href='$yourURL'</script>");
             }
             include "./form/form_them_moi_san_pham.php";
@@ -73,7 +73,7 @@ if (isset($_GET['act'])) {
                         $stringImage = $oldImage;
                     }
                     updateProduct($productId, $productName, $productPrice, $productGiaGoc, $productColor, $stringImage, $maLoai);
-                    $yourURL = "http://localhost/duan1/admin/index.php?act=sanpham";
+                    $yourURL = "http://localhost/du_an_1/admin/index.php?act=sanpham";
                     echo ("<script>location.href='$yourURL'</script>");
                 }
                 include "./form/form_sua_san_pham.php";
@@ -95,7 +95,7 @@ if (isset($_GET['act'])) {
                     $id = $_POST['maLoai'];
                     $tenLoai = $_POST["tenLoai"];
                     updateDanhMuc($id, $tenLoai);
-                    $yourURL = "http://localhost/duan1/admin/index.php?act=loaihang";
+                    $yourURL = "http://localhost/du_an_1/admin/index.php?act=loaihang";
                     echo ("<script>location.href='$yourURL'</script>");
                     
                 }
@@ -110,7 +110,7 @@ if (isset($_GET['act'])) {
                     $check = getOne($query);
                     if (empty($check)) {
                         addDM($tenLoai);
-                        $yourURL = "http://localhost/duan1/admin/index.php?act=loaihang";
+                        $yourURL = "http://localhost/du_an_1/admin/index.php?act=loaihang";
                         echo ("<script>location.href='$yourURL'</script>");
                     } else {
                         $error['danhmuc'] = "Vui lòng chọn tên khác!";
@@ -149,7 +149,7 @@ if (isset($_GET['act'])) {
                     }
                     $sql = "UPDATE taikhoan SET tenTK='$userName',matKhau='$password',email='$email',diaChi='$location',maVaiTro='$vai_tro',anh='$Image',sdt='$sdt' where maTK = $id";
                     connect($sql);
-                    $yourURL = "http://localhost/duan1/admin/index.php?act=khachhang";
+                    $yourURL = "http://localhost/du_an_1/admin/index.php?act=khachhang";
                     echo ("<script>location.href='$yourURL'</script>");
                 }
                 include "./form/form_sua_user.php";

@@ -67,5 +67,5 @@ foreach ($_SESSION['gio_hang'] as $key => $value){
     unset($_SESSION['gio_hang'][$key]);
     
 }
-header("Location:http://localhost/duan1/view/index.php?act=giohang&success");
+header("Location:http://localhost/du_an_1/view/index.php?act=giohang&success");
 ?>

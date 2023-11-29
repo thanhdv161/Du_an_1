@@ -12,7 +12,7 @@
                 <button class="px-5  text-black py-2  slide_right " type="submit">Đăng nhập</button>
             </div><br>
             <div class="text-left2">
-                <a href="http://localhost/duan1/view/index.php?act=quenmk
+                <a href="http://localhost/du_an_1/view/index.php?act=quenmk
                 " class="mr-2" style="color: black;">Quên mật khẩu?</a>hoặc  <a href="../view/index.php?act=dangki" style="color: black;">Đăng kí</a>
             </div>
         </div>

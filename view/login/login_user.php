@@ -9,10 +9,10 @@ include "../login/pdo.php";
     if($result){
         if(checkUser($result)){
             $_SESSION['user'] = $result;
-            header("Location:http://localhost/duan1/admin/index.php?act=trangchu");
+            header("Location:http://localhost/du_an_1/admin/index.php?act=trangchu");
         }else{
             $_SESSION['user'] = $result;
-            header("Location:http://localhost/duan1/view/index.php?act=home&succes=$username");
+            header("Location:http://localhost/du_an_1/view/index.php?act=home&succes=$username");
         }
     }else{
         header("Location: ../index.php?act=login");

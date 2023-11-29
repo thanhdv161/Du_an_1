@@ -6,4 +6,4 @@
     pdo_execute($query); 
     $query = "DELETE FROM `donhang` WHERE maDH = $id";
     pdo_execute($query);    
-    header("Location:http://localhost/duan1/admin/index.php?act=donhang");
+    header("Location:http://localhost/du_an_1/admin/index.php?act=donhang");

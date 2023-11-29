@@ -76,7 +76,7 @@
                     </div>
                 </div>
                 <button type="button" class="btn btn-primary text-white" onclick="return in_hoa_don();">In Hoá Đơn</button>
-                <a href="http://localhost/duan1/admin/index.php?act=donhang">
+                <a href="http://localhost/du_an_1/admin/index.php?act=donhang">
                     <button type="button" class="btn btn-danger text-white">Trở Lại</button>
                 </a>
             </div>

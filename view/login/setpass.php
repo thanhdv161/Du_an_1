@@ -6,7 +6,7 @@
             <input type="password" id="repass" placeholder="Nhập lại mật khẩu" class="inp33">
             <div class="text-left2">
                 <button class="px-5 text-black py-2  slide_right" >Gửi</button>
-                <a href="http://localhost/duan1/view/index.php?act=home" style="color: black;">Hủy</a>
+                <a href="http://localhost/du_an_1/view/index.php?act=home" style="color: black;">Hủy</a>
             </div>
         </form>
 

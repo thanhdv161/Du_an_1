@@ -86,7 +86,7 @@ function themhanghoa($tenHH, $gia, $giaGoc, $mauSac, $anh, $maLoai, $moTa){
 function delete($table,$tableId,$id,$case){
     $query="DELETE FROM $table WHERE $tableId=$id";
     connect($query);
-    header("Location: http://localhost/duan1/admin/index.php?act=$case");
+    header("Location: http://localhost/du_an_1/admin/index.php?act=$case");
 }
 function loadall_sanphamtk($kw=""){
     $query="SELECT * from hanghoa where trangthai = 0";
