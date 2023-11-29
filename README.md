@@ -110,10 +110,6 @@ If you want to use them for your own project, refer to our [style guide](https:/
 
 Already have a project making use of our palette? Don't forget to add it to
 our [showcase](#-showcase) section below!
-<br><img src="assets/misc/transparent.png" height="10" width="0" />
-
-<details>
-<summary>🌻 Latte</summary>
 
 &nbsp;
 
@@ -122,10 +118,6 @@ our [showcase](#-showcase) section below!
 
 &nbsp;
 
-### 🪵 Ports and more!
-
-
-&nbsp;
 
 ### 🌟 Showcase
 
