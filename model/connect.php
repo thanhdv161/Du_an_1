@@ -164,3 +164,4 @@ function load_hanghoa_danhmuc($maLoai){
 function deletebinhluan($id){
     $query = "delete from binhluan where maBL = $id";
     connect($query);
+}
