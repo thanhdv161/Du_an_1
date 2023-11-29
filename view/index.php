@@ -1,6 +1,7 @@
 <?php
 include "../model/connect.php";
 include "../view/modelview/header.php";
+$kq = loadall_danhmuc();
 if (isset($_GET['act'])) {
     switch ($_GET['act']) {
         case 'home':
@@ -12,10 +13,8 @@ if (isset($_GET['act'])) {
             $product3 = getAll($query3);
             $query4 = "SELECT * FROM hanghoa WHERE maLoai=4";
             $product4 = getAll($query4);
-            $query5 ="select * from hanghoa order by maHH desc limit 9";
-            $spmoi = getAll($query5);
-            $query6 ="select * from hanghoa order by luotxem desc limit 4";
-            $topsp = getAll($query6);
+            $spmoi = sanpham_moi();
+            $topsp = sanpham_top();
             include "./home.php";
             break;
         case 'chitietsanpham':
@@ -30,18 +29,17 @@ if (isset($_GET['act'])) {
             include "./chitietsanpham.php";
             break;
         case 'sanphamdanhmuc':
-            $sql = "SELECT * FROM danhmuc";
-            $kq = connect($sql);
-            $query = "SELECT * FROM hanghoa";
-            $product = getAll($query);
-            $query6 ="select * from hanghoa order by luotxem desc limit 8";
-            $topsp = getAll($query6);
-            $querygiamin = "SELECT MIN(gia) FROM hanghoa";
-            $giamin = getFetch($querygiamin);
-            $giamin_string = implode(', ', $giamin);
-            $querygiamax = "SELECT MAX(gia) FROM hanghoa";
-            $giamax = getFetch($querygiamax);
-            $giamax_string = implode(', ', $giamax);
+            if(isset($_GET['maLoai'])){
+                $maLoai = $_GET['maLoai'];
+                $product = load_hanghoa_danhmuc($maLoai);
+            }
+            else{
+                $product = loadall_hanghoa();
+            }
+            $kq = loadall_danhmuc();
+            $topsp = sanpham_top();
+            $giamin_arr = lay_gia_min();
+            $giamax_arr = lay_gia_max();
             include "./sanpham.php";
             break;
         case 'login':
@@ -137,16 +135,9 @@ if (isset($_GET['act'])) {
                 }
                 $product = getAll($query);
             }
-            $querygiamin = "SELECT MIN(gia) FROM hanghoa";
-            $giamin = getFetch($querygiamin);
-            $giamin_string = implode(', ', $giamin);
-            $querygiamax = "SELECT MAX(gia) FROM hanghoa";
-            $giamax = getFetch($querygiamax);
-            $giamax_string = implode(', ', $giamax);
-            $sql = "SELECT * FROM danhmuc";
-            $kq = connect($sql);
-            $query6 ="select * from hanghoa order by luotxem desc limit 8";
-            $topsp = getAll($query6);
+            $giamin_arr = lay_gia_min();
+            $giamax_arr = lay_gia_max();
+            $topsp = sanpham_top();
             include "./sanpham.php";
             break;
         
@@ -163,10 +154,8 @@ if (isset($_GET['act'])) {
     $product3 = getAll($query3);
     $query4 = "SELECT * FROM hanghoa WHERE maLoai=4";
     $product4 = getAll($query4);
-    $query5 ="select * from hanghoa order by maHH desc limit 9";
-    $spmoi = getAll($query5);
-    $query6 ="select * from hanghoa order by luotxem desc limit 4";
-    $topsp = getAll($query6);
+    $spmoi = sanpham_moi();
+    $topsp = sanpham_top();
     include "./home.php";
 }
 

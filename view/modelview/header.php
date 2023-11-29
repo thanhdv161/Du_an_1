@@ -53,9 +53,10 @@
             .box_search{
                 margin-top: 35px;
             }
+            
             .box_search>form{
                 display: flex;
-                background-color: white;
+                background-color: transparent;
             }
             .box_search>form>input{
                 width: 200px;
@@ -65,6 +66,10 @@
                 margin-left: 165px;
                 margin-top: 3px;
             }
+            .btn{
+                background-color: transparent;
+                border: none;
+            }
             .box_search>form>input, .input-group-btn{
                 position: absolute;
             }
@@ -72,14 +77,13 @@
                 border: none;
                 background:transparent;
             }
-            .box_search>form>span>button:hover{
-                background:transparent;
-            }
             .box_search>form>span>button>i{
                 color: grey;
+                border: none;
             }
             .box_search>form>span>button>i:hover{
                 color: red;
+                border: none;
             }
             .loc-sanpham{
                 margin-bottom: 15px;
@@ -108,6 +112,12 @@
                 background-color: rgb(251, 251, 251);
                 border: 1px solid grey;
             }
+            .top_header_middle>a>img{
+                width: 210px;
+            }
+            .top_header_middle>a{
+                text-decoration: none;
+            }
             /*=========end_css_header=========*/
             /*=========css_footer=========*/
             .top_header_middle{
@@ -125,6 +135,7 @@
                 width: 280px;
                 
             }
+
             .sanpham-flex{
                 margin-top: 10px;
                 display: grid;
@@ -132,6 +143,89 @@
                 grid-column-gap: 10px;
             }
             /*=========end_css_sanpham=========*/
+            /*=========css_slideshow=========*/
+            .main_slider_area{
+                width: 1170px;
+                height: 400px;
+                margin: auto;
+            }
+            .container{
+                width: 1170px;
+                
+            }
+            #body_slideshow{
+                width: 1170px;
+                height: 400px;
+                margin:0px;
+                background-color:#fff;
+            }
+            #jssor_1{
+                position:relative;
+                margin: auto;
+                margin-left: 0px;
+                top:0px;
+                left:0px;
+                width:1170px;
+                height:400px;
+                overflow:hidden;
+                visibility:hidden;
+            }
+            .jssorl-009-spin{
+                position:absolute;
+                top:0px;
+                left:0px;
+                width:1170px;
+                height:400px;
+                text-align:center;
+                background-color:rgba(0,0,0,0.7);
+            }
+            .jssorl-009-spin>img{
+                animation-name: jssorl-009-spin;
+                animation-duration: 1.6s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                margin-top:-19px;
+                position:relative;
+                top:50%;
+                width:38px;
+                height:38px;
+            }
+            .slideshow{
+                cursor:default;
+                position:relative;
+                top:0px;
+                left:0px;
+                width: 1170px;
+                height: 400px;
+                overflow:hidden;
+            }
+            .image{
+                width: 1170px;
+            }
+            .image>img{
+                width: 1170px;
+            }
+            @keyframes jssorl-009-spin {
+                from { transform: rotate(0deg); }
+                to { transform: rotate(360deg); }
+            }
+
+            .jssora061 {
+                display:block;
+                position:absolute;
+                cursor:pointer;
+            }
+            .jssora061 .a {
+                fill:none;
+                stroke:#fff;
+                stroke-width:360;
+                stroke-linecap:round;
+            }
+            .jssora061:hover {opacity:.8;}
+            .jssora061.jssora061dn {opacity:.5;}
+            .jssora061.jssora061ds {opacity:.3;pointer-events:none;}
+            
+            /*=========end_css_slideshow=========*/
         </style>
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -153,7 +247,7 @@
                                 <form action="index.php?act=timkiemsanpham" method="POST">
                                     <input type="text" id="" placeholder="Tìm kiếm" name="keyword">
                                     <span class="input-group-btn">
-                                    <button class="btn btn-secondary" type="submit" name="btn_timkiem"><i class="icon-magnifier"></i></button>
+                                    <button class="btn" type="submit" name="btn_timkiem"><i class="icon-magnifier"></i></button>
                                     </span>
                                 </form>
                             </div>
@@ -161,7 +255,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="top_header_middle">
-                            <img src="../img/image-removebg-preview (1).png" alt="">
+                            <a href="index.php?act=home"><img src="../img/image-removebg-preview (1).png" alt=""></a>
                         </div>
                     </div>
                     <div class="col-lg-3">
@@ -246,10 +340,10 @@
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
                                 <li><a href="index.php?act=sanphamdanhmuc" class="dropdown-item">Tất cả sản phẩm</a></li>
-                                <li><a href="#" class="dropdown-item">iPhone</a></li>
-                                <li><a href="#" class="dropdown-item">Samsung</a></li>
-                                <li><a href="#" class="dropdown-item">Xiaomi</a></li>
-                                <li><a href="#" class="dropdown-item">Realme</a></li>
+                                <li><a href="index.php?act=sanphamdanhmuc&maLoai=1" class="dropdown-item">Iphone</a></li>
+                                <li><a href="index.php?act=sanphamdanhmuc&maLoai=2" class="dropdown-item">SamSung</a></li>
+                                <li><a href="index.php?act=sanphamdanhmuc&maLoai=3" class="dropdown-item">Xiaomi</a></li>
+                                <li><a href="index.php?act=sanphamdanhmuc&maLoai=4" class="dropdown-item">Realme</a></li>
                             </ul>
                         </div>
                         <ul class="navbar-nav">

@@ -52,7 +52,7 @@
                                         <?php echo $comment['ngayBL']?>
                                     </td>
                                     <td>
-                                        <a href="../customer/delete_comment.php?id=<?php echo $comment['maBL']?>">
+                                        <a onclick="return confirm_binhluan('<?php echo $comment['noiDung']; ?>')" href="../customer/delete_binhluan.php?id=<?php echo $comment['maBL']?>">
                                             <button type="button" class="btn btn-danger">Xoá Bl</button>
                                         </a>
                                     </td>

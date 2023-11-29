@@ -97,22 +97,12 @@ function loadall_sanphamtk($kw=""){
     $listsanpham=connect($query);
     return  $listsanpham;
 }
-
-function load_ten_dmtk($maLoai){
-    if($maLoai>0){
-        $query="select * from hanghoa where maHH=".$maLoai;
-        $dm=getOne($query);
-        extract($dm);
-        return $name;
-    }else{
-        return "";
-    }
-}
 function binhluan(){
     $query = "select * from (binhluan inner join taikhoan on binhluan.maTK = taikhoan.maTK) inner join hanghoa on binhluan.maHH = hanghoa.maHH";
     $result = getAll($query);
     return $result;
 }
+
 function getOrderId($query){
     $connection = new PDO("mysql:host=localhost;dbname=duan1;charset=utf8", "root", "");
     $status = $connection->prepare($query);
@@ -134,3 +124,46 @@ function checkStatus($number){
         echo "Chưa xác đinh";
     }
 }
+
+function lay_gia_min(){
+    $querygiamin = "SELECT MIN(gia) FROM hanghoa";
+    $giamin = getFetch($querygiamin);
+    $giamin_string = implode(', ', $giamin);
+    return $giamin_string;
+}
+function lay_gia_max(){
+    $querygiamax = "SELECT MAX(gia) FROM hanghoa";
+    $giamax = getFetch($querygiamax);
+    $giamax_string = implode(', ', $giamax);
+    return $giamax_string;
+}
+function sanpham_moi(){
+    $query5 ="select * from hanghoa order by maHH desc limit 9";
+    $spmoi = getAll($query5);
+    return $spmoi;
+}
+function sanpham_top(){
+    $query6 ="select * from hanghoa order by luotxem desc limit 4";
+    $topsp = getAll($query6);
+    return $topsp;
+}
+function loadall_danhmuc(){
+    $sql = "SELECT * FROM danhmuc";
+    $kq = connect($sql);
+    return $kq;
+}
+function loadall_hanghoa(){
+    $query = "SELECT * FROM hanghoa";
+    $product = getAll($query);
+    return $product;
+}
+function load_hanghoa_danhmuc($maLoai){
+    $query = "SELECT * FROM hanghoa where trangthai = 0 and maLoai = $maLoai";
+    $product = getAll($query);
+    return $product;
+}
+function deletebinhluan($id){
+    $query = "delete from binhluan where maBL = $id";
+    connect($query);
+}
+

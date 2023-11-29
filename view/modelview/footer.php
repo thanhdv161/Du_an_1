@@ -120,14 +120,14 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         <script src="../js/theme.js"></script>
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
         <script>
-            $('.price_from').val(<?php echo $giamin_string ?>);
-	        $('.price_to').val(<?php echo $giamax_string/2 ?>);
+            $('.price_from').val(<?php echo $giamin_arr ?>);
+	        $('.price_to').val(<?php echo $giamax_arr/2 ?>);
             $( function() {
                 $( "#slider-range" ).slider({
                 range: true,
-                min: <?php echo $giamin_string ?>,
-                max: <?php echo $giamax_string ?>,
-                values: [ <?php echo $giamin_string ?>, <?php echo $giamax_string/2 ?> ],
+                min: <?php echo $giamin_arr ?>,
+                max: <?php echo $giamax_arr ?>,
+                values: [ <?php echo $giamin_arr ?>, <?php echo $giamax_arr/2 ?> ],
                 slide: function( event, ui ) {
                     $( "#amount" ).val( "vnđ " + addPlus(ui.values[ 0 ]).toString() + " - vnđ " + addPlus(ui.values[ 1 ]) );
                     $('.price_from').val(ui.values[ 0 ]);
@@ -150,5 +150,64 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                 return x1 + x2;
             }
         </script>
+        <!-- #region Jssor Slider Begin -->
+        <!-- Generator: Jssor Slider Composer -->
+        <!-- Source: https://www.jssor.com/demos/banner-slider.slider/=edit -->
+        <script src="../js/jssor.slider-28.1.0.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            window.jssor_1_slider_init = function() {
+
+                var jssor_1_SlideshowTransitions = [
+                {$Duration:800,x:-0.3,$During:{$Left:[0.3,0.7]},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+                {$Duration:800,x:0.3,$SlideOut:true,$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2}
+                ];
+
+                var jssor_1_options = {
+                $AutoPlay: 1,
+                $SlideshowOptions: {
+                    $Class: $JssorSlideshowRunner$,
+                    $Transitions: jssor_1_SlideshowTransitions,
+                    $TransitionsOrder: 1
+                },
+                $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$
+                },
+                $ThumbnailNavigatorOptions: {
+                    $Class: $JssorThumbnailNavigator$,
+                    $Orientation: 2,
+                    $NoDrag: true
+                }
+                };
+
+                var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+                /*#region responsive code begin*/
+
+                var MAX_WIDTH = 1140;
+
+                function ScaleSlider() {
+                    var containerElement = jssor_1_slider.$Elmt.parentNode;
+                    var containerWidth = containerElement.clientWidth;
+
+                    if (containerWidth) {
+
+                        var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                        jssor_1_slider.$ScaleWidth(expectedWidth);
+                    }
+                    else {
+                        window.setTimeout(ScaleSlider, 30);
+                    }
+                }
+
+                ScaleSlider();
+
+                $Jssor$.$AddEvent(window, "load", ScaleSlider);
+                $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+                $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+                /*#endregion responsive code end*/
+            };
+        </script>
+        <script type="text/javascript">jssor_1_slider_init();</script>
     </body>
 </html>
