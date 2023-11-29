@@ -72,45 +72,16 @@
     </picture>
   </a>
 </p>
-
-<p align="center">
-Join our community!
-</p>
-
 &nbsp;
-
-### 🧠 Design Philosophy
-
+### 🧠 Lời mở đầu
 &nbsp;
-
-### 🎨 Palette
-
-**Catppuccin** consists of 4 beautiful pastel color palettes, named **flavors**. All the details can be found below.<br>
-If you want to use them for your own project, refer to our [style guide](https://github.com/catppuccin/catppuccin/blob/main/docs/style-guide.md) for general use cases and guidelines. Additionally, you can find integrations with popular frameworks and tools in [catppuccin/palette](https://github.com/catppuccin/palette).
-
-Already have a project making use of our palette? Don't forget to add it to
-our [showcase](#-showcase) section below!
-
+### 👐 Cống hiến
 &nbsp;
-
-### 👐 Contributing
-
-
-&nbsp;
-
-
 ### 🌟 Showcase
-
 &nbsp;
-
-### 📜 
-
+### 📜 Những lỗi lầm 
 &nbsp;
-
-### ❤️ 
-
+### ❤️ Lời cảm ơn
 &nbsp;
-
 <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
-<p align="center"><a href=""><img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=d9e0ee&colorA=302d41&colorB=b7bdf8"/></a></p>
 
