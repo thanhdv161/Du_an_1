@@ -124,7 +124,6 @@ function checkStatus($number){
         echo "Chưa xác đinh";
     }
 }
-
 function lay_gia_min(){
     $querygiamin = "SELECT MIN(gia) FROM hanghoa";
     $giamin = getFetch($querygiamin);
@@ -165,5 +164,3 @@ function load_hanghoa_danhmuc($maLoai){
 function deletebinhluan($id){
     $query = "delete from binhluan where maBL = $id";
     connect($query);
-}
-
