@@ -22,12 +22,12 @@
             <div class="col-sm-12">
                 <div class="white-box">
                     <div class="title">
-                        <h4>Công Ty TNHH Sport Bicycle</h4>
+                        <h4>Công Ty TNHH SALEPHONE SHOP</h4>
                     </div>
                     <h3 class="box-title text-center">Hoá Đơn Chi Tiết</h3>
                     <h3 class="box-title text-center">-------oOo-------</h3>
-                    <p class="box-title">Tên Khách Hàng : <?php echo $results[0]['tenKh']?></p>
-                    <p class="box-title">Địa Chỉ : <?php echo $results[0]['location']?></p>
+                    <p class="box-title">Tên Khách Hàng : <?php echo $results[0]['tenKH']?></p>
+                    <p class="box-title">Địa Chỉ : <?php echo $results[0]['diaChi']?></p>
                     <p class="box-title">Số Điện Thoại : <?php echo $results[0]['sdt']?></p>
                                                     
                     <div class="table-responsive">
@@ -44,7 +44,31 @@
                                 </tr>
                             </thead>
                             <tbody>
-                               
+                            <?php foreach ($results as $result) : ?>
+                                    <?php $num += $result['soLuong']; ?>
+
+                                    <tr>
+                                        <td>
+                                            <?php echo $result['maDH'] ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $result['ngayDatHang'] ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $result['productName'] ?>
+                                        </td>
+                                        <td><?php echo $result['soLuong'] ?></td>
+                                        <td>
+                                            <?php echo number_format($result['tongTien'],0,",",".")?>
+                                        </td>
+                                        <td>
+                                            <?php echo $result['ghiChu'] ?>
+                                        </td>
+                                        <td>
+                                            <?php checkStatus($result['maTrangThai']) ?>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
                             </tbody>
                         </table>
                         <p class="box-title">Tổng Số Lượng:<?php echo $num; ?></p>

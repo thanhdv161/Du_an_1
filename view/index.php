@@ -85,6 +85,17 @@ if (isset($_GET['act'])) {
         case 'gioithieu':
             include "./gioithieu.php";
             break;
+        case "thanhtoan":
+                if (isset($_SESSION['user'])) {
+                    $userName = $_SESSION['user']['tenTK'];
+                    $emailUser = $_SESSION['user']['email'];
+                    $sdt = $_SESSION['user']['sdt'];
+                    $location = $_SESSION['user']['diaChi'];
+                }
+                $productOder = $_SESSION['gio_hang'];
+    
+            include "./thanh_toan.php";
+                break;
         case 'giohang':
                 $success = false;
                 if (empty($_SESSION['gio_hang'])) {
