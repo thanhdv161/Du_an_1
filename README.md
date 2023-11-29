@@ -77,9 +77,9 @@
 &nbsp;
 ### 👐 Cống hiến
 &nbsp;
-### 🌟 Showcase
+### 🌟 demo sản phẩm
 &nbsp;
-### 📜 Những lỗi lầm 
+### 📜 tổng quan về dự án
 &nbsp;
 ### ❤️ Lời cảm ơn
 &nbsp;
