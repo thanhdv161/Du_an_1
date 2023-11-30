@@ -52,7 +52,7 @@ if (isset($_GET['act'])) {
             include "./login/dangnhap.php";
             break;
         case "dangki":
-                include "./login/dangky.php";
+                include "../customer/dangky.php";
                 break;
         case "quenmk":
                 if(isset($_GET['fall'])){
