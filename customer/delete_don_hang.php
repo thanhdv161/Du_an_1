@@ -1,9 +1,9 @@
 <?php 
 
-    include "../view/login/pdo.php";
+    include "../model/connect.php";
     $id = $_GET['id'];
     $query = "DELETE FROM `chitietdonhang` WHERE maDH = $id";
-    pdo_execute($query); 
+    connect($query); 
     $query = "DELETE FROM `donhang` WHERE maDH = $id";
-    pdo_execute($query);    
+    connect($query); 
     header("Location:http://localhost/duan1/admin/index.php?act=donhang");
