@@ -13,30 +13,25 @@
     <!-- Bread crumb and right sidebar toggle -->
     <!-- ============================================================== -->
     <div class="page-breadcrumb bg-white d-flex justify-content-between align-items-center">
-        <p class="fs-6 fw-bold">Chi Tiết Đơn Hàng</p>
         <!-- /.col-lg-12 -->
     </div>
-    <div class="container-fluid">
+    <div class="container">
         <!-- Start Page Content -->
         <div class="row">
             <div class="col-sm-12">
-                <div class="white-box">
-                    <div class="title">
-                        <h4>Công Ty TNHH SALEPHONE SHOP</h4>
-                    </div>
-                    <h3 class="box-title text-center">Hoá Đơn Chi Tiết</h3>
-                    <h3 class="box-title text-center">-------oOo-------</h3>
-                    <p class="box-title">Tên Khách Hàng : <?php echo $results[0]['tenKH']?></p>
-                    <p class="box-title">Địa Chỉ : <?php echo $results[0]['diaChi']?></p>
-                    <p class="box-title">Số Điện Thoại : <?php echo $results[0]['sdt']?></p>
+                <div class="white-box container">
+                    <h3 style="text-align: center;" class="text-hdn">Chi tiết đơn hàng</h3>
+                    <p class="text-ctdn">Tên khách hàng : <?php echo $results[0]['tenKH']?></p>
+                    <p class="text-ctdn">Địa chỉ : <?php echo $results[0]['diaChi']?></p>
+                    <p class="text-ctdn">Số điện thoại : <?php echo $results[0]['sdt']?></p>
                                                     
-                    <div class="table-responsive">
-                        <table class="table text-nowrap">
+                    <div style="margin: 20px 0;" class="table-responsive">
+                        <table class="table table-bordered table-hover">
                             <thead>
                                 <tr>
-                                    <th class="border-top-0">#</th>
                                     <th class="border-top-0">Ngày đặt</th>
                                     <th class="border-top-0">Sản Phẩm</th>
+                                    <th class="border-top-0">Ảnh sản Phẩm</th>
                                     <th class="border-top-0">Số Lượng</th>
                                     <th class="border-top-0">Thành Tiền</th>
                                     <th class="border-top-0">Ghi chú</th>
@@ -49,13 +44,16 @@
 
                                     <tr>
                                         <td>
-                                            <?php echo $result['maDH'] ?>
-                                        </td>
-                                        <td>
                                             <?php echo $result['ngayDatHang'] ?>
                                         </td>
                                         <td>
                                             <?php echo $result['productName'] ?>
+                                        </td>
+                                        <td>
+                                            <img src="../img/<?php
+                                                                $arr = explode(",", $result['anh']);
+                                                                echo $arr[0];
+                                                                ?>" alt="" width="50" height="50">
                                         </td>
                                         <td><?php echo $result['soLuong'] ?></td>
                                         <td>
@@ -71,14 +69,15 @@
                                 <?php endforeach; ?>
                             </tbody>
                         </table>
-                        <p class="box-title">Tổng Số Lượng:&ensp;<?php echo $num; ?></p>
-                        <p class="box-title">Tổng Tiền:&ensp;<?php echo number_format($results[0]['money'],0,",",".") ?>đ</p>
+                        <p class="text-ctdn">Tổng Số Lượng:&ensp;<?php echo $num; ?></p>
+                        <p class="text-ctdn">Tổng Tiền:&ensp;<?php echo number_format($results[0]['money'],0,",",".") ?>đ</p>
                     </div>
                 </div>
-                <button type="button" class="btn btn-primary text-white" onclick="return in_hoa_don();">In Hoá Đơn</button>
-                <a href="http://localhost/duan1/admin/index.php?act=donhang">
-                    <button type="button" class="btn btn-danger text-white">Trở Lại</button>
-                </a>
+                <div style="margin-top: 30px;" class="container"> 
+                    <a href="http://localhost/duan1/view/index.php?act=ttdonhang">
+                        <button  type="button" class="btn-gui">Trở lại</button>
+                    </a>
+                    </div>
             </div>
         </div>
     </div>
