@@ -40,6 +40,7 @@
             </div>
         </div>
         <div class="box_2 ">
+        <h5 style="margin: 40px 0 30px 0;text-align: center;">Sản phẩm chọn mua</h5>
             <?php
             $tongtien = 0;
             $so_luong = 0;

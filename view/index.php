@@ -52,7 +52,7 @@ if (isset($_GET['act'])) {
             include "./login/dangnhap.php";
             break;
         case "dangki":
-                include "./login/dangky.php";
+                include "../customer/dangky.php";
                 break;
         case "quenmk":
                 if(isset($_GET['fall'])){
@@ -84,6 +84,24 @@ if (isset($_GET['act'])) {
             break;
         case 'gioithieu':
             include "./gioithieu.php";
+            break;
+        case 'ttdonhang':
+            $orders = orders2();
+            include "./ttdonhang.php";
+            break;
+        case 'ctdonhang':
+            $num = 0;
+            $id = $_GET['id'];
+            $query = "select hh.anh, tt.tenTrangThai, donhang.tenKH,donhang.maTrangThai,donhang.diaChi,donhang.sdt,donhang.ngayDatHang, donhang.ghiChu, donhang.tongTien as money, chitietdonhang.*,hanghoa.tenHH as productName from donhang
+            inner join chitietdonhang on donhang.maDH = chitietdonhang.maDH
+            inner join hanghoa on hanghoa.maHH = chitietdonhang.maHH
+            inner join trangthaidonhang tt on tt.id = donhang.maTrangThai
+            inner join hanghoa hh on hh.maHH = chitietdonhang.maHH
+            where donhang.maDH = $id
+            ";
+            $sanpham = hanghoa();
+            $results = getAll($query);
+            include "./ctdonhang.php";
             break;
         case "thanhtoan":
                 if (isset($_SESSION['user'])) {

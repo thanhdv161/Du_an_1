@@ -1,5 +1,5 @@
 <?php
-include "../login/pdo.php";
+include "../view/login/pdo.php";
 
 if (isset($_POST['submit1'])) {
     $email = $_POST["email"];
@@ -12,7 +12,7 @@ $image = $_FILES["anh"]['name'];
 if (isset($_FILES['anh'])) {
     $file = $_FILES['anh'];
     $file_name = $file['name'];
-    move_uploaded_file($file['tmp_name'], './img/' . $file_name);
+    move_uploaded_file($file['tmp_name'], '../img/' . $file_name);
 }
 $query = "SELECT * FROM taikhoan WHERE email='$email'";
 $user = pdo_query($query);

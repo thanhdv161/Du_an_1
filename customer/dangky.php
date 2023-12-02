@@ -3,7 +3,7 @@
 
 <div class="w-[500px] mx-auto container text-center">
         <h3 class="text-hdn">Đăng ký tài khoản</h3>
-        <form action="../view/login/create_user.php" method="POST" enctype="multipart/form-data">
+        <form action="../customer/create_user.php" method="POST" enctype="multipart/form-data">
 
             <input type="email" name="email" id="" placeholder="Email" class="inp33" required><br>
             <input type="text" name="tenTK" id="" placeholder="Tên Tài Khoản" class="inp33" required><br>

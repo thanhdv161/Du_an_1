@@ -115,6 +115,12 @@ function orders(){
     $result = getAll($query);
     return $result;
 }
+function orders2(){
+    $query = "select * from donhang dh inner join trangthaidonhang tt on dh.maTrangThai = tt.id 
+    order by maDH desc limit 1";
+    $result = getAll($query);
+    return $result;
+}
 function checkStatus($number){
     if($number==1){
         echo "Chưa Thanh Toán";

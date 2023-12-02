@@ -97,7 +97,7 @@
                         <label for="comment" class="sr-only">Bình luận của bạn</label>
                         <textarea style="border-radius: 10px;" cols="70" rows="5" id="comment" <?php echo !isset($_SESSION['user']) ? "disabled" : ""; ?> name="comment" placeholder=" Nhập bình luận ở đây..." required></textarea>
                     </div>
-                    <button class="guibl" type="submit" <?php echo !isset($_SESSION['user']) ? "disabled" : ""; ?>>
+                    <button class="btn-gui" type="submit" <?php echo !isset($_SESSION['user']) ? "disabled" : ""; ?>>
                         Gửi
                     </button>
                 </form>
