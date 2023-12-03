@@ -58,7 +58,7 @@
                             <textarea class="form-control" name="message" id="message" rows="1" placeholder="Nhập lời nhắn"></textarea>
                         </div>
                         <div class="form-group col-lg-12">
-                            <button type="submit" value="submit" class="btn update_btn form-control">Gửi</button>
+                            <button type="submit" value="submit" class="btn-gui">Gửi</button>
                         </div>
                     </form>
                 </div>

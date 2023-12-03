@@ -82,6 +82,9 @@ if (isset($_GET['act'])) {
         case 'lienhe':
             include "./lienhe.php";
             break;
+        case 'donhangtrong':
+            include "./donhangtrong.php";
+            break;
         case 'gioithieu':
             include "./gioithieu.php";
             break;
@@ -89,10 +92,13 @@ if (isset($_GET['act'])) {
             $orders = orders2();
             include "./ttdonhang.php";
             break;
+            case 'huydon':
+                include "./huydon.php";
+                break;
         case 'ctdonhang':
             $num = 0;
             $id = $_GET['id'];
-            $query = "select hh.anh, tt.tenTrangThai, donhang.tenKH,donhang.maTrangThai,donhang.diaChi,donhang.sdt,donhang.ngayDatHang, donhang.ghiChu, donhang.tongTien as money, chitietdonhang.*,hanghoa.tenHH as productName from donhang
+            $query = "select donhang.pttt,hh.anh, tt.tenTrangThai, donhang.tenKH,donhang.maTrangThai,donhang.diaChi,donhang.sdt,donhang.ngayDatHang, donhang.ghiChu, donhang.tongTien as money, chitietdonhang.*,hanghoa.tenHH as productName from donhang
             inner join chitietdonhang on donhang.maDH = chitietdonhang.maDH
             inner join hanghoa on hanghoa.maHH = chitietdonhang.maHH
             inner join trangthaidonhang tt on tt.id = donhang.maTrangThai

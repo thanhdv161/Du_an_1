@@ -205,7 +205,7 @@ if (isset($_GET['act'])) {
         case "chitietdonhang":
             $num = 0;
             $id = $_GET['id'];
-            $query = "select tt.tenTrangThai, donhang.tenKH,donhang.maTrangThai,donhang.diaChi,donhang.sdt,donhang.ngayDatHang, donhang.ghiChu, donhang.tongTien as money, chitietdonhang.*,hanghoa.tenHH as productName from donhang
+            $query = "select hanghoa.anh,donhang.pttt,tt.tenTrangThai, donhang.tenKH,donhang.maTrangThai,donhang.diaChi,donhang.sdt,donhang.ngayDatHang, donhang.ghiChu, donhang.tongTien as money, chitietdonhang.*,hanghoa.tenHH as productName from donhang
             inner join chitietdonhang on donhang.maDH = chitietdonhang.maDH
             inner join hanghoa on hanghoa.maHH = chitietdonhang.maHH
             inner join trangthaidonhang tt on tt.id = donhang.maTrangThai

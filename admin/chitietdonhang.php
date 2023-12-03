@@ -37,10 +37,12 @@
                                     <th class="border-top-0">#</th>
                                     <th class="border-top-0">Ngày đặt</th>
                                     <th class="border-top-0">Sản Phẩm</th>
+                                    <th class="border-top-0">Ảnh sản phẩm</th>
                                     <th class="border-top-0">Số Lượng</th>
                                     <th class="border-top-0">Thành Tiền</th>
                                     <th class="border-top-0">Ghi chú</th>
-                                    <th class="border-top-0">Trạng Thái</th>
+                                    <th class="border-top-0">Phương thức thanh toán</th>
+                                    <th class="border-top-0">Trạng thái đơn hàng</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -57,12 +59,28 @@
                                         <td>
                                             <?php echo $result['productName'] ?>
                                         </td>
+                                        <td>
+                                            <img src="../img/<?php
+                                                                $arr = explode(",", $result['anh']);
+                                                                echo $arr[0];
+                                                                ?>" alt="" width="50" height="50">
+                                        </td>
                                         <td><?php echo $result['soLuong'] ?></td>
                                         <td>
                                             <?php echo number_format($result['tongTien'],0,",",".")?>
                                         </td>
                                         <td>
                                             <?php echo $result['ghiChu'] ?>
+                                        </td>
+                                        <td>
+                                            <?php if($result['pttt'] == 1){
+                                                echo "Thanh toán sau khi nhận hàng";
+                                            }else if($result['pttt'] == 2){
+                                                echo "Thanh toán qua VNPAY";
+                                            }else {
+                                                echo "Thanh toán qua MOMO";
+                                            }
+                                            ?>
                                         </td>
                                         <td>
                                             <?php echo $result['tenTrangThai'] ?>
@@ -75,7 +93,6 @@
                         <p class="box-title">Tổng Tiền:&ensp;<?php echo number_format($results[0]['money'],0,",",".") ?>đ</p>
                     </div>
                 </div>
-                <button type="button" class="btn btn-primary text-white" onclick="return in_hoa_don();">In Hoá Đơn</button>
                 <a href="http://localhost/duan1/admin/index.php?act=donhang">
                     <button type="button" class="btn btn-danger text-white">Trở Lại</button>
                 </a>

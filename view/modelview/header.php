@@ -323,7 +323,6 @@
             </div>
         </div>
         <!--================End Top Header Area =================-->
-        
         <!--================Menu Area =================-->
         <header class="shop_header_area">
             <div class="container">
@@ -351,6 +350,13 @@
                             <li class="nav-item"><a class="nav-link" href="./index.php?act=gioithieu">Giới thiệu</a></li>
                             <li class="nav-item"><a class="nav-link" href="./index.php?act=tintuc">Tin tức</a></li>
                             <li class="nav-item"><a class="nav-link" href="./index.php?act=lienhe">Liên hệ</a></li>
+                            <?php
+                                if (isset($_POST['maDH'])) {
+                                    echo '<li class="nav-item"><a class="nav-link" href="./index.php?act=ttdonhang">Lịch sử đơn hàng</a></li>';
+                                }else{
+                                    echo '<li class="nav-item"><a class="nav-link" href="./index.php?act=donhangtrong">Lịch sử đơn hàng</a></li>';
+                                }
+                            ?>
                         </ul>
                     </div>
                 </nav>

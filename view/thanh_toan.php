@@ -34,7 +34,6 @@
                 <div style="margin: 20px 50px 20px 0;">
                     <button class="btn-gui" type="submit">XÁC NHẬN ĐẶT HÀNG</button>
                 </div>
-            </form>
             <div class="text-center mt-[250px]">
 
             </div>
@@ -51,8 +50,8 @@
                 $tongtien += $thanh_tien;
                 $so_luong += $row['so_luong'];
             ?>
-                <div class="flex mt-7 border p-2">
-                    <img class="w-[100px] h-[100px] border rounded" width="120px" src="../img/<?php echo $row['anh'] ?>" alt="">
+                <div class="flex mt-7 p-2">
+                    <img class="w-[100px] h-[100px] border rounded" width="110px" src="../img/<?php echo $row['anh'] ?>" alt="">
                     <div class="pl-5 py-5">
                         <span><?php echo $row['tenHH'] ?></span>
                         <span class="block"><?php echo $row['mauSac'] ?></span>
@@ -70,7 +69,15 @@
                 <h3 style="font-size: 18px;color: red;" class="text-black"><?php echo number_format($tongtien) ?>đ</h3>
                 
             </div>
+            <h5 style="margin: 50px 0 15px 0;text-align: center;">Chọn phương thức thanh toán</h5>
+            <div style="text-align: center;">
+            <input style="margin-left: 27px;margin-right: 5px;" type="radio" name="pttt" value="1" checked>Thanh toán sau khi nhận hàng <br>
+            <input style="margin-left: 7px;margin-right: 5px;" type="radio" name="pttt" value="2">Thanh toán qua VNPAY <img width="25px" src="../img/vnpay.png" alt=""><br>
+            <input style="margin-left: 1px;margin-right: 5px;" type="radio" name="pttt" value="3">Thanh toán qua MOMO <img width="18px" src="../img/momo.png" alt="">
+            </div>
+            </form>
         </div>
+        
     </div>
     <style>
        

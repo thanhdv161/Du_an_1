@@ -12,6 +12,8 @@ $sdt = "";
 $location = "";
 $note = $_POST['ghiChu'];
 $ngay_nhap = date("Y-m-d H:i:s",time());
+$pttt = $_POST['pttt'];
+
 if(!empty($_SESSION['user'])){
     $name = $_SESSION['user']['tenTK'];
     $email = $_SESSION['user']['email'];
@@ -32,7 +34,7 @@ foreach ($_SESSION['gio_hang'] as $key => $value){
     $total += $value['gia'] * $value['so_luong'];
     $profit += ($value['gia']-$value['importPrice']) * $value['so_luong'];
 }
-$query = "INSERT INTO `donhang`(`maDH`, `tenkh`, `ngayDatHang`, `tongTien`, `ghiChu`, `diaChi`, `sdt`,`maTrangThai`) VALUES (null,'$name','$ngay_nhap','$total','$note','$location','$sdt',1)";
+$query = "INSERT INTO `donhang`(`maDH`, `tenkh`, `ngayDatHang`, `tongTien`, `ghiChu`, `diaChi`, `sdt`,`maTrangThai`,`pttt`) VALUES (null,'$name','$ngay_nhap','$total','$note','$location','$sdt',1,'$pttt')";
 // lấy id order và thêm dữ liệu vào bảng order
 $last_id = getOrderId($query);
 $queryString="";
