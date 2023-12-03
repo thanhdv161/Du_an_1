@@ -21,7 +21,6 @@
             </div>
         </section>
         
-        
         <style>
             .text-left{
                 width: 120px;

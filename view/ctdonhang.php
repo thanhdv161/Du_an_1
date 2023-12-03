@@ -35,7 +35,9 @@
                                     <th class="border-top-0">Số Lượng</th>
                                     <th class="border-top-0">Thành Tiền</th>
                                     <th class="border-top-0">Ghi chú</th>
-                                    <th class="border-top-0">Trạng Thái</th>
+                                    <th class="border-top-0">Phương thức thanh toán</th>
+                                    <th class="border-top-0">Trạng thái đơn hàng</th>
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -61,6 +63,16 @@
                                         </td>
                                         <td>
                                             <?php echo $result['ghiChu'] ?>
+                                        </td>
+                                        <td>
+                                            <?php if($result['pttt'] == 1){
+                                                echo "Thanh toán sau khi nhận hàng";
+                                            }else if($result['pttt'] == 2){
+                                                echo "Thanh toán qua VNPAY";
+                                            }else {
+                                                echo "Thanh toán qua MOMO";
+                                            }
+                                            ?>
                                         </td>
                                         <td>
                                             <?php echo $result['tenTrangThai'] ?>

@@ -29,7 +29,7 @@
                                 <th class="border-top-0">Ghi chú</th>
                                 <th class="border-top-0">Địa Chỉ</th>
                                 <th class="border-top-0">Số Điện Thoại</th>
-                                <th class="border-top-0">Trạng thái</th>
+                                <th class="border-top-0">Trạng thái đơn hàng</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -64,6 +64,11 @@
                     <div style="margin-top: 30px;text-align: center;">
                     <a href="http://localhost/duan1/view/index.php?act=ctdonhang&id=<?php echo $order['maDH'] ?>">
                         <button  type="button" class="btn-gui">Xem chi tiết đơn hàng</button>
+                    </a>
+                    <a onclick="return confirm('Bạn chắc chắn muốn hủy đơn hàng này không?')" href="../customer/huy_don_hang.php?id=<?php echo $order['maDH'] ?>">
+                        <?php if ($order['maTrangThai']==1 ) {
+                            echo '<button  type="button" class="btn-huy">Hủy đơn hàng</button>';
+                        }?>
                     </a>
                     </div>
                     </div>

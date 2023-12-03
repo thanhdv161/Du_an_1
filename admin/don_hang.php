@@ -81,11 +81,7 @@
                                             </a>
                                             <button type="submit" class="btn btn-primary text-white" name="updateStatus" value="<?php echo $order['maDH'] ?>">Cập nhật Trạng Thái </button>
                                             <a onclick="return confirm('Bạn muốn xóa đơn hàng <?php echo $order['maDH'] ?> chứ?')" href="../customer/delete_don_hang.php?id=<?php echo $order['maDH'] ?>">
-                                            <?php if ($order['maTrangThai']==1 ) {
-                                                   echo '<button type="button" class="btn btn-danger text-white">Xoá</button>';
-                                                }elseif($order['maTrangThai']==4){
-                                                    echo '<button type="button" class="btn btn-danger text-white">Xoá</button>';
-                                                } ?>
+                                            <button type="button" class="btn btn-danger text-white">Xoá</button>
                                             </a>
                                         </td>
                                     </tr>
