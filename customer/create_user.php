@@ -24,7 +24,7 @@ $user = pdo_query($query);
         $query = "INSERT INTO taikhoan( tenTK, matKhau, email, diaChi, 
         maVaiTro, anh, sdt) VALUES ('$username ','$password','$email','$location','$roleId','$image','$sdt')";
         pdo_execute($query);
-        header("location:http://localhost/duan1/view/index.php?act=login");
+        header("location:http://localhost/duan1/view/index.php?act=login&dangkitc");
     }
 }
 

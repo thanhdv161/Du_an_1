@@ -37,15 +37,15 @@
 
                     <a class="navbar-brand" href="dashboard.html">
                         <!-- Logo icon -->
-                        <b class="logo-icon">
+                        <!-- <b class="logo-icon"> -->
                             <!-- Dark Logo icon -->
-                            <a href="./index.php?act=trangchu"><img src="../img/logo-icon.png" alt="homepage" /></a>
-                        </b>
+                            <!-- <a href="./index.php?act=trangchu"><img src="../img/logo-icon.png" alt="homepage" /></a>
+                        </b> -->
                         <!--End Logo icon -->
                         <!-- Logo text -->
                         <span class="logo-text">
                             <!-- dark Logo text -->
-                            <a href="./index.php?act=trangchu"><img src="../img/logo-text.png" alt="homepage" /></a>
+                            <a href="./index.php?act=trangchu"><img style="margin-left: 30px;" width="150px" src="../img/image-removebg-preview (1).png" alt="homepage" /></a>
                         </span>
                     </a>
                 </div>
