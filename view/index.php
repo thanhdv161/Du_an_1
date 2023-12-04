@@ -44,7 +44,10 @@ if (isset($_GET['act'])) {
             break;
         case 'login':
             if(isset($_GET["successful"])){
-                echo '<script>alert("Đổi mật khẩu thành công")</script>';
+                echo '<script>alert("Đổi mật khẩu thành công!")</script>';
+            }
+            if(isset($_GET["dangkitc"])){
+                echo '<script>alert("Đăng kí thành công!")</script>';
             }
             else{
                 echo("");
