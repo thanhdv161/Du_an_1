@@ -152,6 +152,11 @@ function sanpham_top(){
     $topsp = getAll($query6);
     return $topsp;
 }
+function sanpham_top5(){
+    $query6 ="select * from hanghoa order by luotxem desc limit 5";
+    $topsp = getAll($query6);
+    return $topsp;
+}
 function loadall_danhmuc(){
     $sql = "SELECT * FROM danhmuc";
     $kq = connect($sql);

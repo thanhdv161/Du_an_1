@@ -37,7 +37,7 @@ if (isset($_GET['act'])) {
                 $product = loadall_hanghoa();
             }
             $kq = loadall_danhmuc();
-            $topsp = sanpham_top();
+            $topsp = sanpham_top5();
             $giamin_arr = lay_gia_min();
             $giamax_arr = lay_gia_max();
             include "./sanpham.php";
@@ -80,6 +80,7 @@ if (isset($_GET['act'])) {
             include "./login/dangnhap.php";
                 break;
         case 'tintuc':
+            $topsp = sanpham_top5();
             include "./tintuc.php";
             break;
         case 'lienhe':
@@ -95,9 +96,9 @@ if (isset($_GET['act'])) {
             $orders = orders2();
             include "./ttdonhang.php";
             break;
-            case 'huydon':
-                include "./huydon.php";
-                break;
+        case 'huydon':
+            include "./huydon.php";
+            break;
         case 'ctdonhang':
             $num = 0;
             $id = $_GET['id'];
