@@ -72,9 +72,9 @@
 &nbsp;
 <details open>
 <summary>🧠Lời mở đầu</summary>
-  - [Ngày nay, sự phát triển bùng nổ của công nghệ thông tin đã cách mạng hoá giao tiếp của con người và tạo ra một loại hình kết nối   
-  - [BitBurner](#)
-  - [Blockbench](#)
+  - Ngày nay, sự phát triển bùng nổ của công nghệ thông tin đã cách mạng hoá giao tiếp của con người và tạo ra một loại hình kết nối mới, tiện lợi. Trong bối cảnh này, nhu cầu mua công việc và tiêu thụ thông tin. Internet đã trở thành trung tâm của mọi hoạt động mở ra các lĩnh vực trực tuyến, đặc biệt là ngành điện thoại di động ngày càng trở nên quan trọng và được ưu tiên.
+  - Do sự tiện lợi và đa dạng của thị trường trực tuyến, chúng em quyết định tạo website bán hàng trên thiết bị di động để mang đến cho khách hàng trải nghiệm mua sắm thuận tiện, linh hoạt và đáng tin cậy. Trang web của chúng em không chỉ là nơi mua sắm mà còn là không gian nơi bạn có thể tìm hiểu về các xu hướng mới nhất, xem sản phẩm và tìm hiểu về công nghệ di động mới nhất.
+  - Nhóm 3 chúng em đã nỗ lực tạo ra một trang web thân thiện, dễ sử dụng và đáp ứng nhu cầu của tất cả người dùng cùng một lúc. Với mẫu mã đa dạng và chất lượng sản phẩm, chúng em hy vọng sẽ mang lại sự hài lòng tối đa cho khách hàng. Hãy tham gia cùng nhóm em đến với trải nghiệm không gian kinh doanh trực tuyến tiện lợi, nhanh chóng và an toàn  nơi bạn không chỉ có thể mua sắm mà còn có thể khám phá và đổi mới.
   </details>
 &nbsp;
 
