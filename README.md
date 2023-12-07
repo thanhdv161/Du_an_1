@@ -21,9 +21,6 @@
 &nbsp;
 
 <p align="center">
-</p>
-
-<p align="center">
   <a href="https://github.com/catppuccin">
     <picture>
       <source srcset="assets/social/macchiato_github.svg" width="64" height="64" alt="Github Logo" media="(prefers-color-scheme: dark)"/>
@@ -73,16 +70,25 @@
   </a>
 </p>
 &nbsp;
-### 🧠 Design Philosophy
+
+### 🧠 Ý tưởng dự án
 
 &nbsp;
+
 ### 👐 Contributing
+
 &nbsp;
+
 ### 🌟 Showcase
+
 &nbsp;
+
 ### 📜 
+
 &nbsp;
-### ❤️ 
+
+### ❤️
+
 &nbsp;
 <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
 
