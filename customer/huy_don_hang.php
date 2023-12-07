@@ -6,4 +6,4 @@
     connect($query); 
     $query = "DELETE FROM `donhang` WHERE maDH = $id";
     connect($query); 
-    header("Location:http://localhost/duan1/admin/index.php?act=donhang");
+    header("Location:http://localhost/duan1/view/index.php?act=huydon");

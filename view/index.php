@@ -1,90 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            font-size: 16px;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            overflow-x: hidden; /* Hide horizontal overflow */
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            overflow-x: hidden; /* Hide horizontal overflow */
-            /* Add spacing to the right */
-            padding-right: 20px; /* You can adjust this value based on your design */
-        }
-
-        /* Add specific styles for iPhone 10 to iPhone 15 */
-        @media (max-width: 428px) {
-            body {
-                font-size: 14px;
-            }
-            /* Adjust styles for iPhone 10 */
-            /* Your specific styles for iPhone 10 go here */
-        }
-
-        @media (min-width: 429px) and (max-width: 471px) {
-            body {
-                font-size: 14px;
-            }
-            /* Adjust styles for iPhone 11 */
-            /* Your specific styles for iPhone 11 go here */
-        }
-
-        @media (min-width: 472px) and (max-width: 524px) {
-            body {
-                font-size: 14px;
-            }
-            /* Adjust styles for iPhone 12 */
-            /* Your specific styles for iPhone 12 go here */
-        }
-
-        @media (min-width: 525px) and (max-width: 572px) {
-            body {
-                font-size: 15px;
-            }
-            /* Adjust styles for iPhone 13 */
-            /* Your specific styles for iPhone 13 go here */
-        }
-
-        @media (min-width: 573px) and (max-width: 619px) {
-            body {
-                font-size: 15px;
-            }
-            /* Adjust styles for iPhone 14 */
-            /* Your specific styles for iPhone 14 go here */
-        }
-
-        @media (min-width: 620px) and (max-width: 767px) {
-            body {
-                font-size: 15px;
-            }
-            /* Adjust styles for iPad Mini and Samsung Galaxy */
-            /* Your specific styles for iPad Mini and Samsung Galaxy go here */
-        }
-
-        @media (min-width: 768px) {
-            body {
-                font-size: 16px;
-            }
-            /* Your existing styles for larger screens go here */
-        }
-
-        /* Your existing styles go here */
-    </style>
-</head>
-
-<body>
 <?php
 include "../model/connect.php";
 include "../view/modelview/header.php";
@@ -124,14 +37,17 @@ if (isset($_GET['act'])) {
                 $product = loadall_hanghoa();
             }
             $kq = loadall_danhmuc();
-            $topsp = sanpham_top();
+            $topsp = sanpham_top5();
             $giamin_arr = lay_gia_min();
             $giamax_arr = lay_gia_max();
             include "./sanpham.php";
             break;
         case 'login':
             if(isset($_GET["successful"])){
-                echo '<script>alert("Đổi mật khẩu thành công")</script>';
+                echo '<script>alert("Đổi mật khẩu thành công!")</script>';
+            }
+            if(isset($_GET["dangkitc"])){
+                echo '<script>alert("Đăng kí thành công!")</script>';
             }
             else{
                 echo("");
@@ -139,7 +55,7 @@ if (isset($_GET['act'])) {
             include "./login/dangnhap.php";
             break;
         case "dangki":
-                include "./login/dangky.php";
+                include "../customer/dangky.php";
                 break;
         case "quenmk":
                 if(isset($_GET['fall'])){
@@ -164,13 +80,38 @@ if (isset($_GET['act'])) {
             include "./login/dangnhap.php";
                 break;
         case 'tintuc':
+            $topsp = sanpham_top5();
             include "./tintuc.php";
             break;
         case 'lienhe':
             include "./lienhe.php";
             break;
+        case 'donhangtrong':
+            include "./donhangtrong.php";
+            break;
         case 'gioithieu':
             include "./gioithieu.php";
+            break;
+        case 'ttdonhang':
+            $orders = orders2();
+            include "./ttdonhang.php";
+            break;
+        case 'huydon':
+            include "./huydon.php";
+            break;
+        case 'ctdonhang':
+            $num = 0;
+            $id = $_GET['id'];
+            $query = "select donhang.pttt,hh.anh, tt.tenTrangThai, donhang.tenKH,donhang.maTrangThai,donhang.diaChi,donhang.sdt,donhang.ngayDatHang, donhang.ghiChu, donhang.tongTien as money, chitietdonhang.*,hanghoa.tenHH as productName from donhang
+            inner join chitietdonhang on donhang.maDH = chitietdonhang.maDH
+            inner join hanghoa on hanghoa.maHH = chitietdonhang.maHH
+            inner join trangthaidonhang tt on tt.id = donhang.maTrangThai
+            inner join hanghoa hh on hh.maHH = chitietdonhang.maHH
+            where donhang.maDH = $id
+            ";
+            $sanpham = hanghoa();
+            $results = getAll($query);
+            include "./ctdonhang.php";
             break;
         case "thanhtoan":
                 if (isset($_SESSION['user'])) {
@@ -247,7 +188,3 @@ if (isset($_GET['act'])) {
 }
 
 include '../view/modelview/footer.php';
-?>
-</body>
-
-</html>

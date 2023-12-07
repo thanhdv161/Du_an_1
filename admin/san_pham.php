@@ -72,7 +72,7 @@
                                         <?php echo $hanghoa['trangthai']==0?"Còn Hàng":"Hết Hàng"?>
                                         </td>
                                         <td>
-                                            <a href="http://localhost/du_an_1/admin/index.php?act=updatesp&id=<?php echo $hanghoa['maHH'] ?>">
+                                            <a href="http://localhost/duan1/admin/index.php?act=updatesp&id=<?php echo $hanghoa['maHH'] ?>">
                                                 <button type="button" class="btn btn-primary">Sửa sp</button>
                                             </a>
                                             <a onclick="return confirm_product('<?php echo $hanghoa['tenHH']; ?>')" href="../customer/delete_sanpham.php?id=<?php echo $hanghoa['maHH'] ?>">

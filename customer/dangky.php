@@ -2,12 +2,19 @@
 
 
 <div class="w-[500px] mx-auto container text-center">
-        <h3 class="text-hdn">Phục hồi mật khẩu</h3>
-        <form action="./login/set_pass.php" method="POST">
-
+        <h3 class="text-hdn">Đăng ký tài khoản</h3>
+        <form action="../customer/create_user.php" method="POST" enctype="multipart/form-data">
+        
             <input type="email" name="email" id="" placeholder="Email" class="inp33" required>
+            <div><span style="color: red;"><?php echo isset($_GET['error']) ? "Email này đã tồn tại vui lòng nhập một email khác" : ""; ?></span></div>
+            <input type="text" name="tenTK" id="" placeholder="Tên Tài Khoản" class="inp33" required><br>
+            <input type="password" name="matKhau" id="" placeholder="Mật Khẩu" class="inp33" required><br>
+            <input type="file" name="anh" id="" class="inp33" required><br>
+            <input type="text" value="2" name="maVaiTro" hidden>
+            <input type="text" name="sdt" id="" placeholder="Số Điện Thoại" class="inp33" required><br>
+            <input type="text" name="diaChi" id="" placeholder="Địa Chỉ" class="inp33" required>
             <div class="text-left2">
-                <button class="btn-gui">Gửi</button>
+                <button class="btn-gui" type="submit" name="submit1" >Đăng Kí</button>
                 <a href="http://localhost/duan1/view/index.php?act=dangnhap" style="color: black;">Hủy</a>
             </div>
         </form>
@@ -18,11 +25,11 @@
 
 
 <style>
-
     .text-left2{
               width: 200px;  
               margin-top: 20px;
-              margin-left: 315px;
+              margin-left: 330px;
+             
             }
       .inp33{
                 width: 400px;

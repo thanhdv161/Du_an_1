@@ -1644,20 +1644,6 @@ i:before {
   text-align: center;
 }
 
-.solid_banner_inner {
-  padding: 68px 0px;
-}
-
-.solid_banner_inner h3 {
-  font-size: 24px;
-  text-transform: uppercase;
-  color: #000;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  letter-spacing: .60px;
-  padding-bottom: 10px;
-}
-
 .solid_banner_inner ul li {
   display: inline-block;
   margin-right: 12px;
@@ -2492,9 +2478,68 @@ i:before {
   color: #666666;
   letter-spacing: .35px;
 }
+.btn-gui{
+  background-color: black;
+  color: #D8D9DA;
+  padding: 10px 20px;
+  border-radius: 3px;
+  margin-bottom: 40px;
+}
 
+.btn-gui:hover{
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 3px;
+}
+.btn-gioh{
+  background-color: black;
+  color: #D8D9DA;
+  padding: 10px 20px;
+  border-radius: 3px;
+  margin-bottom: 15px;
+}
 
+.btn-gioh:hover{
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 3px;
+}
+.btn-thanhtoan{
+  background-color: red;
+  color: #D8D9DA;
+  padding: 10px 20px;
+  border-radius: 3px;
+  margin-bottom: 40px;
+  border: 1px solid white;
+}
 
+.btn-thanhtoan:hover{
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 3px;
+}
+.text-hdn{
+  font-size: 18px;
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin: 50px 0 30px 0;
+  text-transform: uppercase;
+}
+.text-hgh{
+  font-size: 20px;
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin: 50px 0 10px 0;
+  text-transform: uppercase;
+}
 /* End World Servie Area css
 ============================================================================================ */
 /*---------------------------------------------------- */
@@ -2542,13 +2587,29 @@ i:before {
   font-weight: 500;
   letter-spacing: .70px;
   padding: 0px 15px;
-
+  border-radius: 5px;
+}
+.btn-huy{
+  background-color: red;
+  color: #D8D9DA;
+  padding: 10px 20px;
+  border-radius: 3px;
+  margin-bottom: 40px;
+  border: 1px solid red;
 }
 
+.btn-huy:hover{
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 3px;
+}
 .add_cart_btn:hover {
   color: #fff;
   background: transparent;
   color: #262121;
+  border-radius: 5px;
 }
 
 .discover_btn {
@@ -3468,7 +3529,8 @@ i:before {
 }
 .addgh{
   background-color: red;
-  color: white;
+  border-radius: 3px;
+  color: #D8D9DA;
   border: 1px solid white;
   font-size: 16px;
   padding: 10px;
@@ -3476,9 +3538,10 @@ i:before {
   padding-right: 100px;
 }
 .addgh:hover{
-  background-color: chocolate;
-  color: white;
-  border: 1px solid white;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 3px;
   padding: 10px;
   padding-left: 100px;
   padding-right: 100px;
@@ -5813,7 +5876,15 @@ i:before {
   cursor: pointer;
   opacity: 1;
 }
-
+.text-ctdn{
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #000;
+  -webkit-transition: all 400ms linear 0s;
+  -o-transition: all 400ms linear 0s;
+  transition: all 400ms linear 0s;
+}
 .l_feature_widget .verticalCarousel .verticalCarouselHeader .float-md-right a:hover {
   background: #000;
   color: #fff;

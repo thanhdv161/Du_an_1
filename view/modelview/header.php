@@ -323,7 +323,6 @@
             </div>
         </div>
         <!--================End Top Header Area =================-->
-        
         <!--================Menu Area =================-->
         <header class="shop_header_area">
             <div class="container">
@@ -340,7 +339,7 @@
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
                                 <li><a href="index.php?act=sanphamdanhmuc" class="dropdown-item">Tất cả sản phẩm</a></li>
-                                <li><a href="index.php?act=sanphamdanhmuc&maLoai=1" class="dropdown-item">Iphone</a></li>
+                                <li><a href="index.php?act=sanphamdanhmuc&maLoai=1" class="dropdown-item">iPhone</a></li>
                                 <li><a href="index.php?act=sanphamdanhmuc&maLoai=2" class="dropdown-item">SamSung</a></li>
                                 <li><a href="index.php?act=sanphamdanhmuc&maLoai=3" class="dropdown-item">Xiaomi</a></li>
                                 <li><a href="index.php?act=sanphamdanhmuc&maLoai=4" class="dropdown-item">Realme</a></li>
@@ -351,6 +350,13 @@
                             <li class="nav-item"><a class="nav-link" href="./index.php?act=gioithieu">Giới thiệu</a></li>
                             <li class="nav-item"><a class="nav-link" href="./index.php?act=tintuc">Tin tức</a></li>
                             <li class="nav-item"><a class="nav-link" href="./index.php?act=lienhe">Liên hệ</a></li>
+                            <?php
+                                if (isset($_SESSION['user'])) {
+                                    echo '<li class="nav-item"><a class="nav-link" href="./index.php?act=ttdonhang">Lịch sử đơn hàng</a></li>';
+                                }else{
+                                    echo '<li class="nav-item"><a class="nav-link" href="./index.php?act=donhangtrong">Lịch sử đơn hàng</a></li>';
+                                }
+                            ?>
                         </ul>
                     </div>
                 </nav>

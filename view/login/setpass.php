@@ -1,12 +1,12 @@
 <div class="w-[500px] mx-auto container text-center">
-        <h3 class="text-4xl font-bold my-5">Đặt lại Mật khẩu</h3>
+        <h3 class="text-hdn">Đặt lại mật khẩu</h3>
         <form action="../view/login/doipass.php" method="POST" >
             <input type="text" name="email" value="<?php echo $email?>" hidden>
             <input type="password" name="matKhau" id="pass" placeholder="Nhập mật khẩu mới" class="inp33"><br>
             <input type="password" id="repass" placeholder="Nhập lại mật khẩu" class="inp33">
             <div class="text-left2">
-                <button class="px-5 text-black py-2  slide_right" >Gửi</button>
-                <a href="http://localhost/du_an_1/view/index.php?act=home" style="color: black;">Hủy</a>
+                <button class="btn-gui" >Gửi</button>
+                <a href="http://localhost/duan1/view/index.php?act=dangnhap" style="color: black;">Hủy</a>
             </div>
         </form>
 
@@ -16,7 +16,7 @@
      .text-left2{
               width: 200px;  
               margin-top: 20px;
-              margin-left: 360px;
+              margin-left: 318px;
              
             }
     .inp33{

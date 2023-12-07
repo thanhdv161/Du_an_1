@@ -1,6 +1,6 @@
 
 <div class="container mx-auto text-center">
-    <h1 style="margin-top: 30px;" class="text-3xl">Giỏ hàng của bạn</h1>
+    <h1 style="margin-top: 30px;" class="text-hgh">Giỏ hàng của bạn</h1>
     <p style="font-size: 15px;">
         <?php
         if ($success) {
@@ -60,19 +60,16 @@
                 </tbody>
             </table>
             <div class="flex flex-col">
-                <p style="font-size: 20px;">Tổng tiền:&ensp;<span style="font-size: 20px;" class="text-black"><?php echo number_format($tongtien) ?>đ</span></p><br>
+                <p style="font-size: 18px;">Tổng tiền:&ensp;<span style="font-size: 20px;" class="text-black"><?php echo number_format($tongtien) ?>đ</span></p><br>
                 <div style="text-align: center;margin-bottom: 30px;">
                     
-                        <button class="px-5 text-black py-2 giohangtt" type="submit"> <a href="http://localhost/du_an_1/view/index.php?act=sanphamdanhmuc">
-                            Tiếp tục mua hàng </a></button>
+                        <a style="padding: 13px 50px;" class="btn-gioh" href="http://localhost/duan1/view/index.php?act=sanphamdanhmuc" >
+                            Tiếp tục mua hàng</a>
                     
-                    <button  class="px-5 text-black py-2 giohangtt" type="submit" name="update">Cập nhật</button> <br>
-                    <a href="" class="w-full" <?php echo count($result) == 0 ? "hidden" : "" ?>>
-                    <button class="px-5 text-black py-2 giohangtt" type="submit"> <a href="http://localhost/du_an_1/view/index.php?act=thanhtoan">
-                            Thanh toán</a></button>
-                            <a href="" class="w-full" <?php echo count($result) == 0 ? "hidden" : "" ?>>
-                    <button class="px-5 text-black py-2 giohangtt " type="submit"> <a href="http://localhost/du_an_1/view/index.php?act=dongydathang">
-                            Đơn hàng đã đặt</a></button>
+                    <button class="px-5 py-2 btn-gioh" type="submit" name="update">Cập nhật</button>
+                    <a href="" class="w-full" <?php echo count($result) == 0 ? "hidden" : "" ?>> <br>
+                    <div><a style="padding: 13px 154px;" class="btn-thanhtoan " href="http://localhost/duan1/view/index.php?act=thanhtoan">
+                        Thanh toán</a></div>
                 </div>
                 
             </div>
@@ -91,24 +88,7 @@
     
 </script>
 <style>
-        .giohangtt a{
-            color: black;
-        }
-        .giohangtt{
-            color: black;
-        }
-        .thanhtoan a{
-            color: black;
-        }
-        .giohangtt:hover{
-            text-decoration: underline;
-        }
-        .giohangtt a:hover{
-            text-decoration: underline;
-        }
-        .thanhtoan a:hover{
-            text-decoration: underline;
-        }
+  
    .text-left2.text-black.button_slide {
     width: 250px;
    margin-bottom: 10px;

@@ -6,5 +6,5 @@
     $date = date("Y-m-d");
     $query = "INSERT INTO binhluan(noiDung,maTK ,maHH,ngayBL) VALUES ('$comment','$maTK','$id','$date')";
     connect($query);
-    header("location:http://localhost/du_an_1/view/index.php?act=chitietsanpham&id=$id");
+    header("location:http://localhost/duan1/view/index.php?act=chitietsanpham&id=$id");
 ?>

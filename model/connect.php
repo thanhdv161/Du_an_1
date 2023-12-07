@@ -86,7 +86,7 @@ function themhanghoa($tenHH, $gia, $giaGoc, $mauSac, $anh, $maLoai, $moTa){
 function delete($table,$tableId,$id,$case){
     $query="DELETE FROM $table WHERE $tableId=$id";
     connect($query);
-    header("Location: http://localhost/du_an_1/admin/index.php?act=$case");
+    header("Location: http://localhost/duan1/admin/index.php?act=$case");
 }
 function loadall_sanphamtk($kw=""){
     $query="SELECT * from hanghoa where trangthai = 0";
@@ -112,6 +112,12 @@ function getOrderId($query){
 }
 function orders(){
     $query = "select * from donhang";
+    $result = getAll($query);
+    return $result;
+}
+function orders2(){
+    $query = "select * from donhang dh inner join trangthaidonhang tt on dh.maTrangThai = tt.id 
+    order by maDH desc limit 1";
     $result = getAll($query);
     return $result;
 }
@@ -143,6 +149,11 @@ function sanpham_moi(){
 }
 function sanpham_top(){
     $query6 ="select * from hanghoa order by luotxem desc limit 4";
+    $topsp = getAll($query6);
+    return $topsp;
+}
+function sanpham_top5(){
+    $query6 ="select * from hanghoa order by luotxem desc limit 5";
     $topsp = getAll($query6);
     return $topsp;
 }

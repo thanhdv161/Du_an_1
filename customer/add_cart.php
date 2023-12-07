@@ -23,7 +23,7 @@ if (isset($_GET['id'])) {
     } else {
         $_SESSION['gio_hang'][$productId]['so_luong'] += 1;
     }
-    header("Location:http://localhost/du_an_1/view/index.php?act=sanphamdanhmuc&success");
+    header("Location:http://localhost/duan1/view/index.php?act=sanphamdanhmuc&success");
     exit();
 };
 if (isset($_POST['submit'])) {
@@ -46,7 +46,7 @@ if (isset($_POST['submit'])) {
     } else {
         $_SESSION['gio_hang'][$productId]['so_luong'] += $sl;
     }
-    header("Location:http://localhost/du_an_1/view/index.php?act=sanphamdanhmuc&success");
+    header("Location:http://localhost/duan1/view/index.php?act=sanphamdanhmuc&success");
 }
 if (isset($_GET['update'])) {
     if (!empty($_SESSION['gio_hang'])) {
@@ -55,8 +55,8 @@ if (isset($_GET['update'])) {
         foreach ($productId as $index => $id) {
             $_SESSION['gio_hang'][$id]['so_luong'] = $sl[$index];
         }
-        header("Location:http://localhost/du_an_1/view/index.php?act=giohang&update");
+        header("Location:http://localhost/duan1/view/index.php?act=giohang&update");
     }else{
-        header("Location:http://localhost/du_an_1/view/index.php?act=giohang");
+        header("Location:http://localhost/duan1/view/index.php?act=giohang");
     }
 }
