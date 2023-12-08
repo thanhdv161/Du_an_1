@@ -111,7 +111,7 @@
                         <article class="ttbinhluan" >
                             <footer>
                                 <div class="thongtinbl">
-                                    <p style="margin-right: 10px;"><img width="20px" src="../img/<?php echo $binhluan['anh']?>">&emsp;<?php echo $binhluan['tenTK']?></p>
+                                    <p style="margin-right: 10px;"><img width="20px" src="../view/login/img/<?php echo $binhluan['anh']?>">&emsp;<?php echo $binhluan['tenTK']?></p>
                                     <p><time><?php echo $binhluan['ngayBL']?></time></p>
                                 </div>
                             </footer>
