@@ -55,26 +55,26 @@ $category = getOne($query);
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Tên Sản Phẩm</label><br>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="text" class="form-control p-0 border-0" name="tenHH" value="<?php echo $category['tenHH']?>" id="productName">
+                                    <input type="text" class="form-control p-0 border-0" name="tenHH" value="<?php echo $category['tenHH']?>" id="productName" required>
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label for="dongia" class="col-md-12 p-0">Đơn Giá</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="number" class="form-control p-0 border-0" name="gia" value="<?php echo $category['gia']?>" id="productPrice">
+                                    <input type="number" class="form-control p-0 border-0" name="gia" min="1000000" max="100000000" value="<?php echo $category['gia']?>" id="productPrice" required>
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label for="giamgia" class="col-md-12 p-0">Giá Gốc</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="number" class="form-control p-0 border-0" name="giaGoc" id="productDiscount" value="<?php echo $category['giaGoc']?>">
+                                    <input type="number" class="form-control p-0 border-0" name="giaGoc" min="1000000" max="100000000" id="productDiscount" value="<?php echo $category['giaGoc']?>" required>
                                 </div>
                             </div>
                             
                             <div class="form-group mb-4">
                                 <label for="giamgia" class="col-md-12 p-0">Màu sắc</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="text" class="form-control p-0 border-0" name="mauSac" id="productColor" value="<?php echo $category['mauSac']  ?>">
+                                    <input type="text" class="form-control p-0 border-0" name="mauSac" id="productColor" value="<?php echo $category['mauSac']  ?>" required>
                                 </div>
                             </div>
                             <div class="form-group mb-4">
@@ -87,7 +87,7 @@ $category = getOne($query);
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Mô Tả</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <textarea rows="5" class="form-control pl-4 border-0" name="moTa" id="productDesc">
+                                    <textarea rows="5" class="form-control pl-4 border-0" name="moTa" id="productDesc" required>
                                         <?php echo $category['moTa']?>
                                     </textarea>
                                 </div>

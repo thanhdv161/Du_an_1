@@ -54,33 +54,34 @@ $user_update = getOne($query);
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Tên User</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="text" value="<?php echo $user_update['tenTK'] ?>" class="form-control p-0 border-0" name="ten_kh">
+                                    <input type="text" value="<?php echo $user_update['tenTK'] ?>" class="form-control p-0 border-0" name="ten_kh" required>
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Email</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="text" value="<?php echo $user_update['email'] ?>" class="form-control p-0 border-0" name="email">
+                                    <input type="email" value="<?php echo $user_update['email'] ?>" class="form-control p-0 border-0" name="email" required>
+                                    <span style="color: red;"><?php echo isset($_GET['error']) ? "Email này đã tồn tại vui lòng nhập một email khác" : ""; ?></span>
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Mật Khẩu</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="text" value="<?php echo $user_update['matKhau'] ?>" class="form-control p-0 border-0" name="mat_khau">
+                                    <input type="text" value="<?php echo $user_update['matKhau'] ?>" class="form-control p-0 border-0" name="mat_khau" required>
                                 </div>
                             </div>
                            
                            
                             <div class="form-group mb-4">
-                                <label class="col-md-12 p-0">SDT</label>
+                                <label class="col-md-12 p-0">Số điện thoại</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="number" value="<?php echo $user_update['sdt'] ?>" class="form-control p-0 border-0" name="sdt">
+                                    <input type="tel" pattern="[0-9]{10}" required title="Vui lòng nhập số điện thoại 10 chữ số" value="<?php echo $user_update['sdt'] ?>" class="form-control p-0 border-0" name="sdt" required>
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">ĐỊA CHỈ</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="text" value="<?php echo $user_update['diaChi'] ?>" class="form-control p-0 border-0" name="location">
+                                    <input type="text" value="<?php echo $user_update['diaChi'] ?>" class="form-control p-0 border-0" name="location" required>
                                 </div>
                             </div>
                             <div class="form-group mb-4">
