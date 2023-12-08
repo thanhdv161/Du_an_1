@@ -347,7 +347,6 @@
                         </div>
                         <ul class="navbar-nav">
                             <li class="nav-item"><a class="nav-link" href="./index.php?act=home">Trang chủ</a></li>
-                            <li class="nav-item"><a class="nav-link" href="./index.php?act=gioithieu">Giới thiệu</a></li>
                             <li class="nav-item"><a class="nav-link" href="./index.php?act=tintuc">Tin tức</a></li>
                             <li class="nav-item"><a class="nav-link" href="./index.php?act=lienhe">Liên hệ</a></li>
                             <?php

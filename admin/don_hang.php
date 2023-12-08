@@ -79,10 +79,7 @@
                                             <a href="http://localhost/duan1/admin/index.php?act=chitietdonhang&id=<?php echo $order['maDH'] ?>">
                                                 <button type="button" class="btn btn-primary text-white">Chi tiết</button>
                                             </a>
-                                            <button type="submit" class="btn btn-primary text-white" name="updateStatus" value="<?php echo $order['maDH'] ?>">Cập nhật Trạng Thái </button>
-                                            <a onclick="return confirm('Bạn muốn xóa đơn hàng <?php echo $order['maDH'] ?> chứ?')" href="../customer/delete_don_hang.php?id=<?php echo $order['maDH'] ?>">
-                                            <button type="button" class="btn btn-danger text-white">Xoá</button>
-                                            </a>
+                                            <button type="submit" onclick="submitForm()" class="btn btn-primary text-white" name="updateStatus" value="<?php echo $order['maDH'] ?>">Cập nhật Trạng Thái </button>
                                         </td>
                                     </tr>
                                 </form>
@@ -94,4 +91,9 @@
         </div>
     </div>
 </div>
+<script>
+        function submitForm() {
+            alert("Bạn đã cập nhật thành công trạng thái đơn hàng");
+        }
+    </script>
 </div>

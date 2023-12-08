@@ -51,7 +51,7 @@
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Email</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="text" class="form-control p-0 border-0" name="email" id="email" required>
+                                    <input type="email" class="form-control p-0 border-0" name="email" id="email" required>
                                     <span style="color: red;"><?php echo isset($_GET['error']) ? "Email này đã tồn tại vui lòng nhập một email khác" : ""; ?></span>
                                 </div>
                             </div>
@@ -70,7 +70,7 @@
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Số điện thoại</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="number" class="form-control p-0 border-0" name="sdt" id="sdt" required>
+                                    <input type="tel" class="form-control p-0 border-0" pattern="[0-9]{10}" required title="Vui lòng nhập số điện thoại 10 chữ số" name="sdt" id="sdt" required>
                                 </div>
                             </div>
                             <div class="form-group mb-4">
@@ -83,7 +83,6 @@
                                 <label for="vai_tro" class="col-md-12 p-0">Chọn vai trò của bạn:</label>
                                 <select name="maVaiTro" id="maVaiTro" class="form-select shadow-none p-0 border-0 form-control-line">
                                     <option value="2">Khách hàng</option>
-                                    <option value="3">Nhân viên</option>
                                     <option value="4">Quản trị viên</option>
                                 </select>
                             </div>
@@ -104,8 +103,6 @@
 
     <!-- footer -->
     <!-- ============================================================== -->
-    <footer class="footer text-center"> 2021 © Ample Admin brought to you by <a href="https://www.wrappixel.com/">wrappixel.com</a>
-    </footer>
     <!-- ============================================================== -->
     <!-- End footer -->
     <!-- ============================================================== -->

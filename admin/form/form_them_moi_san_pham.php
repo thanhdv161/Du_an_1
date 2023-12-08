@@ -52,31 +52,31 @@
                             <div class="form-group mb-4">
                                 <label for="dongia" class="col-md-12 p-0">Giá bán</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="number" class="form-control p-0 border-0" name="gia" id="gia">
+                                    <input type="number" class="form-control p-0 border-0" name="gia" id="gia" required>
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label for="giamgia" class="col-md-12 p-0">Giá gốc</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="number" class="form-control p-0 border-0" name="giaGoc" id="giaGoc">
+                                    <input type="number" class="form-control p-0 border-0" name="giaGoc" id="giaGoc" required>
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label for="giamgia" class="col-md-12 p-0">Màu sắc</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="text" class="form-control p-0 border-0" name="mauSac" id="mauSac">
+                                    <input type="text" class="form-control p-0 border-0" name="mauSac" id="mauSac" required>
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Hình Ảnh</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="file" name="anh[]" class="form-control p-0 border-0" multiple id="picture">
+                                    <input type="file" name="anh[]" class="form-control p-0 border-0" multiple id="picture" required>
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Mô Tả</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <textarea rows="5" class="form-control pl-4 border-0" name="moTa" id="moTa">
+                                    <textarea rows="5" class="form-control pl-4 border-0" name="moTa" id="moTa" required>
                                     </textarea>
                                 </div>
                             </div>

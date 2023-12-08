@@ -1,6 +1,6 @@
 <div class="w-[500px] mx-auto container text-center">
         <h3 class="text-hdn">Đặt lại mật khẩu</h3>
-        <form action="../view/login/doipass.php" method="POST" >
+        <form action="../view/login/doipass.php" method="POST" onsubmit="return validate_setpass()">
             <input type="text" name="email" value="<?php echo $email?>" hidden>
             <input type="password" name="matKhau" id="pass" placeholder="Nhập mật khẩu mới" class="inp33"><br>
             <input type="password" id="repass" placeholder="Nhập lại mật khẩu" class="inp33">
@@ -44,3 +44,25 @@
         color: black;
     }
 </style>
+<script>
+    function validate_setpass(){
+
+var pass = document.getElementById("pass");
+if(pass.value==""){
+    alert("Bạn chưa nhập mật khẩu mới!");
+    document.getElementById("pass").focus();
+    return false;
+}
+var repass = document.getElementById("repass");
+if(repass.value==""){
+    alert("Bạn chưa nhập lại mật khẩu mới!");
+    document.getElementById("repass").focus();
+    return false;
+}
+if(pass.value != repass.value) {
+    alert("Mật khẩu không trùng khớp");
+    return false;
+}
+
+}
+</script>

@@ -15,6 +15,6 @@ include "../login/pdo.php";
             header("Location:http://localhost/duan1/view/index.php?act=home&succes=$username");
         }
     }else{
-        header("Location: ../index.php?act=login");
+        header("Location: ../index.php?act=login&error");
         exit();
 }

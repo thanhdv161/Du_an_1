@@ -6,7 +6,7 @@
         <p class="fs-6 fw-bold">Bình Luận</p>
         <div class="d-flex form-group">
             <form action="" class="mx-2 border" method="post">
-                <input type="date" class="p-1" placeholder="tìm kiếm" name="search">
+                <input type="date" class="p-1" placeholder="tìm kiếm" name="search" required>
                 <button class="btn btn-primary" type="submit">Tìm kiếm</button>
             </form>
             

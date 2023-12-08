@@ -22,7 +22,7 @@
             <div class="col-sm-12">
                 <div class="white-box">
                     <div class="title">
-                        <h4>Công Ty TNHH SALEPHONE SHOP</h4>
+                        <h4>SALEPHONE SHOP</h4>
                     </div>
                     <h3 class="box-title text-center">Hoá Đơn Chi Tiết</h3>
                     <h3 class="box-title text-center">-------oOo-------</h3>

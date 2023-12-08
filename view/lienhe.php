@@ -44,18 +44,18 @@
                 </div>
                 <div class="contact_form_inner">
                     <h3>Gửi Lời Nhắn</h3>
-                    <form class="contact_us_form row" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                    <form class="contact_us_form row" action="#" method="post" id="contactForm" novalidate="novalidate">
                         <div class="form-group col-lg-4">
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Nhập tên *">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Nhập tên *" required>
                         </div>
                         <div class="form-group col-lg-4">
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Email *">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email *" required>
                         </div>
                         <div class="form-group col-lg-4">
-                            <input type="text" class="form-control" id="phone" name="phone" placeholder="Số điện thoại *">
+                            <input type="text" class="form-control" id="phone" name="phone" placeholder="Số điện thoại *" required>
                         </div>
                         <div class="form-group col-lg-12">
-                            <textarea class="form-control" name="message" id="message" rows="1" placeholder="Nhập lời nhắn"></textarea>
+                            <textarea class="form-control" name="message" id="message" rows="1" placeholder="Nhập lời nhắn" required></textarea>
                         </div>
                         <div class="form-group col-lg-12">
                             <button type="submit" value="submit" class="btn-gui">Gửi</button>

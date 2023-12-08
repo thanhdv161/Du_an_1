@@ -12,7 +12,7 @@
     <div class="container2 mx-auto text-center">
         <div class="box_1">
             <h5 style="margin: 40px 0 30px 0;text-align: center;">Thông tin giao hàng</h5>
-            <form action="../customer/thanhtoan.php" method="post" id="checkout-form">
+            <form action="../customer/thanhtoan.php" method="post" id="checkout-form" >
                 <div class="form-group">
                     <input rules="required|min:5" class="inp33" id="userName" type="text" name="tenTK" value="<?php echo isset($_SESSION['user']) ? $userName : ""; ?>" placeholder="Họ và tên" required>
                     <br><small class="form-message"></small>
@@ -22,7 +22,7 @@
                     <br><small class="form-message text-red-500"></small>
                 </div>
                 <div class="form-group">
-                    <input rules="required|phone|min:10" class="inp33" id="orderSdt" type="number" name="sdt" placeholder="Số điện thoại" value="<?php echo isset($_SESSION['user']) ? $sdt : ""; ?>" required>
+                    <input rules="required|phone|min:10" class="inp33" id="orderSdt" type="tel" name="sdt" pattern="[0-9]{10}" required title="Vui lòng nhập số điện thoại 10 chữ số" placeholder="Số điện thoại" value="<?php echo isset($_SESSION['user']) ? $sdt : ""; ?>" required>
                     <br><small class="form-message text-red-500"></small>
                 </div>
                 <div class="form-group">

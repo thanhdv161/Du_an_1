@@ -5,7 +5,7 @@
         <h3 class="text-hdn">Phục hồi mật khẩu</h3>
         <form action="./login/set_pass.php" method="POST">
 
-            <input type="email" name="email" id="" placeholder="Email" class="inp33" required>
+            <input type="email" name="email" id="" placeholder="Email" class="inp33">
             <div class="text-left2">
                 <button class="btn-gui">Gửi</button>
                 <a href="http://localhost/duan1/view/index.php?act=dangnhap" style="color: black;">Hủy</a>

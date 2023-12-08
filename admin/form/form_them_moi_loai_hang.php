@@ -38,12 +38,12 @@
                         <form class="form-horizontal form-material" method="post"  action="./index.php?act=addlh">
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Tên Danh Mục</label>
-                                <p <?php echo isset($error['danhmuc'])?"":"hidden" ?> class="alert alert-warning"><?php  if(isset($error['danhmuc'])){
-                                    echo $error['danhmuc'];
-                                } ?></p>
                                 <div class="col-md-12 border-bottom p-0">
                                     <input type="text" required class="form-control p-0 border-0" name="tenLoai" value="<?php echo isset($_POST['tenLoai'])?$_POST['tenLoai']:"" ?>" >
                                 </div>
+                                <p <?php echo isset($error['danhmuc'])?"":"hidden" ?> class="alert alert-warning"><?php  if(isset($error['danhmuc'])){
+                                    echo $error['danhmuc'];
+                                } ?></p>
                             </div>
                             <div class="form-group mb-4">
                                 <div class="col-sm-12">

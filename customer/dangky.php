@@ -11,7 +11,7 @@
             <input type="password" name="matKhau" id="" placeholder="Mật Khẩu" class="inp33" required><br>
             <input type="file" name="anh" id="" class="inp33" required><br>
             <input type="text" value="2" name="maVaiTro" hidden>
-            <input type="text" name="sdt" id="" placeholder="Số Điện Thoại" class="inp33" required><br>
+            <input type="tel" name="sdt" id="" pattern="[0-9]{10}" required title="Vui lòng nhập số điện thoại 10 chữ số" placeholder="Số Điện Thoại" class="inp33" required><br>
             <input type="text" name="diaChi" id="" placeholder="Địa Chỉ" class="inp33" required>
             <div class="text-left2">
                 <button class="btn-gui" type="submit" name="submit1" >Đăng Kí</button>

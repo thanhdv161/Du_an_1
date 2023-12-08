@@ -11,7 +11,7 @@
         <p class="fs-6 fw-bold">Danh Mục</p>
         <div class="d-flex form-group">
             <form action="" class="mx-2 border" method="post">
-                <input type="text" class="p-1 " placeholder="tìm kiếm" name="search">
+                <input type="text" class="p-1 " placeholder="tìm kiếm" name="search" required>
                 <button class="btn btn-success text-white" type="submit">Tìm kiếm</button>
             </form>
             <a href="http://localhost/duan1/admin/index.php?act=addlh">
@@ -51,7 +51,7 @@
                                         <a href="http://localhost/duan1/admin/index.php?act=updatelh&id=<?php echo $dm['maLoai']?>">
                                             <button type="button" class="btn btn-primary">Sửa</button>
                                         </a>
-                                        <a  onclick="return confirm_danhmuc('<?php echo $dm['tenLoai'];?>, sản phẩm của bạn sẽ chuyển về loại Chưa xác định')" href="./index.php?act=deletelh&id=<?php echo $dm['maLoai']?>">
+                                        <a  onclick="return confirm_danhmuc('<?php echo $dm['tenLoai'];?>')" href="./index.php?act=deletelh&id=<?php echo $dm['maLoai']?>">
                                             <button type="button" class="btn btn-danger text-white">Xoá</button>
                                         </a>
                                     </td>

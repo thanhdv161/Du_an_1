@@ -1,25 +1,4 @@
-function validateDangNhap() {
-    var email = document.getElementById("email").value;
-    console.log("Email: " + email);
-    if (email == "") {
-        alert("Không được để trống email");
-        document.getElementById("email").style.backgroundColor = "yellow";
-        document.getElementById("email").focus();
-        return false;
-    } else {
-        document.getElementById("email").style.backgroundColor = "white";
-    }
-    var password = document.getElementById("password").value
-    if (password == "") {
-        alert("Không được để trống Password");
-        document.getElementById("password").style.backgroundColor = "yellow";
-        document.getElementById("password").focus();
-        return false;
-    } else {
-        document.getElementById("password").style.backgroundColor = "white";
-    }
-    
-}
+
 function validate() {
     var name = document.querySelector("#productName");
     if(name.value == ""){
@@ -100,26 +79,7 @@ function validate_lienhe(){
         name.style.backgroundColor="white";
     }
 }
-function validate_setpass(){
 
-    var pass = document.getElementById("pass");
-    if(pass.value==""){
-        alert("Bạn chưa nhập mật khẩu mới!");
-        pass.style.backgroundColor="red";
-        return false;
-    }
-    var repass = document.getElementById("repass");
-    if(repass.value==""){
-        alert("Nhập lại mật khẩu mới!");
-        repass.style.backgroundColor="red";
-        return false;
-    }
-    if(pass.value != repass.value) {
-        alert("Mật khẩu không trùng khớp");
-        return false;
-    }
-   
-}
 function validate_adduser(){
     var useName = document.getElementById("tenTK");
     if(useName.value==""){

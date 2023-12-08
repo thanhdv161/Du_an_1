@@ -66,7 +66,7 @@
                         <a style="padding: 13px 50px;" class="btn-gioh" href="http://localhost/duan1/view/index.php?act=sanphamdanhmuc" >
                             Tiếp tục mua hàng</a>
                     
-                    <button class="px-5 py-2 btn-gioh" type="submit" name="update">Cập nhật</button>
+                    <button class="px-5 py-2 btn-gioh" type="submit" onclick="submitForm()" name="update">Cập nhật</button>
                     <a href="" class="w-full" <?php echo count($result) == 0 ? "hidden" : "" ?>> <br>
                     <div><a style="padding: 13px 154px;" class="btn-thanhtoan " href="http://localhost/duan1/view/index.php?act=thanhtoan">
                         Thanh toán</a></div>
@@ -87,6 +87,11 @@
     }, 2000)
     
 </script>
+<script>
+        function submitForm() {
+            alert("Bạn đã cập nhật thành công đơn hàng");
+        }
+    </script>
 <style>
   
    .text-left2.text-black.button_slide {

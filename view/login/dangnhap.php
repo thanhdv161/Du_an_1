@@ -4,9 +4,9 @@
             <div class="container">
                 <div class="solid_banner_inner">
                     <h3 class="text-hdn">Đăng Nhập</h3>
-                    <form action="../view/login/login_user.php" method="post" >
-        <div><input type="email" name="email" placeholder="Email" id="email" class="inp33" required></div>
-        <div style="margin-bottom: 15px;"><input type="password" id="password" name = "password" placeholder="Mật khẩu" class="inp33" required></div>
+                    <form action="../view/login/login_user.php" method="post" onsubmit="return  validateDangNhap()">
+        <div><input type="email" name="email" placeholder="Email" id="email" class="inp33"></div>
+        <div style="margin-bottom: 15px;"><input type="password" id="password" name = "password" placeholder="Mật khẩu" class="inp33"></div>
         <div class="login2">
             <div class="text-left">
                 <button class="btn-gui" type="submit">Đăng nhập</button>
@@ -63,3 +63,25 @@
     }
     </style>
     <!--================End Categories Banner Area =================-->
+    <script>
+        function validateDangNhap() {
+    var email = document.getElementById("email").value;
+    console.log("Email: " + email);
+    if (email == "") {
+        alert("Không được để trống email");
+        document.getElementById("email").focus();
+        return false;
+    } else {
+        document.getElementById("email").style.backgroundColor = "white";
+    }
+    var password = document.getElementById("password").value;
+    if (password == "") {
+        alert("Không được để trống Password");
+        document.getElementById("password").focus();
+        return false;
+    } else {
+        document.getElementById("password").style.backgroundColor = "white";
+    }
+    
+}
+    </script>

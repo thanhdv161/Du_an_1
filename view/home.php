@@ -131,7 +131,7 @@ if (isset($_GET['success'])) {
         <div class="row">
             <div class="col-lg-6">
                 <div class="f_add_item white_add">
-                    <div class="f_add_img"><img class="img-fluid" src="../img/blog/chuyentrang-APPLEDT-390x210.png" alt=""></div>>
+                    <div class="f_add_img"><img class="img-fluid" src="../img/blog/chuyentrang-APPLEDT-390x210.png" alt=""></div>
                 </div>
             </div>
             <div class="col-lg-6">
